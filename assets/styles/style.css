@@ -1363,3 +1363,9 @@ body {
   transition: opacity 1s ease;
 }
 /* end css comming soon */
+
+/* start css page hotels */
+.hotels__container {
+  padding: 0 40px;
+}
+/* end css page hotels */

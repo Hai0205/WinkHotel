@@ -693,6 +693,9 @@ body {
 .offer__icon {
   margin-bottom: 48px;
 }
+.offer__content {
+  padding-right: 20px;
+}
 /* end css wink offer */
 /* start section deals */
 .deals__container {

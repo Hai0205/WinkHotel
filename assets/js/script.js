@@ -156,48 +156,6 @@ function scrollRoom() {
   });
 }
 
-// function scrollRoom() {
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   const heightSlider = $(".wink-room__slide").height();
-//   const targetY = heightSlider + 450;
-
-//   // First animation: Set height to 365 without scrub
-//   gsap.to(".before-elements", {
-//     height: 365,
-//     duration: 1,
-//     scrollTrigger: {
-//       trigger: ".wink-room__heading",
-//       start: "top 70%",
-//       end: "top 60%", // Immediate end to ensure it doesn't scrub
-//       toggleActions: "play reverse play reverse",
-//       markers: true,
-//     },
-//   });
-
-//   // Create a timeline for the scrubbed animations
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".wink-room",
-//       start: "top 60%", // Start after the first animation
-//       end: "bottom 80%",
-//       scrub: 1,
-//       toggleActions: "play reverse play reverse",
-//       // markers: true,
-//     },
-//   });
-
-//   // Second animation with ScrollTrigger and scrub
-//   tl.to(".before-elements", {
-//     width: 32,
-//     height: 27,
-//     left: -24,
-//     x: 0,
-//     y: targetY,
-//     duration: 1,
-//   });
-// }
-
 function selectLanguage() {
   $(".language__head").on("click", function (event) {
     event.stopPropagation();

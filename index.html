@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ</title>
+    <!-- import boostrap css -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <!-- end import boostrap css -->
+
+    <!-- import font  -->
+    <link rel="stylesheet" href="./assets/font/font.css" />
+    <!-- end import font -->
+    <!-- import css lightpick -->
+    <link rel="stylesheet" href="./assets/libs/lightpick.min.css" />
+    <!-- end import css lightpick -->
+
+    <!-- import css swiper -->
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end import css swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- import link custom css -->
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <!-- end import link custom css -->
+  </head>
+  <body>
+    <!-- start feeback -->
+    <div class="feedback">
+      <div class="feedback__text b2-font color-white">FEEDBACK</div>
+      <div class="feedback__icon">
+        <img src="./assets/images/icon-chat.svg" alt="" />
+      </div>
+    </div>
+    <!-- end start feeback -->
+    <!-- start header -->
+    <header class="header">
+      <div class="header__top-bar">
+        <div class="header-top__container">
+          <div class="header__logo">
+            <a href="/">
+              <img src="./assets/images/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__group-btn">
+            <div class="header__btn-language">
+              <div class="language__head">
+                <div class="value-select color-white b2-font">ENGLISH</div>
+                <img src="./assets/images/icon-arrow-down.svg" alt="" />
+              </div>
+              <div class="language__body">
+                <ul>
+                  <li>
+                    <a href="" class="color-white b2-font">VIETNAM</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="header__btn-sign-in color-white b2-font">SIGN IN</div>
+          </div>
+        </div>
+      </div>
+      <div class="header__main">
+        <div class="header__burgers">
+          <div class="box">
+            <div class="bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <div class="header__nav">
+          <nav>
+            <ul>
+              <li>
+                <a href="" class="b2-font color-black">HOTELS</a>
+              </li>
+
+              <li>
+                <a href="" class="b2-font color-black">MEETING</a>
+              </li>
+              <li>
+                <a href="" class="b2-font color-black">WINK EXPERIENCE</a>
+              </li>
+              <li>
+                <a href="" class="b2-font color-black"
+                  >WINK REWARDS LIFESTYLE</a
+                >
+              </li>
+              <li>
+                <a href="" class="b2-font color-black">DEALS</a>
+              </li>
+              <li>
+                <a href="" class="b2-font color-black">BLOGS</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__button">
+          <a href="" class="b2-font color-white button__book">BOOK NOW</a>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <main>
+      <!-- start section hero banner -->
+      <section class="banner-hero">
+        <div class="container-fluid p-0">
+          <div class="banner-hero__container">
+            <div class="swiper swiper-banner">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slide-banner">
+                    <div class="banner-hero__image">
+                      <img src="./assets/images/hero-banner.webp" alt="" />
+                    </div>
+                    <div class="banner-hero__heading">
+                      <h1 class="h1-bold color-white">
+                        Visionary Hospitality Experience Creators
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slide-banner">
+                    <div class="banner-hero__image">
+                      <img src="./assets/images/room-2.webp" alt="" />
+                    </div>
+                    <div class="banner-hero__heading">
+                      <h1 class="h1-bold color-white">
+                        Visionary Hospitality Experience Creators
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="swiper-button-next swiper-button-white"></div>
+              <div class="swiper-button-prev swiper-button-white"></div> -->
+            </div>
+            <div class="banner-hero__booking">
+              <div class="banner-hero__form">
+                <form action="">
+                  <div class="select-hotel">
+                    <div class="select-head">
+                      <img
+                        src="./assets/images/icon-arrow-down-black.svg"
+                        alt=""
+                      />
+                      <h5 class="color-black b1-font">Select Hotel</h5>
+                    </div>
+                  </div>
+                  <div class="line"></div>
+                  <div class="date">
+                    <input
+                      type="text"
+                      id="startday"
+                      class="b1-font color-black"
+                      autocomplete="off"
+                    />
+                    <div class="line"></div>
+                    <input
+                      type="text"
+                      id="endday"
+                      class="b1-font color-black"
+                      autocomplete="off"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="adults">
+                    <input
+                      type="number"
+                      placeholder="2 adults, 2 children"
+                      min="1"
+                      class="b1-font color-black"
+                    />
+                  </div>
+                  <div class="line"></div>
+                  <div class="promo-code">
+                    <input
+                      type="text"
+                      name=""
+                      placeholder="Promotion Code"
+                      class="b1-font color-black"
+                    />
+                  </div>
+                  <button class="find-room color-white b2-font">
+                    FIND ROOM
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section hero banner -->
+      <section class="spacing-75"></section>
+      <!-- start section wink room -->
+      <section class="wink-room">
+        <div class="container-fluid p-0">
+          <div class="wink-room__container row g-0">
+            <div class="wink-room__heading col-md-9 offset-md-2">
+              <div class="heading">
+                <span class="before-elements"></span>
+                <h2 class="title h1-bold color-black" data-aos="fade-up">
+                  WHOOSH! <br />
+                  A WHIRLWIND OF INNOVATION
+                </h2>
+              </div>
+            </div>
+            <div class="wink-room__slide">
+              <div class="swiper swiper-room">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="slide-inner">
+                      <img src="./assets/images/room-1.webp" alt="" />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="slide-inner">
+                      <img src="./assets/images/room-2.webp" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spacing-120"></div>
+        <div class="offer">
+          <div class="container-fluid p-0">
+            <div class="row g-0">
+              <div class="col-md-9 offset-md-2">
+                <div class="offer__content">
+                  <div class="offer__icon">
+                    <!-- <img src="./assets/images/icon-signature-red.svg" alt="" /> -->
+                  </div>
+                  <div class="offer__text">
+                    <p class="h1-light color-black">
+                      "The offer of affordable luxury means that while the
+                      hotel’s rooms may admittedly be “space-efficient,” no
+                      expense has been spared inside them." CNN
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section wink room -->
+      <section class="spacing-120"></section>
+      <!-- start section wink experience -->
+      <section class="experience">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-md-8 offset-md-2">
+              <div class="experience__container">
+                <div class="experience__content">
+                  <div class="experience__heading">
+                    <h3 class="h2-font color-black" data-aos="fade-up">
+                      THE WINK EXPERIENCE
+                    </h3>
+                    <p class="b1-font color-black" data-aos="fade-up">
+                      What sets Wink apart is its contemporary ethos of chic +
+                      creative design, deep functionality and traditional
+                      Vietnamese values. Quá đỉnh!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="experience__grid">
+                  <div class="experience__item">
+                    <div class="experience__box" data-aos="fade-up">
+                      <div class="experience__image">
+                        <img src="./assets/images/room-2.webp" alt="" />
+                      </div>
+                      <div class="experience__desc">
+                        <h5 class="h3-italic">STAY 24/7</h5>
+                        <p class="b2-italic">
+                          CHECK OUT THE SAME TIME YOU CHECKED IN
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience__item">
+                    <div
+                      class="experience__box"
+                      data-aos="fade-up"
+                      data-aos-delay="100"
+                    >
+                      <div class="experience__image">
+                        <img src="./assets/images/exp-1.png" alt="" />
+                      </div>
+                      <div class="experience__desc">
+                        <h5 class="h3-italic">24/7 SERVICES</h5>
+                        <p class="b2-italic">
+                          WINK BAR + LAUNDROMAT + CO-WORKING SPACE
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience__item">
+                    <div class="experience__box" data-aos="fade-up">
+                      <div class="experience__image">
+                        <img src="./assets/images/exp-gym.png" alt="" />
+                      </div>
+                      <div class="experience__desc">
+                        <h5 class="h3-italic">Tech Driven Stay.</h5>
+                        <p class="b2-italic">FAST, EFFICIENT, FUNCTIONAL</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section wink experience -->
+      <div class="spacing-85"></div>
+      <!-- start section deals -->
+      <section class="deals">
+        <div class="container-fluid p-0">
+          <div class="deals__container">
+            <h3 class="h2-font color-black" data-aos="fade-up">NEWS & DEALS</h3>
+            <div class="deals__header">
+              <p class="b1-font color-black" data-aos="fade-up">
+                Wink Hotel reimagines the relationship between hospitality and
+                sustainability. <br />
+                Wink helps you because sustainable stays give you better sleep.
+              </p>
+              <a href="#" class="deals__btn">
+                <span class="deals__label">view all</span>
+              </a>
+            </div>
+            <div class="box__container">
+              <div class="box" data-aos="fade-up">
+                <div class="box__img">
+                  <a href="#">
+                    <img src="./assets/images/image-deals-2.png" alt="" />
+                  </a>
+                </div>
+                <p class="b3-bold color-black box__subtitle">3 MARCH, 2024</p>
+                <a href="#" class="box__title h4-font"
+                  >Wink Hotel Saigon Centre is now open in 2024
+                </a>
+                <a href="#" class="deals__btn">
+                  <span class="deals__label">details</span>
+                </a>
+              </div>
+              <div class="box" data-aos="fade-up" data-aos-delay="100">
+                <div class="box__img">
+                  <a href="#">
+                    <img src="./assets/images/image-deals-1.png" alt="" />
+                  </a>
+                </div>
+
+                <p class="b3-bold color-black box__subtitle">25 MARCH, 2024</p>
+                <a href="#" class="box__title h4-font"
+                  >Wink Hotel Starts a revolution in Vietnamese hospitality</a
+                >
+                <a href="#" class="deals__btn">
+                  <span class="deals__label">details</span>
+                </a>
+              </div>
+              <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <div class="box__img">
+                  <a href="#">
+                    <img src="./assets/images/image-deals-3.png" alt="" />
+                  </a>
+                </div>
+
+                <p class="b3-bold color-black box__subtitle">
+                  DEALS - WINK HOTEL CAN THO
+                </p>
+                <a href="#" class="box__title h4-font"
+                  >Summer hot deal in Wink Hotel Can Tho</a
+                >
+                <a href="#" class="deals__btn">
+                  <span class="deals__label">details</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section deals -->
+      <div class="spacing-120"></div>
+      <!-- start section comming soon -->
+      <section class="comming-soon">
+        <div class="container-fluid">
+          <div class="comming-soon__container">
+            <div class="comming-soon__left" data-aos="fade-up">
+              <p class="b3-bold color-black">comming soon</p>
+              <h2 class="h2-font color-primary">
+                Wink Hotel Ha
+                <span id="text-front1" class="text-fade mx-2"> Noi</span>
+                <span id="text-back1" class="text-fade">i Phong</span>
+              </h2>
+              <div class="text__container b1-font color-black">
+                <span id="text-front2"
+                  >Opening 5 July 2024, explore Ha Noi, a vibrant port city with
+                  rich culture, stunning beaches, and tasty local dishes like
+                  Banh Da Cua and Nem Cua Be.</span
+                >
+                <span id="text-back2"
+                  >Opening 4 July 2024, explore Hai Phong, a vibrant port city
+                  with rich culture, stunning beaches, and tasty local dishes
+                  like Banh Da Cua and Nem Cua Be.</span
+                >
+              </div>
+            </div>
+            <div class="comming-soon__right" data-aos="fade-up">
+              <div class="img__container">
+                <img
+                  id="image-front1"
+                  src="./assets/images/image-wink.png"
+                  alt=""
+                />
+                <img
+                  id="image-back1"
+                  src="./assets/images/image-wink-bar.png"
+                  alt=""
+                />
+              </div>
+              <div class="img__container">
+                <img
+                  id="image-front2"
+                  src="./assets/images/image-wink-bar.png"
+                  alt=""
+                />
+                <img
+                  id="image-back2"
+                  src="./assets/images/image-wink.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section comming soon -->
+      <div class="spacing-200"></div>
+      <!-- start section wink guide -->
+      <section class="banner-guides">
+        <div class="container-fluid p-0">
+          <div class="banner-guides__container">
+            <div class="banner-guides__text">
+              <span>Wink</span>
+              <span>Guides</span>
+            </div>
+            <div class="banner-guides__img">
+              <img src="./assets/images/hero-banner.webp" alt="" />
+            </div>
+          </div>
+          <div class="banner-guides__content">
+            <div class="row g-0">
+              <div class="col-md-9 offer__text">
+                <p class="h1-light color-black content">
+                  A true Vietnamese. Wink thinks that although Vietnam seems
+                  easy to know, it’s full of hidden places and secret corners,
+                  and we can help you discover them.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section wink guide -->
+      <div class="spacing-40"></div>
+      <!-- start section featured image -->
+      <section class="featured-image">
+        <div class="container-fluid p-0">
+          <div class="featured-image__container">
+            <div class="featured-image__list" data-aos="fade-up">
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-1.webp" alt="" />
+                </div>
+              </div>
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-2.webp" alt="" />
+                </div>
+              </div>
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-3.webp" alt="" />
+                </div>
+              </div>
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-4.webp" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- add class reverse -->
+            <div class="featured-image__list reverse" data-aos="fade-up">
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-8.webp" alt="" />
+                </div>
+              </div>
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-7.webp" alt="" />
+                </div>
+              </div>
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-6.webp" alt="" />
+                </div>
+              </div>
+              <div class="featured-image__item">
+                <div class="featured-image__box">
+                  <img src="./assets/images/image-feature-5.webp" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section featured image -->
+      <div class="spacing-40"></div>
+    </main>
+    <!-- start footer -->
+    <footer class="footer">
+      <div class="container-fluid p-0">
+        <div class="footer__container">
+          <div class="footer__container--top">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="footer__container--left">
+                  <div class="chit-chat">
+                    <div class="chit-chat__content">
+                      <h6 class="b2-bold color-primary">
+                        CHIT-CHAT. TALK TO US.
+                      </h6>
+                      <p class="color-white b1-font">
+                        3M Floor, Capital Place Tower, 6 Thai Van Lung Street,
+                        Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam
+                      </p>
+                    </div>
+                    <div class="chit-chat__contact">
+                      <a
+                        href="mailto:connect@wink-hotels.com"
+                        class="email color-white b1-font"
+                        >connect@wink-hotels.com</a
+                      >
+                      <a
+                        href="tel:+842838269999"
+                        class="tell color-white b1-font"
+                        >+84 28 3826 9999</a
+                      >
+                    </div>
+                  </div>
+                  <div class="about__wink">
+                    <h6 class="b2-bold color-primary">ABOUT WINK</h6>
+                    <ul>
+                      <li>
+                        <a href="" class="b2-bold color-white"
+                          >COMPANY PROFILE</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="b2-bold color-white">CAREERS</a>
+                      </li>
+                      <li>
+                        <a href="" class="b2-bold color-white">ESG</a>
+                      </li>
+                      <li>
+                        <a href="" class="b2-bold color-white">MEDIA</a>
+                      </li>
+                      <li>
+                        <a href="" class="b2-bold color-white"
+                          >OUR COMMUNITIES</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="b2-bold color-white">FOR INVESTOR</a>
+                      </li>
+                      <li>
+                        <a href="" class="b2-bold color-white">FAQ?</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="follow__us">
+                    <h6 class="b2-bold color-primary">FOLLOW US ON</h6>
+
+                    <ul>
+                      <li>
+                        <a href="">
+                          <!-- icon facebook -->
+                          <svg
+                            width="11"
+                            height="20"
+                            viewBox="0 0 11 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.0004 11.0349L10.5521 7.58649H7.24165V5.17261C7.24165 4.20705 7.58649 3.4484 9.10379 3.4484H10.6901V0.275872C9.79347 0.137936 8.82791 0 7.93133 0C5.10364 0 3.10356 1.7242 3.10356 4.82776V7.58649H0V11.0349H3.10356V20.0007C4.48292 20.0007 5.86229 20.0007 7.24165 20.0007V11.0349H10.0004Z"
+                              fill="white"
+                            />
+                          </svg>
+                          <!-- end icon facebook -->
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <!-- icon instagram -->
+                          <svg
+                            width="21"
+                            height="20"
+                            viewBox="0 0 21 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g clip-path="url(#clip0_257_1824)">
+                              <path
+                                d="M10.6867 0.00101039C12.1155 0.00101039 13.5445 0.00421382 14.9732 0.00101039C15.8113 -0.00155236 16.6243 0.141315 17.3787 0.499138C19.1845 1.3551 20.2794 2.77166 20.6097 4.75331C20.6623 5.09006 20.6875 5.43052 20.685 5.77135C20.6907 8.59037 20.685 11.4123 20.6898 14.2326C20.6923 15.6139 20.3054 16.8613 19.4247 17.9335C18.6152 18.9199 17.5898 19.5833 16.3328 19.8447C15.8903 19.9386 15.4396 19.9881 14.9873 19.9924C12.1244 20.0052 9.26151 20.0004 6.39828 19.9984C5.04772 19.9984 3.82497 19.6089 2.77232 18.7491C1.77926 17.9374 1.11614 16.9055 0.845453 15.6475C0.749792 15.1999 0.70052 14.7435 0.698417 14.2858C0.685283 11.4283 0.692007 8.57051 0.691687 5.71273C0.691687 4.34262 1.09308 3.10899 1.96986 2.04897C2.78001 1.06968 3.80703 0.429312 5.05348 0.14773C5.50579 0.0480483 5.96781 -0.000849078 6.43096 0.00196453L10.6867 0.00101039ZM5.89086 9.99957C5.89374 12.6379 8.03716 14.8047 10.6816 14.7932C13.3984 14.7829 15.4759 12.6321 15.4867 9.9986C15.4967 7.35513 13.3151 5.18833 10.6816 5.20082C8.03908 5.21459 5.8883 7.36795 5.89086 9.99957ZM14.6897 4.802C14.6878 5.44685 15.225 5.98728 15.8785 5.99913C16.5266 6.01034 17.0862 5.4587 17.0878 4.8068C17.0868 4.4889 16.9607 4.18417 16.7367 3.95857C16.5127 3.73296 16.2089 3.60464 15.891 3.60135C15.2359 3.59943 14.692 4.14305 14.6897 4.802Z"
+                                fill="white"
+                              />
+                              <path
+                                d="M10.6867 6.8003C12.4428 6.79741 13.8923 8.24921 13.8901 10.0073C13.8879 11.7653 12.4486 13.1979 10.6921 13.1988C8.93023 13.1988 7.48868 11.7573 7.49189 9.99349C7.49459 9.14716 7.8321 8.33627 8.4307 7.73797C9.0293 7.13968 9.84034 6.80258 10.6867 6.8003Z"
+                                fill="white"
+                              />
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_257_1824">
+                                <rect
+                                  width="20"
+                                  height="20"
+                                  fill="white"
+                                  transform="translate(0.690063)"
+                                />
+                              </clipPath>
+                            </defs>
+                          </svg>
+                          <!-- end icon instagram -->
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <!-- start icon ytb -->
+                          <svg
+                            width="30"
+                            height="20"
+                            viewBox="0 0 30 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M26.1498 0.611787C27.3734 0.941211 28.3381 1.90595 28.6676 3.12953C29.2794 5.3649 29.2558 10.0239 29.2558 10.0239C29.2558 10.0239 29.2558 14.6594 28.6676 16.8947C28.3381 18.1183 27.3734 19.0831 26.1498 19.4125C23.9145 20.0007 14.9729 20.0007 14.9729 20.0007C14.9729 20.0007 6.05497 20.0007 3.79606 19.389C2.57249 19.0595 1.60774 18.0948 1.27832 16.8712C0.690063 14.6594 0.690063 10.0004 0.690063 10.0004C0.690063 10.0004 0.690063 5.3649 1.27832 3.12953C1.60774 1.90595 2.59602 0.917681 3.79606 0.588257C6.03144 0 14.9729 0 14.9729 0C14.9729 0 23.9145 0 26.1498 0.611787ZM19.5613 9.83699L12.1258 14.1195V5.55448L19.5613 9.83699Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <!-- end icon ytb -->
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <!-- icon linked -->
+                          <svg
+                            width="21"
+                            height="20"
+                            viewBox="0 0 21 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.67558 0C0.891523 0 0.25592 0.635602 0.25592 1.41966V18.581C0.25592 19.3651 0.891524 20.0007 1.67558 20.0007H18.837C19.6211 20.0007 20.2567 19.3651 20.2567 18.581V1.41966C20.2567 0.635603 19.6211 0 18.837 0H1.67558ZM4.74519 6.21111C5.70344 6.21111 6.48025 5.43429 6.48025 4.47605C6.48025 3.5178 5.70344 2.74099 4.74519 2.74099C3.78694 2.74099 3.01013 3.5178 3.01013 4.47605C3.01013 5.43429 3.78694 6.21111 4.74519 6.21111ZM8.06927 7.49336H10.9448V8.81067C10.9448 8.81067 11.7251 7.25003 13.8483 7.25003C15.7422 7.25003 17.3111 8.18303 17.3111 11.0269V17.0237H14.3312V11.7535C14.3312 10.0759 13.4356 9.89142 12.7531 9.89142C11.3367 9.89142 11.0943 11.1131 11.0943 11.9724V17.0237H8.06927V7.49336ZM6.25769 7.49338H3.2327V17.0238H6.25769V7.49338Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <!-- end icon linked -->
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <!-- icon tiktok -->
+                          <svg
+                            width="19"
+                            height="20"
+                            viewBox="0 0 19 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.83996 16.5743C8.50877 16.5743 9.8616 15.3795 9.8616 13.5526V0H13.4854C13.2821 2.47163 15.7392 4.85915 18.4489 4.80455V8.21214C16.1315 8.21214 14.161 7.23228 13.4751 6.68848V13.5526C13.4751 16.5743 11.098 20.0007 6.83996 20.0007C2.58189 20.0007 0.256683 16.5743 0.256683 13.5526C0.256683 9.28786 4.7699 6.81446 7.75909 7.41899V10.8898C7.60872 10.8366 7.22092 10.758 6.89061 10.758C5.20794 10.6959 3.81831 12.0607 3.81831 13.5526C3.81831 15.2214 5.17115 16.5743 6.83996 16.5743Z"
+                              fill="white"
+                            />
+                          </svg>
+
+                          <!-- end icon tiktok -->
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="footer__container--right">
+                  <div class="newsletter">
+                    <h6 class="b2-bold color-primary">
+                      SIGN UP FOR NEWSLETTER
+                    </h6>
+                    <p class="b1-font color-white content">
+                      Stay connected! Wink updates + city guides + insider info
+                      = Wink Hotels’ newsletter. Quá ngầu!
+                    </p>
+                    <div class="form">
+                      <input
+                        type="text"
+                        placeholder="You email address"
+                        class="b1-font color-white"
+                      />
+                      <button>
+                        <span class="b2-bold color-white">SEND</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="download-app">
+                    <h6 class="b2-bold color-primary">DOWNLOAD APP</h6>
+                    <ul>
+                      <li>
+                        <a href="">
+                          <img src="./assets/images/google-play.svg" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="./assets/images/app-store.svg" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__container--bottom">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <div class="wink">
+                  <p class="b3-bold color-white">© 2024 WINK HOTELS</p>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="row g-0">
+                  <div class="col-md-9">
+                    <div class="terms">
+                      <div class="terms__desc color-gray-50 b2-bold">
+                        The Wink Hotel may update this policy from time to time.
+                        We will always post the then-current version of this
+                        policy on our websites and will indicate at the top of
+                        the policy the date on which the latest version took
+                        effect. Please review this policy from time to time to
+                        stay updated on our privacy practices and keep your
+                        personal information safe and secured in one of the best
+                        hotels in Saigon.
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="" class="b2-bold color-gray-50"
+                            >TERMS & CONDITIONS</a
+                          >
+                        </li>
+                        <li>
+                          <a href="" class="b2-bold color-gray-50"
+                            >PAYMENT METHOD</a
+                          >
+                        </li>
+                        <li>
+                          <a href="" class="b2-bold color-gray-50"
+                            >PRIVACY POLICY</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="footer__container--bl">
+                      <div class="bct">
+                        <img src="./assets/images/logo-bct.svg" alt="" />
+                      </div>
+                      <div class="author b2-bold color-gray-50">
+                        <span>WEBSITE BY</span>
+                        <a href="https://alphacreative.vn/">ALPHA CREATIVE</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <!-- import jquery -->
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <!-- end jquery -->
+    <!-- import gsap -->
+    <script src="./assets/libs/gsap.min.js"></script>
+
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+
+    <script src="./assets/libs/splitType.min.js"></script>
+    <!-- end import gsap -->
+
+    <!-- import boostrap js -->
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <!-- end import boostrap js -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- import swiper js -->
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <!-- end import swiper js -->
+
+    <!-- import moment js -->
+    <script src="./assets/libs/moment.min.js"></script>
+    <!-- end import moment js -->
+
+    <!-- import lightpick js -->
+    <script src="./assets/libs/lightpick.min.js"></script>
+    <!-- end import lightpick js -->
+    <!-- import custom js -->
+    <script src="./assets/js/script.js"></script>
+    <!-- end import custom js -->
+  </body>
+</html>

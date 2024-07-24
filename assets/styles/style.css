@@ -301,7 +301,8 @@ body {
   position: relative;
   transition: all 0.3s ease-in-out;
 }
-.header__nav nav ul li a:hover {
+.header__nav nav ul li a:hover,
+.header__nav nav ul li a.active {
   color: var(--color-primary);
   /* background-position: 0%; */
 }
@@ -326,6 +327,10 @@ body {
   left: 0;
 }
 .header__nav nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header__nav nav ul li a.active::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }

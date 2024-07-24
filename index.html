@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
     <!-- end import css swiper -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+
     <!-- import link custom css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
     <link rel="stylesheet" href="./assets/styles/style-mobile.css" />
@@ -343,55 +345,67 @@
                 <span class="deals__label">view all</span>
               </a>
             </div>
-            <div class="box__container">
-              <!-- item -->
-              <div class="box" data-aos="fade-up">
-                <div class="box__img">
-                  <a href="#">
-                    <img src="./assets/images/image-deals-2.png" alt="" />
+            <div class="box__container swiper">
+              <div class="box__wrapper swiper-wrapper">
+                <!-- item -->
+                <div class="box swiper-slide" data-aos="fade-up">
+                  <div class="box__img">
+                    <a href="#">
+                      <img src="./assets/images/image-deals-2.png" alt="" />
+                    </a>
+                  </div>
+                  <p class="b3-bold color-black box__subtitle">3 MARCH, 2024</p>
+                  <a href="#" class="box__title h4-font"
+                    >Wink Hotel Saigon Centre is now open in 2024
+                  </a>
+                  <a href="#" class="deals__btn">
+                    <span class="deals__label">details</span>
                   </a>
                 </div>
-                <p class="b3-bold color-black box__subtitle">3 MARCH, 2024</p>
-                <a href="#" class="box__title h4-font"
-                  >Wink Hotel Saigon Centre is now open in 2024
-                </a>
-                <a href="#" class="deals__btn">
-                  <span class="deals__label">details</span>
-                </a>
-              </div>
-              <!-- item -->
-              <div class="box" data-aos="fade-up" data-aos-delay="100">
-                <div class="box__img">
-                  <a href="#">
-                    <img src="./assets/images/image-deals-1.png" alt="" />
-                  </a>
-                </div>
+                <!-- item -->
+                <div class="box swiper-slide" data-aos="fade-up" data-aos-delay="100">
+                  <div class="box__img">
+                    <a href="#">
+                      <img src="./assets/images/image-deals-1.png" alt="" />
+                    </a>
+                  </div>
 
-                <p class="b3-bold color-black box__subtitle">25 MARCH, 2024</p>
-                <a href="#" class="box__title h4-font"
-                  >Wink Hotel Starts a revolution in Vietnamese hospitality</a
-                >
-                <a href="#" class="deals__btn">
-                  <span class="deals__label">details</span>
-                </a>
-              </div>
-              <!-- item -->
-              <div class="box" data-aos="fade-up" data-aos-delay="200">
-                <div class="box__img">
-                  <a href="#">
-                    <img src="./assets/images/image-deals-3.png" alt="" />
+                  <p class="b3-bold color-black box__subtitle">25 MARCH, 2024</p>
+                  <a href="#" class="box__title h4-font"
+                    >Wink Hotel Starts a revolution in Vietnamese hospitality</a
+                  >
+                  <a href="#" class="deals__btn">
+                    <span class="deals__label">details</span>
                   </a>
                 </div>
+                <!-- item -->
+                <div class="box swiper-slide" data-aos="fade-up" data-aos-delay="200">
+                  <div class="box__img">
+                    <a href="#">
+                      <img src="./assets/images/image-deals-3.png" alt="" />
+                    </a>
+                  </div>
 
-                <p class="b3-bold color-black box__subtitle">
-                  DEALS - WINK HOTEL CAN THO
-                </p>
-                <a href="#" class="box__title h4-font"
-                  >Summer hot deal in Wink Hotel Can Tho</a
-                >
-                <a href="#" class="deals__btn">
-                  <span class="deals__label">details</span>
-                </a>
+                  <p class="b3-bold color-black box__subtitle">
+                    DEALS - WINK HOTEL CAN THO
+                  </p>
+                  <a href="#" class="box__title h4-font"
+                    >Summer hot deal in Wink Hotel Can Tho</a
+                  >
+                  <a href="#" class="deals__btn">
+                    <span class="deals__label">details</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- button swiper -->
+            <div class="swiper-button__container">
+              <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-fill"></i>
+              </div>
+              <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-fill"></i>
               </div>
             </div>
           </div>
@@ -421,6 +435,15 @@
                   with rich culture, stunning beaches, and tasty local dishes
                   like Banh Da Cua and Nem Cua Be.</span
                 >
+              </div>
+
+              <div class="comming-soon__btn">
+                <div class="comming-soon__btn-prev">
+                  <i class="ri-arrow-left-s-fill"></i>
+                </div>
+                <div class="comming-soon__btn-next">
+                  <i class="ri-arrow-right-s-fill"></i>
+                </div>
               </div>
             </div>
             <div class="comming-soon__right" data-aos="fade-up">

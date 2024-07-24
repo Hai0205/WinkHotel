@@ -8,6 +8,7 @@ $(document).ready(function () {
   bookingForm();
   swiperRoom();
   scrollWinkGuide();
+  customSelectContent();
   $(".comming-soon__container").on("click", swapImages);
   animationTextReveal();
   ScrollTrigger.refresh();
@@ -354,4 +355,26 @@ function swapImages() {
 
   textFront2.id = "text-back2";
   textBack2.id = "text-front2";
+}
+
+function customSelectContent() {
+  document.onclick = function (e) {
+    const dropdownMenu = document.querySelector(".dropdown-custom__menu");
+    const dropdownItems = document.querySelectorAll(".dropdown-custom__item");
+    const btnDropdown = document.querySelector(".dropdown-custom__btn h5");
+    if (
+      e.target.parentElement.classList.contains("dropdown-custom__btn") ||
+      e.target.parentElement.classList.contains("dropdown-custom")
+    ) {
+      dropdownMenu.classList.toggle("dropdown--active");
+    } else {
+      dropdownMenu.classList.remove("dropdown--active");
+    }
+
+    dropdownItems.forEach((item) => {
+      item.onclick = function (e) {
+        btnDropdown.textContent = e.target.textContent;
+      };
+    });
+  };
 }

@@ -1576,6 +1576,37 @@ body {
 } */
 /* end css page hotels */
 
+/* custom dropdown select */
+.dropdown-custom__btn h5 {
+  text-transform: uppercase;
+}
+.dropdown-custom {
+  position: relative;
+}
+
+.dropdown-custom__menu {
+  position: absolute;
+  background-color: white;
+  top: 25px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.dropdown-custom__menu .dropdown-custom__item {
+  width: 100%;
+  padding: 5px 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* end dropdown select */
+
 /* start css moblie */
 @media (max-width: 767px) {
   .footer__container--top {

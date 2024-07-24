@@ -478,11 +478,11 @@ body {
   height: calc(100vh - 120px);
   width: 100%;
   background-color: var(--color-primary);
-  clip-path: polygon(91% 0, 100% 0%, 100% 100%, 66% 100%);
-  transition: all 0.3s ease-in-out;
+  clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  transition: all 1s ease 0.6s;
 }
 .header__sub-menu.active {
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
 }
 /* end css header */
 

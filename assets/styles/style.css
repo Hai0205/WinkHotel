@@ -1451,6 +1451,10 @@ body {
   color: var(--black);
   letter-spacing: 3%;
   text-transform: uppercase;
+  transition: all 0.3 ease-in-out;
+}
+.hotels__box:hover .hotels__name {
+  color: var(--color-primary);
 }
 .hotels__text {
   font-size: 16px;
@@ -1531,11 +1535,15 @@ body {
 .btn__brand:hover::before {
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
-.hotels__box:hover .btn__brand span {
+/* .hotels__box:hover .btn__brand span {
   color: var(--color-white);
   transform: translateX(0);
 }
 .hotels__box:hover .btn__brand::before {
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
-}
+} */
 /* end css page hotels */
+
+/* start css moblie */
+
+/* end css moblie */

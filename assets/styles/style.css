@@ -472,6 +472,18 @@ body {
     transform: scale(1);
   }
 }
+.header__sub-menu {
+  position: fixed;
+  top: 120px;
+  height: calc(100vh - 120px);
+  width: 100%;
+  background-color: var(--color-primary);
+  clip-path: polygon(91% 0, 100% 0%, 100% 100%, 66% 100%);
+  transition: all 0.3s ease-in-out;
+}
+.header__sub-menu.active {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+}
 /* end css header */
 
 /* start css hero banner */

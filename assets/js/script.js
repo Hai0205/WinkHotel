@@ -176,6 +176,7 @@ function selectLanguage() {
     } else {
       $(this).removeClass("not-active").addClass("active");
     }
+    $(".header__sub-menu").toggleClass("active");
   });
 }
 

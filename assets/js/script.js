@@ -39,6 +39,15 @@ function scrollHeader() {
         // Shrink navTop
         self.direction === -1 ? navTop.play() : navTop.reverse();
         // self.refresh();
+        if (self.direction === -1) {
+          $(".header__sub-menu")
+            .addClass("scrolled-down")
+            .removeClass("scrolled-up");
+        } else {
+          $(".header__sub-menu")
+            .addClass("scrolled-up")
+            .removeClass("scrolled-down");
+        }
       },
     });
   }

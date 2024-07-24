@@ -369,27 +369,27 @@ body {
 }
 
 .bar.active span:nth-child(1) {
-  animation: ease 0.5s top forwards;
+  animation: ease 1s top forwards;
 }
 
 .bar.not-active span:nth-child(1) {
-  animation: ease 0.5s top-2 forwards;
+  animation: ease 1s top-2 forwards;
 }
 
 .bar.active span:nth-child(2) {
-  animation: ease 0.5s scaled forwards;
+  animation: ease 1s scaled forwards;
 }
 
 .bar.not-active span:nth-child(2) {
-  animation: ease 0.5s scaled-2 forwards;
+  animation: ease 1s scaled-2 forwards;
 }
 
 .bar.active span:nth-child(3) {
-  animation: ease 0.5s bottom forwards;
+  animation: ease 1s bottom forwards;
 }
 
 .bar.not-active span:nth-child(3) {
-  animation: ease 0.5s bottom-2 forwards;
+  animation: ease 1s bottom-2 forwards;
 }
 
 @keyframes top {
@@ -479,8 +479,13 @@ body {
   width: 100%;
   background-color: var(--color-gray-50);
   clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-
   transition: all 1s ease 0.6s;
+}
+.header__sub-menu.scrolled-down {
+  height: calc(100vh - 120px);
+}
+.header__sub-menu.scrolled-up {
+  height: calc(100vh - 60px);
 }
 .header__sub-menu.active {
   clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
@@ -1548,6 +1553,14 @@ body {
 }
 .btn__brand:hover::before {
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+.limit__line {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
 }
 /* .hotels__box:hover .btn__brand span {
   color: var(--color-white);

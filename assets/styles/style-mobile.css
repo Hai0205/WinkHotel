@@ -1,5 +1,44 @@
-/* start css mobile deals */
 @media screen and (max-width: 768px) {
+  /* experience */
+  .experience__container {
+    padding: 0;
+  }
+  .experience__grid {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .experience__box {
+    display: block;
+  }
+
+  .experience__item {
+    width: 100%;
+    padding-left: 64px;
+  }
+
+  .experience__item:nth-child(odd) {
+    transform: skewX(-15deg) translateX(-40px);
+  }
+
+  .experience__item:nth-child(even) {
+    transform: skewX(-15deg) translateX(30px);
+  }
+
+  .experience__item:nth-child(odd) .experience__box .experience__desc,
+  .experience__item .experience__box .experience__desc {
+    padding-left: 100px;
+  }
+
+  .experience__item .experience__box .experience__image {
+    margin-bottom: 15px;
+  }
+
+  .experience__heading {
+    padding: 0 15px;
+  }
+
+  /* deals */
   .deals__container {
     padding: 0 20px;
   }
@@ -53,11 +92,8 @@
   .swiper-button-next {
     right: calc(60% - 7rem);
   }
-}
-/* end css mobile deals */
 
-/* start css mobile comming soon */
-@media screen and (max-width: 768px) {
+  /* comming soon */
   .comming-soon__container {
     flex-direction: column-reverse;
     padding: 0 20px;
@@ -94,5 +130,16 @@
     border: 1px solid;
     cursor: pointer;
   }
+
+  /* wink guides */
+  .banner-guides__img {
+    height: 400px;
+  }
+  .banner-guides__text span {
+    font-size: 60px;
+  }
+  .banner-guides__text {
+    top: 0;
+    left: 20px;
+  }
 }
-/* end css mobile comming soon */

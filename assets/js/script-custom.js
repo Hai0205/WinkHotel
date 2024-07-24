@@ -21,6 +21,7 @@ function enableSwiper() {
     swiper = new Swiper('.box__container', {
       loop: true,
       grabCursor: true,
+      spaceBetween: 20,
       
       navigation: {
         nextEl: '.swiper-button-next',
@@ -30,11 +31,32 @@ function enableSwiper() {
       breakpoints: {
         768: {
           slidesPerView: '1',
-          spaceBetween: 20,
         }
       }
     });
   // }
 }
 
+function toggleDropdown(e) {
+  document.onclick = function (e) {
+    const dropdownMenu = document.querySelector(".dropdown-custom__menu");
+    const dropdownItems = document.querySelectorAll(".dropdown-custom__item");
+    const btnDropdown = document.querySelector(".dropdown-custom__btn h5");
+    if (e.target.parentElement.classList.contains("dropdown-custom__btn") ||
+      e.target.parentElement.classList.contains("dropdown-custom")
+    ) {
+      dropdownMenu.classList.toggle("dropdown--active")
+    } else {
+      dropdownMenu.classList.remove("dropdown--active")
+    }
+
+    dropdownItems.forEach(item => {
+      item.onclick = function (e) {
+        btnDropdown.textContent = e.target.textContent;
+      }
+    })
+  }
+}
+
+toggleDropdown()
 swiperDeals()

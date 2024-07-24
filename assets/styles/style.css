@@ -1392,20 +1392,27 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+.hotels__box:hover .hotels__image img {
+  transform: scale(1.05);
+}
 .hotels__image {
   width: 100%;
-  aspect-ratio: 427 / 280;
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(280 / 427 * 100%);
 }
 .hotels__image img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   object-fit: cover;
+  transition: all 0.4s ease-in-out;
 }
 .hotels__box {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+
 .hotels__content {
   padding: 24px 32px 28px;
   background-color: var(--color-white);
@@ -1497,6 +1504,9 @@ body {
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
   height: 100%;
 }
+.btn__brand:hover {
+  color: var(--color-white);
+}
 .btn__brand:hover span {
   color: var(--color-white);
   transform: translateX(0);
@@ -1507,7 +1517,7 @@ body {
   font-size: inherit;
   text-align: center;
   transform: translateX(20%);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out, color 0.2s ease-out;
 }
 .btn__brand::before {
   content: "";
@@ -1519,6 +1529,13 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .btn__brand:hover::before {
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+}
+.hotels__box:hover .btn__brand span {
+  color: var(--color-white);
+  transform: translateX(0);
+}
+.hotels__box:hover .btn__brand::before {
   clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 /* end css page hotels */

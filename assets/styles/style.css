@@ -475,10 +475,11 @@ body {
 .header__sub-menu {
   position: fixed;
   top: 120px;
-  height: calc(100vh - 120px);
+  height: 100vh;
   width: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--color-gray-50);
   clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+
   transition: all 1s ease 0.6s;
 }
 .header__sub-menu.active {

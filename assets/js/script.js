@@ -60,13 +60,22 @@ function scrollHeader() {
   $(window).on("load", initializeScrollTrigger);
 }
 function subMenuHeader() {
-  let menuItem = $(".menu-item");
-  if (menuItem.hasClass(".menu-item-has-children")) {
-    $(".box-img").addClass("show");
-  } else {
-    $(".box-img").removeClass("show");
-  }
+  console.log("aa");
+  let menuItem = $(".menu-item a");
+
+  menuItem.on("mouseenter", function () {
+    if ($(this).closest(".menu-item").hasClass("menu-item-has-children")) {
+      $(".box-img").addClass("hidden");
+    }
+  });
+
+  menuItem.on("mouseleave", function () {
+    if ($(this).closest(".menu-item").hasClass("menu-item-has-children")) {
+      $(".box-img").removeClass("hidden");
+    }
+  });
 }
+
 function swiperBanner() {
   var interleaveOffset = 0.9;
 
@@ -202,7 +211,7 @@ function scrollRoom() {
       end: "bottom 80%",
       scrub: 1,
       toggleActions: "play reverse play reverse",
-      markers: true,
+      // markers: true,
     },
   });
 

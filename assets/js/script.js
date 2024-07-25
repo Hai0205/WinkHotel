@@ -5,7 +5,7 @@ $(document).ready(function () {
   swiperBanner();
   scrollRoom();
   scrollFeedBack();
-  selectLanguage();
+  menubar();
   bookingForm();
   swiperRoom();
   scrollWinkGuide();
@@ -225,18 +225,7 @@ function scrollRoom() {
   });
 }
 
-function selectLanguage() {
-  $(".language__head").on("click", function (event) {
-    event.stopPropagation();
-    $(".language__body").toggleClass("show");
-  });
-  $(document).on("click", function () {
-    $(".language__body").removeClass("show");
-  });
-
-  $(".language__body").on("click", function (event) {
-    event.stopPropagation();
-  });
+function menubar() {
   var bar = $(".bar");
 
   bar.on("click", function () {
@@ -428,9 +417,9 @@ function toggleDropdown() {
 
     // Xử lý sự kiện click cho nút dropdown
     $btnDropdown.on("click", function (e) {
+      e.stopPropagation();
       closeAllDropdowns($dropdown);
       $dropdownMenu.toggleClass("dropdown--active");
-      e.stopPropagation(); // Ngăn chặn sự kiện click truyền ra ngoài
     });
 
     // Xử lý sự kiện click cho tài liệu
@@ -440,21 +429,20 @@ function toggleDropdown() {
       }
     });
 
-    // Xử lý sự kiện click cho các mục dropdown
     $dropdownItems.on("click", function (e) {
+      e.stopPropagation();
+      const $menu = $dropdown.find(".dropdown-custom__menu");
       const tmp = $textDropdown.text();
       $textDropdown.text($(this).text());
-      if ($(e.target).hasClass("language__item")) {
+      if ($(this).hasClass("language__item")) {
         $(this).text(tmp);
       }
       closeAllDropdowns();
     });
 
-    // Hàm đóng tất cả dropdowns, ngoại trừ dropdown được truyền vào
     function closeAllDropdowns(exception) {
       $dropdowns.each(function () {
         const $this = $(this);
-        // Kiểm tra xem phần tử hiện tại có phải là phần tử exception hay không
         if (!exception || !exception.is($this)) {
           $this.find(".dropdown-custom__menu").removeClass("dropdown--active");
         }

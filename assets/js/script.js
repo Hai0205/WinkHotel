@@ -184,11 +184,8 @@ function scrollRoom() {
   const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".wink-room",
-      start: "top 80%",
-      end: "top 70%", // Complete quickly
-      scrub: 1,
-      toggleActions: "play reverse play reverse",
-      // markers: true,
+      start: "-10px 60%",
+      end: "-10px 60%",
     },
   });
 
@@ -201,11 +198,11 @@ function scrollRoom() {
   const tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".wink-room",
-      start: "top 70%", // Start after the first animation completes
+      start: "400px 80%", // Start after the first animation completes
       end: "bottom 80%",
       scrub: 1,
       toggleActions: "play reverse play reverse",
-      // markers: true,
+      markers: true,
     },
   });
 

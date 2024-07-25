@@ -287,7 +287,7 @@ function scrollWinkGuide() {
       start: "top 50%",
       end: "bottom bottom",
       // pin: true,
-      markers: true,
+      // markers: true,
       scrub: 1,
       toggleActions: "play reverse play reverse",
     },

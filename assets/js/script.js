@@ -61,16 +61,16 @@ function scrollHeader() {
 }
 function subMenuHeader() {
   console.log("aa");
-  let menuItem = $(".menu-item a");
+  let menuItem = $(".menu-item ");
 
   menuItem.on("mouseenter", function () {
-    if ($(this).closest(".menu-item").hasClass("menu-item-has-children")) {
+    if ($(this).hasClass("menu-item-has-children")) {
       $(".box-img").addClass("hidden");
     }
   });
 
   menuItem.on("mouseleave", function () {
-    if ($(this).closest(".menu-item").hasClass("menu-item-has-children")) {
+    if ($(this).hasClass("menu-item-has-children")) {
       $(".box-img").removeClass("hidden");
     }
   });
@@ -150,39 +150,7 @@ function scrollFeedBack() {
   // Re-initialize ScrollTrigger when page is refreshed
   $(window).on("load", initializeScrollTrigger);
 }
-// function scrollRoom() {
-//   gsap.registerPlugin(ScrollTrigger);
 
-//   const heightSlider = $(".wink-room__slide").height();
-//   const targetY = heightSlider + 450;
-
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".wink-room",
-//       start: "top 80%",
-//       end: "bottom 80%",
-//       scrub: 1,
-//       toggleActions: "play reverse play reverse",
-//       // markers: true,
-//     },
-//   });
-
-//   // First animation: height from 0 to 365 with scrub
-//   tl.to(".before-elements", {
-//     height: 365,
-//     duration: 1,
-//   });
-
-//   // Second animation with scrub
-//   tl.to(".before-elements", {
-//     width: 32,
-//     height: 27,
-//     left: -24,
-//     x: 0,
-//     y: targetY,
-//     duration: 1,
-//   });
-// }
 function scrollRoom() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -235,16 +203,20 @@ function menubar() {
       $(this).removeClass("not-active").addClass("active");
     }
     $(".header__sub-menu").toggleClass("active");
-    var scrollBarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
-    console.log(scrollBarWidth);
+    // check when menu active
+    const $body = $("body");
+    const $header = $("header");
 
-    if ($("body").hasClass("overflow-hidden")) {
-      $("body").removeClass("overflow-hidden");
-      $("body").css("padding-right", "");
+    if ($body.hasClass("overflow-hidden")) {
+      $body.removeClass("overflow-hidden").css("width", "");
+      $header.css("width", "");
     } else {
-      $("body").addClass("overflow-hidden");
-      $("body").css("padding-right", scrollBarWidth + "px");
+      const scrollBarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      $body
+        .addClass("overflow-hidden")
+        .css("width", `calc(100% - ${scrollBarWidth}px)`);
+      $header.css("width", `calc(100% - ${scrollBarWidth}px)`);
     }
   });
 }

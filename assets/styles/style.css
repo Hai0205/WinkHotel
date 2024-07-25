@@ -581,7 +581,7 @@ body {
 
 .menu-container {
   padding: 0;
-  margin: 0px 40px 30px;
+  margin-left: 40px;
   list-style: none;
 }
 
@@ -610,7 +610,8 @@ body {
   transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
 }
-.menu-container li.menu-item-has-children a:hover::after {
+.menu-container li.menu-item-has-children a:hover::after,
+.menu-container li.menu-item-has-children:hover a::after {
   background-image: url("../images/ic_arrow_red.svg");
 }
 .menu-container li a::before {
@@ -625,11 +626,13 @@ body {
   transform-origin: bottom right;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.menu-container li a:hover::before {
+.menu-container li a:hover::before,
+.menu-container li:hover a::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.menu-container li a:hover {
+.menu-container li a:hover,
+.menu-container li:hover a {
   color: var(--color-primary);
 }
 .menu-container li:first-child a {

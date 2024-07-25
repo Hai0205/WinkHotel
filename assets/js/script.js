@@ -332,7 +332,7 @@ function scrollWinkGuide() {
       end: "bottom bottom",
       // pin: true,
       // markers: true,
-      // scrub: 1,
+      scrub: 1,
       toggleActions: "play reverse play reverse",
     },
   });

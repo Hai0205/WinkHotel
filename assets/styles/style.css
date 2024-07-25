@@ -109,6 +109,12 @@ body {
   font-weight: 900;
   /* font-style: italic; */
 }
+.h3-bold {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0.03rem;
+}
 .h4-font {
   font-size: 20px;
   line-height: 32px;
@@ -482,7 +488,7 @@ body {
   top: 120px;
   height: 100vh;
   width: 100%;
-  background-color: var(--color-gray-50);
+  background-color: var(--color-white);
   clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
   transition: all 1s ease 0.6s;
 }
@@ -1407,7 +1413,7 @@ body {
   font-size: 12px;
   line-height: 16px;
   font-weight: 900;
-  letter-spacing: 5%;
+  letter-spacing: 0.05rem;
   color: var(--color-black);
   margin-bottom: 0;
 }
@@ -1466,14 +1472,14 @@ body {
   line-height: 20px;
   font-weight: 900;
   color: var(--color-black);
-  letter-spacing: 5%;
+  letter-spacing: 0.05rem;
 }
 .hotels__name {
   font-size: 20px;
   line-height: 40px;
   font-weight: 900;
   color: var(--black);
-  letter-spacing: 3%;
+  letter-spacing: 0.03rem;
   text-transform: uppercase;
   transition: all 0.3 ease-in-out;
 }
@@ -1484,7 +1490,7 @@ body {
   font-size: 16px;
   line-height: 26px;
   font-weight: 400;
-  letter-spacing: 4%;
+  letter-spacing: 0.04rem;
   margin-bottom: 40px;
 }
 .hotels__content--bottom {

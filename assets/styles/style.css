@@ -580,21 +580,20 @@ body {
   padding: 0;
   margin: 30px 40px;
   list-style: none;
-  position: relative;
 }
 
 .menu-item {
   height: max-content;
-  max-width: 30%;
+  width: 100%;
 }
 
 .menu-item-has-children > .sub-menu__container {
   /* display: none; */
   position: absolute;
-  width: 70%;
+  width: 75%;
   height: 100%;
   top: 0;
-  right: 0;
+  right: 40px;
   opacity: 0;
   z-index: -1;
   visibility: hidden;
@@ -606,26 +605,29 @@ body {
   z-index: 2;
   visibility: visible;
 }
-/* .sub-menu__image {
+.box-img {
   aspect-ratio: 894 / 432;
   width: 100%;
   height: auto;
-} */
+  padding-top: 30px;
+  padding-right: 40px;
+}
+.box-img img,
 .menu-item-has-children > .sub-menu__container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.menu-item-has-children .sub-menu__container {
+.sub-menu__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
-.menu-item-has-children .sub-menu__container .sub-menu__image {
-  width: 100%;
-  aspect-ratio: 427 / 280;
-}
-
+/* .menu-item-has-children .sub-menu__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+} */
 /* end css header */
 
 /* start css hero banner */

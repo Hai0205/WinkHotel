@@ -1,6 +1,7 @@
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
   scrollHeader();
+  subMenuHeader();
   swiperBanner();
   scrollRoom();
   scrollFeedBack();
@@ -57,6 +58,14 @@ function scrollHeader() {
 
   // Re-initialize ScrollTrigger when page is refreshed
   $(window).on("load", initializeScrollTrigger);
+}
+function subMenuHeader() {
+  let menuItem = $(".menu-item");
+  if (menuItem.hasClass(".menu-item-has-children")) {
+    $(".box-img").addClass("show");
+  } else {
+    $(".box-img").removeClass("show");
+  }
 }
 function swiperBanner() {
   var interleaveOffset = 0.9;
@@ -186,7 +195,7 @@ function selectLanguage() {
     } else {
       $(this).removeClass("not-active").addClass("active");
     }
-    // $(".header__sub-menu").toggleClass("active");
+    $(".header__sub-menu").toggleClass("active");
   });
 }
 
@@ -275,10 +284,10 @@ function scrollWinkGuide() {
     duration: 1,
     scrollTrigger: {
       trigger: ".banner-guides__container",
-      start: "top 8%",
+      start: "top 50%",
       end: "bottom bottom",
       // pin: true,
-      // markers: true,
+      markers: true,
       scrub: 1,
       toggleActions: "play reverse play reverse",
     },

@@ -141,16 +141,67 @@ function scrollFeedBack() {
   // Re-initialize ScrollTrigger when page is refreshed
   $(window).on("load", initializeScrollTrigger);
 }
+// function scrollRoom() {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   const heightSlider = $(".wink-room__slide").height();
+//   const targetY = heightSlider + 450;
+
+//   const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".wink-room",
+//       start: "top 80%",
+//       end: "bottom 80%",
+//       scrub: 1,
+//       toggleActions: "play reverse play reverse",
+//       // markers: true,
+//     },
+//   });
+
+//   // First animation: height from 0 to 365 with scrub
+//   tl.to(".before-elements", {
+//     height: 365,
+//     duration: 1,
+//   });
+
+//   // Second animation with scrub
+//   tl.to(".before-elements", {
+//     width: 32,
+//     height: 27,
+//     left: -24,
+//     x: 0,
+//     y: targetY,
+//     duration: 1,
+//   });
+// }
 function scrollRoom() {
   gsap.registerPlugin(ScrollTrigger);
 
   const heightSlider = $(".wink-room__slide").height();
   const targetY = heightSlider + 450;
 
-  const tl = gsap.timeline({
+  // First animation: height from 0 to 365
+  const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".wink-room",
       start: "top 80%",
+      end: "top 70%", // Complete quickly
+      scrub: 1,
+      toggleActions: "play reverse play reverse",
+      // markers: true,
+    },
+  });
+
+  tl1.to(".before-elements", {
+    height: 365,
+    duration: 1, // Quick but noticeable
+  });
+
+  // Second animation with scrub
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".wink-room",
+      start: "top 70%", // Start after the first animation completes
       end: "bottom 80%",
       scrub: 1,
       toggleActions: "play reverse play reverse",
@@ -158,14 +209,7 @@ function scrollRoom() {
     },
   });
 
-  // First animation: height from 0 to 365 with scrub
-  tl.to(".before-elements", {
-    height: 365,
-    duration: 1,
-  });
-
-  // Second animation with scrub
-  tl.to(".before-elements", {
+  tl2.to(".before-elements", {
     width: 32,
     height: 27,
     left: -24,
@@ -288,7 +332,7 @@ function scrollWinkGuide() {
       end: "bottom bottom",
       // pin: true,
       // markers: true,
-      scrub: 1,
+      // scrub: 1,
       toggleActions: "play reverse play reverse",
     },
   });

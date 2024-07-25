@@ -358,23 +358,22 @@ function swapImages() {
 }
 
 function customSelectContent() {
-  document.onclick = function (e) {
-    const dropdownMenu = document.querySelector(".dropdown-custom__menu");
-    const dropdownItems = document.querySelectorAll(".dropdown-custom__item");
-    const btnDropdown = document.querySelector(".dropdown-custom__btn h5");
+  $(document).on("click", function (e) {
+    const dropdownMenu = $(".dropdown-custom__menu");
+    const dropdownItems = $(".dropdown-custom__item");
+    const btnDropdown = $(".dropdown-custom__btn h5");
+
     if (
-      e.target.parentElement.classList.contains("dropdown-custom__btn") ||
-      e.target.parentElement.classList.contains("dropdown-custom")
+      $(e.target).closest(".dropdown-custom__btn").length ||
+      $(e.target).closest(".dropdown-custom").length
     ) {
-      dropdownMenu.classList.toggle("dropdown--active");
+      dropdownMenu.toggleClass("dropdown--active");
     } else {
-      dropdownMenu.classList.remove("dropdown--active");
+      dropdownMenu.removeClass("dropdown--active");
     }
 
-    dropdownItems.forEach((item) => {
-      item.onclick = function (e) {
-        btnDropdown.textContent = e.target.textContent;
-      };
+    dropdownItems.on("click", function () {
+      btnDropdown.text($(this).text());
     });
-  };
+  });
 }

@@ -66,6 +66,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary);
 } */
+
 /* end custom scroll bar */
 /* css classname */
 .h1-bold {
@@ -556,7 +557,8 @@ body {
   height: 100vh;
   width: 100%;
   background-color: var(--color-white);
-  clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  /* clip-path: polygon(100% 100%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 100%); */
+  clip-path: circle(0 at 100% 0);
   transition: all 1s ease 0.6s;
 }
 
@@ -569,7 +571,8 @@ body {
 }
 
 .header__sub-menu.active {
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%); */
+  clip-path: circle(141.2% at 100% 0);
 }
 
 .header__sub-menu * {
@@ -632,9 +635,7 @@ body {
 .menu-container li:first-child a {
   padding-top: 0;
 }
-.menu-container li:last-child a {
-  padding-bottom: 0;
-}
+
 .menu-item-has-children > .sub-menu__container {
   /* display: none; */
   position: absolute;

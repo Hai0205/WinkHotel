@@ -235,7 +235,31 @@ function menubar() {
       $(this).removeClass("not-active").addClass("active");
     }
     $(".header__sub-menu").toggleClass("active");
+    var scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    console.log(scrollBarWidth);
+
+    if ($("body").hasClass("overflow-hidden")) {
+      $("body").removeClass("overflow-hidden");
+      $("body").css("padding-right", "");
+    } else {
+      $("body").addClass("overflow-hidden");
+      $("body").css("padding-right", scrollBarWidth + "px");
+    }
   });
+}
+function toggleScrollLock() {
+  const body = $("body");
+
+  if (body.hasClass("no-scroll")) {
+    body.removeClass("no-scroll");
+    body.css("padding-right", "");
+  } else {
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    body.addClass("no-scroll");
+    body.css("padding-right", scrollBarWidth + "px");
+  }
 }
 
 function bookingForm() {

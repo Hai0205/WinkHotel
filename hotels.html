@@ -42,17 +42,13 @@
             </a>
           </div>
           <div class="header__group-btn">
-            <div class="header__btn-language">
-              <div class="language__head">
-                <div class="value-select color-white b2-font">ENGLISH</div>
+            <div class="header__btn-language dropdown-custom">
+              <div class="language__head dropdown-custom__btn">
+                <div class="value-select color-white b2-font dropdown-custom__text">ENGLISH</div>
                 <img src="./assets/images/icon-arrow-down.svg" alt="" />
               </div>
-              <div class="language__body">
-                <ul>
-                  <li>
-                    <a href="" class="color-white b2-font">VIETNAM</a>
-                  </li>
-                </ul>
+              <div class="language__body dropdown-custom__menu">
+                <div class="dropdown-custom__item language__item color-white b2-font">VIETNAM</div>
               </div>
             </div>
             <div class="header__btn-sign-in color-white b2-font">SIGN IN</div>
@@ -202,7 +198,7 @@
                 <div class="hotels__filter--location">
                   <div class="dropdown-custom">
                     <div class="head dropdown-custom__btn">
-                      <h5>LOCATION ALL</h5>
+                      <h5 class="dropdown-custom__text">LOCATION ALL</h5>
                       <img
                         src="./assets/images/icon-arrow-down-black.svg"
                         alt=""
@@ -216,12 +212,19 @@
                   </div>
                 </div>
                 <div class="hotels__filter--opening">
-                  <div class="head">
-                    <h5>OPENING</h5>
-                    <img
-                      src="./assets/images/icon-arrow-down-black.svg"
-                      alt=""
-                    />
+                  <div class="dropdown-custom">
+                    <div class="head hotels-filter-location__dropdown-btn dropdown-custom__btn">
+                      <h5 class="dropdown-custom__text">OPENING</h5>
+                      <img
+                        src="./assets/images/icon-arrow-down-black.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="dropdown-custom__menu">
+                      <div class="dropdown-custom__item">5AM - 5PM</div>
+                      <div class="dropdown-custom__item">6AM - 7AM</div>
+                      <div class="dropdown-custom__item">8AM - 9AM</div>
+                    </div>
                   </div>
                 </div>
               </div>

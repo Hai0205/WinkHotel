@@ -1,6 +1,7 @@
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
   scrollHeader();
+  subMenuHeader();
   swiperBanner();
   scrollRoom();
   scrollFeedBack();
@@ -57,6 +58,14 @@ function scrollHeader() {
 
   // Re-initialize ScrollTrigger when page is refreshed
   $(window).on("load", initializeScrollTrigger);
+}
+function subMenuHeader() {
+  let menuItem = $(".menu-item");
+  if (menuItem.hasClass(".menu-item-has-children")) {
+    $(".box-img").addClass("show");
+  } else {
+    $(".box-img").removeClass("show");
+  }
 }
 function swiperBanner() {
   var interleaveOffset = 0.9;
@@ -132,16 +141,67 @@ function scrollFeedBack() {
   // Re-initialize ScrollTrigger when page is refreshed
   $(window).on("load", initializeScrollTrigger);
 }
+// function scrollRoom() {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   const heightSlider = $(".wink-room__slide").height();
+//   const targetY = heightSlider + 450;
+
+//   const tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: ".wink-room",
+//       start: "top 80%",
+//       end: "bottom 80%",
+//       scrub: 1,
+//       toggleActions: "play reverse play reverse",
+//       // markers: true,
+//     },
+//   });
+
+//   // First animation: height from 0 to 365 with scrub
+//   tl.to(".before-elements", {
+//     height: 365,
+//     duration: 1,
+//   });
+
+//   // Second animation with scrub
+//   tl.to(".before-elements", {
+//     width: 32,
+//     height: 27,
+//     left: -24,
+//     x: 0,
+//     y: targetY,
+//     duration: 1,
+//   });
+// }
 function scrollRoom() {
   gsap.registerPlugin(ScrollTrigger);
 
   const heightSlider = $(".wink-room__slide").height();
   const targetY = heightSlider + 450;
 
-  const tl = gsap.timeline({
+  // First animation: height from 0 to 365
+  const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".wink-room",
       start: "top 80%",
+      end: "top 70%", // Complete quickly
+      scrub: 1,
+      toggleActions: "play reverse play reverse",
+      // markers: true,
+    },
+  });
+
+  tl1.to(".before-elements", {
+    height: 365,
+    duration: 1, // Quick but noticeable
+  });
+
+  // Second animation with scrub
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".wink-room",
+      start: "top 70%", // Start after the first animation completes
       end: "bottom 80%",
       scrub: 1,
       toggleActions: "play reverse play reverse",
@@ -149,14 +209,7 @@ function scrollRoom() {
     },
   });
 
-  // First animation: height from 0 to 365 with scrub
-  tl.to(".before-elements", {
-    height: 365,
-    duration: 1,
-  });
-
-  // Second animation with scrub
-  tl.to(".before-elements", {
+  tl2.to(".before-elements", {
     width: 32,
     height: 27,
     left: -24,
@@ -186,7 +239,7 @@ function selectLanguage() {
     } else {
       $(this).removeClass("not-active").addClass("active");
     }
-    // $(".header__sub-menu").toggleClass("active");
+    $(".header__sub-menu").toggleClass("active");
   });
 }
 
@@ -275,11 +328,11 @@ function scrollWinkGuide() {
     duration: 1,
     scrollTrigger: {
       trigger: ".banner-guides__container",
-      start: "top 8%",
+      start: "top 50%",
       end: "bottom bottom",
       // pin: true,
       // markers: true,
-      scrub: 1,
+      // scrub: 1,
       toggleActions: "play reverse play reverse",
     },
   });
@@ -358,23 +411,22 @@ function swapImages() {
 }
 
 function customSelectContent() {
-  document.onclick = function (e) {
-    const dropdownMenu = document.querySelector(".dropdown-custom__menu");
-    const dropdownItems = document.querySelectorAll(".dropdown-custom__item");
-    const btnDropdown = document.querySelector(".dropdown-custom__btn h5");
+  $(document).on("click", function (e) {
+    const dropdownMenu = $(".dropdown-custom__menu");
+    const dropdownItems = $(".dropdown-custom__item");
+    const btnDropdown = $(".dropdown-custom__btn h5");
+
     if (
-      e.target.parentElement.classList.contains("dropdown-custom__btn") ||
-      e.target.parentElement.classList.contains("dropdown-custom")
+      $(e.target).closest(".dropdown-custom__btn").length ||
+      $(e.target).closest(".dropdown-custom").length
     ) {
-      dropdownMenu.classList.toggle("dropdown--active");
+      dropdownMenu.toggleClass("dropdown--active");
     } else {
-      dropdownMenu.classList.remove("dropdown--active");
+      dropdownMenu.removeClass("dropdown--active");
     }
 
-    dropdownItems.forEach((item) => {
-      item.onclick = function (e) {
-        btnDropdown.textContent = e.target.textContent;
-      };
+    dropdownItems.on("click", function () {
+      btnDropdown.text($(this).text());
     });
-  };
+  });
 }

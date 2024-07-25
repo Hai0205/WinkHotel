@@ -9,7 +9,7 @@ $(document).ready(function () {
   bookingForm();
   swiperRoom();
   scrollWinkGuide();
-  customSelectContent();
+  toggleDropdown();
   $(".comming-soon__container").on("click", swapImages);
   animationTextReveal();
   ScrollTrigger.refresh();
@@ -416,23 +416,49 @@ function swapImages() {
   textBack2.id = "text-front2";
 }
 
-function customSelectContent() {
-  $(document).on("click", function (e) {
-    const dropdownMenu = $(".dropdown-custom__menu");
-    const dropdownItems = $(".dropdown-custom__item");
-    const btnDropdown = $(".dropdown-custom__btn h5");
+function toggleDropdown() {
+  const $dropdowns = $(".dropdown-custom");
 
-    if (
-      $(e.target).closest(".dropdown-custom__btn").length ||
-      $(e.target).closest(".dropdown-custom").length
-    ) {
-      dropdownMenu.toggleClass("dropdown--active");
-    } else {
-      dropdownMenu.removeClass("dropdown--active");
-    }
+  $dropdowns.each(function () {
+    const $dropdown = $(this);
+    const $btnDropdown = $dropdown.find(".dropdown-custom__btn");
+    const $dropdownMenu = $dropdown.find(".dropdown-custom__menu");
+    const $dropdownItems = $dropdown.find(".dropdown-custom__item");
+    const $textDropdown = $dropdown.find(".dropdown-custom__text");
 
-    dropdownItems.on("click", function () {
-      btnDropdown.text($(this).text());
+    // Xử lý sự kiện click cho nút dropdown
+    $btnDropdown.on("click", function (e) {
+      closeAllDropdowns($dropdown);
+      $dropdownMenu.toggleClass("dropdown--active");
+      e.stopPropagation(); // Ngăn chặn sự kiện click truyền ra ngoài
     });
+
+    // Xử lý sự kiện click cho tài liệu
+    $(document).on("click", function (e) {
+      if (!$(e.target).closest(".dropdown-custom").length) {
+        closeAllDropdowns();
+      }
+    });
+
+    // Xử lý sự kiện click cho các mục dropdown
+    $dropdownItems.on("click", function (e) {
+      const tmp = $textDropdown.text();
+      $textDropdown.text($(this).text());
+      if ($(e.target).hasClass("language__item")) {
+        $(this).text(tmp);
+      }
+      closeAllDropdowns();
+    });
+
+    // Hàm đóng tất cả dropdowns, ngoại trừ dropdown được truyền vào
+    function closeAllDropdowns(exception) {
+      $dropdowns.each(function () {
+        const $this = $(this);
+        // Kiểm tra xem phần tử hiện tại có phải là phần tử exception hay không
+        if (!exception || !exception.is($this)) {
+          $this.find(".dropdown-custom__menu").removeClass("dropdown--active");
+        }
+      });
+    }
   });
 }

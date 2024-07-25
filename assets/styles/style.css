@@ -430,7 +430,7 @@ body {
   position: relative;
 }
 
-.bar span+span {
+.bar span + span {
   margin-top: 4px;
 }
 
@@ -588,7 +588,7 @@ body {
   max-width: 30%;
 }
 
-.menu-item-has-children>.sub-menu__container {
+.menu-item-has-children > .sub-menu__container {
   /* display: none; */
   position: absolute;
   width: 70%;
@@ -601,20 +601,29 @@ body {
   transition: all 0.4s;
 }
 
-.menu-item-has-children:hover>.sub-menu__container {
+.menu-item-has-children:hover > .sub-menu__container {
   opacity: 1;
   z-index: 2;
   visibility: visible;
 }
-.sub-menu__image{
+/* .sub-menu__image {
   aspect-ratio: 894 / 432;
   width: 100%;
   height: auto;
-}
-.menu-item-has-children>.sub-menu__container img {
+} */
+.menu-item-has-children > .sub-menu__container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.menu-item-has-children .sub-menu__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.menu-item-has-children .sub-menu__container .sub-menu__image {
+  width: 100%;
+  aspect-ratio: 427 / 280;
 }
 
 /* end css header */
@@ -657,9 +666,11 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-      rgba(0, 0, 0, 0) 55.37%,
-      rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 55.37%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
 }
 
 .banner-hero__image img {
@@ -825,7 +836,7 @@ body {
   font-weight: 900;
 }
 
-.lightpick__month-title>.lightpick__select-months,
+.lightpick__month-title > .lightpick__select-months,
 .lightpick__day-of-the-week {
   font-weight: 900;
 }
@@ -1031,7 +1042,8 @@ body {
   overflow: hidden;
 }
 
-.deals__container .box .deals__btn {}
+.deals__container .box .deals__btn {
+}
 
 .deals__container .box__content {
   padding: 24px 32px 50px;
@@ -1047,7 +1059,8 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.deals__container .box__title {}
+.deals__container .box__title {
+}
 
 .deals__container .box img {
   width: 100%;

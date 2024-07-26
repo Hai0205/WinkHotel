@@ -8,7 +8,8 @@ $(document).ready(function () {
   bookingForm();
   swiperRoom();
   scrollWinkGuide();
-  $(".comming-soon__container").on("click", swapImages);
+  $(".comming-soon__btn-prev").on("click", swapImages);
+  $(".comming-soon__btn-next").on("click", swapImages);
   animationTextReveal();
   ScrollTrigger.refresh();
   AOS.init({
@@ -317,43 +318,57 @@ function animationTextReveal() {
   });
 }
 
-function fadeOut(element, duration, callback) {
-  element.style.transition = `opacity ${duration}ms ease-in-out`;
-  element.style.opacity = 0.8;
-
-  setTimeout(function () {
-    if (callback) callback();
-  }, duration);
-}
-
-function fadeIn(element, duration) {
-  element.style.transition = `opacity ${duration}ms ease-in-out`;
-  element.style.opacity = 1;
-}
-
+let isVisible = true
 function swapImages() {
   const imageFront1 = document.getElementById("image-front1");
-  const imageFront2 = document.getElementById("image-front2");
   const imageBack1 = document.getElementById("image-back1");
-  const imageBack2 = document.getElementById("image-back2");
   const textFront1 = document.getElementById("text-front1");
   const textBack1 = document.getElementById("text-back1");
   const textFront2 = document.getElementById("text-front2");
   const textBack2 = document.getElementById("text-back2");
-
-  imageFront1.style.opacity = 1;
-  imageBack1.style.opacity = 1;
-  imageFront2.style.opacity = 0;
-  imageBack2.style.opacity = 0;
-
-  imageFront1.id = "image-back2";
-  imageBack1.id = "image-front2";
-  imageFront2.id = "image-back1";
-  imageBack2.id = "image-front1";
 
   textFront1.id = "text-back1";
   textBack1.id = "text-front1";
 
   textFront2.id = "text-back2";
   textBack2.id = "text-front2";
+
+  if (!isVisible) {
+    gsap.to("#image-front1", {
+      xPercent: 0,
+      yPercent: 0,
+      opacity: 1,
+      ease: "power3.out",
+    })
+  
+    imageBack1.style.zIndex = "-1"
+    imageFront1.style.zIndex = "1"
+  
+    gsap.to("#image-back1", {
+      xPercent: 0,
+      yPercent: 0,
+      opacity: 1,
+      ease: "power3.out"
+    })
+  } 
+  else {
+    gsap.to("#image-front1", {
+      xPercent: 7,
+      yPercent: 16,
+      opacity: 1,
+      ease: "power3.out"
+    })
+  
+    imageFront1.style.zIndex = "-1"
+    imageBack1.style.zIndex = "1"
+  
+    gsap.to("#image-back1", {
+      xPercent: -7,
+      yPercent: -16,
+      opacity: 1,
+      ease: "power3.out"
+    })
+  }
+
+  isVisible = !isVisible
 }

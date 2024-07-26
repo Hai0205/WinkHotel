@@ -85,6 +85,12 @@
     border: solid 1px;
   }
 
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: black;
+    color: white;
+  }
+
   .swiper-button-prev {
     left: calc(60% - 7rem);
   }
@@ -129,6 +135,18 @@
     justify-content: center;
     border: 1px solid;
     cursor: pointer;
+  }
+
+  .comming-soon__btn-prev:hover,
+  .comming-soon__btn-next:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .comming-soon__btn-prev:active,
+  .comming-soon__btn-next:active {
+    background-color: black;
+    color: white;
   }
 
   /* wink guides */

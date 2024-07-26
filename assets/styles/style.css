@@ -932,6 +932,15 @@ body {
   flex-direction: column;
   gap: 32px 0;
 }
+
+.experience__box a {
+  text-decoration: none;
+}
+
+.experience__box a:hover {
+  color: var(--color-black);
+
+}
 .experience__item:nth-child(even) .experience__box {
   flex-direction: column-reverse;
 }
@@ -962,6 +971,7 @@ body {
 .experience__desc p {
   margin-bottom: 0;
 }
+
 /* end css experience */
 /* start css featured image */
 .featured-image__container {
@@ -1294,7 +1304,6 @@ body {
   padding: 0 155px;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   flex-wrap: wrap;
 }
 .comming-soon__left {
@@ -1303,15 +1312,11 @@ body {
 
 .comming-soon__left p {
   text-transform: uppercase;
-  /* font-size: 0.8rem;
-  font-weight: 900; */
   margin: 20px 0;
 }
 
 .comming-soon__left h2 {
   position: relative;
-  /* font-weight: 900;
-  color: var(--color-primary); */
   margin-bottom: 30px;
   display: block;
 }
@@ -1381,8 +1386,11 @@ body {
   transition: opacity 1s ease;
 }
 .comming-soon__btn {
-  display: none;
+  margin-top: 20px;
+  font-size: 20px;
 }
+
+
 /* end css comming soon */
 
 /* start css page hotels */

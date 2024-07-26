@@ -203,7 +203,7 @@ function menubar() {
   // Tạo timeline cho animation mở và đóng
   var menuTl = gsap.timeline({ paused: true });
   menuTl.from(
-    ".menu-container li ",
+    ".menu-container li, .sub-menu__bottom ",
     0.5,
     {
       autoAlpha: 0,

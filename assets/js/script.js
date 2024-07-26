@@ -163,12 +163,14 @@ function scrollRoom() {
       trigger: ".wink-room",
       start: "-10px 60%",
       end: "-10px 60%",
+      // markers: true,
     },
   });
 
   tl1.to(".before-elements", {
     height: 365,
     duration: 1, // Quick but noticeable
+    ease: "none",
   });
 
   // Second animation with scrub
@@ -202,16 +204,25 @@ function menubar() {
   });
   // Tạo timeline cho animation mở và đóng
   var menuTl = gsap.timeline({ paused: true });
-  menuTl.from(
-    ".menu-container li, .sub-menu__bottom ",
-    0.5,
-    {
-      autoAlpha: 0,
-      stagger: 0.1,
-      marginLeft: 50,
-    },
-    0.7
-  );
+  menuTl
+    .from(
+      ".menu-container li, .sub-menu__bottom",
+      {
+        duration: 0.5,
+        autoAlpha: 0,
+        stagger: 0.1,
+        marginLeft: 50,
+      },
+      0.7
+    )
+    .from(
+      ".box-img",
+      {
+        duration: 1,
+        autoAlpha: 0,
+      },
+      1.2
+    );
 
   bar.on("click", function () {
     if ($(this).hasClass("active")) {
@@ -240,10 +251,10 @@ function menubar() {
   });
 
   // check hover submenu
-  $(".menu-container .menu-item").hover(function () {
-    $(".menu-container .menu-item").removeClass("active");
-    $(this).addClass("active");
-  });
+  // $(".menu-container .menu-item").hover(function () {
+  //   $(".menu-container .menu-item").removeClass("active");
+  //   $(this).addClass("active");
+  // });
 }
 function toggleScrollLock() {
   const body = $("body");

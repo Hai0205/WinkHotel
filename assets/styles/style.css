@@ -1281,6 +1281,7 @@ body {
   width: 100%;
   aspect-ratio: 508 / 287;
   overflow: hidden;
+  display: block;
 }
 
 .experience__item .experience__box .experience__image img {

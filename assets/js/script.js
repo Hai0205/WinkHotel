@@ -5,11 +5,11 @@ $(document).ready(function () {
   swiperBanner();
   scrollRoom();
   scrollFeedBack();
-  selectLanguage();
+  menubar();
   bookingForm();
   swiperRoom();
   scrollWinkGuide();
-  customSelectContent();
+  toggleDropdown();
   $(".comming-soon__container").on("click", swapImages);
   animationTextReveal();
   ScrollTrigger.refresh();
@@ -60,13 +60,22 @@ function scrollHeader() {
   $(window).on("load", initializeScrollTrigger);
 }
 function subMenuHeader() {
-  let menuItem = $(".menu-item");
-  if (menuItem.hasClass(".menu-item-has-children")) {
-    $(".box-img").addClass("show");
-  } else {
-    $(".box-img").removeClass("show");
-  }
+  console.log("aa");
+  let menuItem = $(".menu-item ");
+
+  menuItem.on("mouseenter", function () {
+    if ($(this).hasClass("menu-item-has-children")) {
+      $(".box-img").addClass("hidden");
+    }
+  });
+
+  menuItem.on("mouseleave", function () {
+    if ($(this).hasClass("menu-item-has-children")) {
+      $(".box-img").removeClass("hidden");
+    }
+  });
 }
+
 function swiperBanner() {
   var interleaveOffset = 0.9;
 
@@ -141,39 +150,7 @@ function scrollFeedBack() {
   // Re-initialize ScrollTrigger when page is refreshed
   $(window).on("load", initializeScrollTrigger);
 }
-// function scrollRoom() {
-//   gsap.registerPlugin(ScrollTrigger);
 
-//   const heightSlider = $(".wink-room__slide").height();
-//   const targetY = heightSlider + 450;
-
-//   const tl = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: ".wink-room",
-//       start: "top 80%",
-//       end: "bottom 80%",
-//       scrub: 1,
-//       toggleActions: "play reverse play reverse",
-//       // markers: true,
-//     },
-//   });
-
-//   // First animation: height from 0 to 365 with scrub
-//   tl.to(".before-elements", {
-//     height: 365,
-//     duration: 1,
-//   });
-
-//   // Second animation with scrub
-//   tl.to(".before-elements", {
-//     width: 32,
-//     height: 27,
-//     left: -24,
-//     x: 0,
-//     y: targetY,
-//     duration: 1,
-//   });
-// }
 function scrollRoom() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -185,7 +162,7 @@ function scrollRoom() {
     scrollTrigger: {
       trigger: ".wink-room",
       start: "-10px 60%",
-      end: "-10px 60%", 
+      end: "-10px 60%",
     },
   });
 
@@ -216,28 +193,64 @@ function scrollRoom() {
   });
 }
 
-function selectLanguage() {
-  $(".language__head").on("click", function (event) {
-    event.stopPropagation();
-    $(".language__body").toggleClass("show");
-  });
-  $(document).on("click", function () {
-    $(".language__body").removeClass("show");
-  });
-
-  $(".language__body").on("click", function (event) {
-    event.stopPropagation();
-  });
+function menubar() {
   var bar = $(".bar");
+
+  // Tạo timeline cho animation mở và đóng
+  var menuTl = gsap.timeline({ paused: true });
+  menuTl
+    .to(".menu-container", 1.2, {
+      x: 0,
+    })
+    .from(
+      ".menu-container li",
+      1,
+      {
+        autoAlpha: 0,
+        y: 50,
+        stagger: 0.2,
+      },
+      1.2
+    );
 
   bar.on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active").addClass("not-active");
+      menuTl.reverse();
     } else {
       $(this).removeClass("not-active").addClass("active");
+      menuTl.play();
     }
     $(".header__sub-menu").toggleClass("active");
+    // check when menu active
+    const $body = $("body");
+    const $header = $("header");
+
+    if ($body.hasClass("overflow-hidden")) {
+      $body.removeClass("overflow-hidden").css("width", "");
+      $header.css("width", "");
+    } else {
+      const scrollBarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
+      $body
+        .addClass("overflow-hidden")
+        .css("width", `calc(100% - ${scrollBarWidth}px)`);
+      $header.css("width", `calc(100% - ${scrollBarWidth}px)`);
+    }
   });
+}
+function toggleScrollLock() {
+  const body = $("body");
+
+  if (body.hasClass("no-scroll")) {
+    body.removeClass("no-scroll");
+    body.css("padding-right", "");
+  } else {
+    const scrollBarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    body.addClass("no-scroll");
+    body.css("padding-right", scrollBarWidth + "px");
+  }
 }
 
 function bookingForm() {
@@ -329,7 +342,7 @@ function scrollWinkGuide() {
       end: "bottom bottom",
       // pin: true,
       // markers: true,
-      // scrub: 1,
+      scrub: 1,
       toggleActions: "play reverse play reverse",
     },
   });
@@ -407,23 +420,48 @@ function swapImages() {
   textBack2.id = "text-front2";
 }
 
-function customSelectContent() {
-  $(document).on("click", function (e) {
-    const dropdownMenu = $(".dropdown-custom__menu");
-    const dropdownItems = $(".dropdown-custom__item");
-    const btnDropdown = $(".dropdown-custom__btn h5");
+function toggleDropdown() {
+  const $dropdowns = $(".dropdown-custom");
 
-    if (
-      $(e.target).closest(".dropdown-custom__btn").length ||
-      $(e.target).closest(".dropdown-custom").length
-    ) {
-      dropdownMenu.toggleClass("dropdown--active");
-    } else {
-      dropdownMenu.removeClass("dropdown--active");
-    }
+  $dropdowns.each(function () {
+    const $dropdown = $(this);
+    const $btnDropdown = $dropdown.find(".dropdown-custom__btn");
+    const $dropdownMenu = $dropdown.find(".dropdown-custom__menu");
+    const $dropdownItems = $dropdown.find(".dropdown-custom__item");
+    const $textDropdown = $dropdown.find(".dropdown-custom__text");
 
-    dropdownItems.on("click", function () {
-      btnDropdown.text($(this).text());
+    // Xử lý sự kiện click cho nút dropdown
+    $btnDropdown.on("click", function (e) {
+      e.stopPropagation();
+      closeAllDropdowns($dropdown);
+      $dropdownMenu.toggleClass("dropdown--active");
     });
+
+    // Xử lý sự kiện click cho tài liệu
+    $(document).on("click", function (e) {
+      if (!$(e.target).closest(".dropdown-custom").length) {
+        closeAllDropdowns();
+      }
+    });
+
+    $dropdownItems.on("click", function (e) {
+      e.stopPropagation();
+      const $menu = $dropdown.find(".dropdown-custom__menu");
+      const tmp = $textDropdown.text();
+      $textDropdown.text($(this).text());
+      if ($(this).hasClass("language__item")) {
+        $(this).text(tmp);
+      }
+      closeAllDropdowns();
+    });
+
+    function closeAllDropdowns(exception) {
+      $dropdowns.each(function () {
+        const $this = $(this);
+        if (!exception || !exception.is($this)) {
+          $this.find(".dropdown-custom__menu").removeClass("dropdown--active");
+        }
+      });
+    }
   });
 }

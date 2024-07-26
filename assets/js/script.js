@@ -20,13 +20,13 @@ $(document).ready(function () {
 });
 
 function scrollHeader() {
-  let height = $(".header__top-bar").height();
+  let height = $(".header__top-bar").height() * -1;
   let navTop;
 
   function initializeScrollTrigger() {
     navTop = gsap
       .from("header", {
-        y: "-" + height,
+        y: height,
         paused: true,
         duration: 0.5,
         ease: "power1.out",
@@ -201,25 +201,25 @@ function menubar() {
     nullTargetWarn: false,
   });
   // Tạo timeline cho animation mở và đóng
-  // var menuTl = gsap.timeline({ paused: true });
-  // menuTl.from(
-  //   ".menu-container li ",
-  //   1,
-  //   {
-  //     autoAlpha: 0,
-  //     stagger: 0.2,
-  //     x: 50,
-  //   },
-  //   1.2
-  // );
+  var menuTl = gsap.timeline({ paused: true });
+  menuTl.from(
+    ".menu-container li ",
+    0.5,
+    {
+      autoAlpha: 0,
+      stagger: 0.1,
+      marginLeft: 50,
+    },
+    0.7
+  );
 
   bar.on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active").addClass("not-active");
-      // menuTl.reverse();
+      menuTl.reverse();
     } else {
       $(this).removeClass("not-active").addClass("active");
-      // menuTl.play();
+      menuTl.play();
     }
     $(".header__sub-menu").toggleClass("active");
     // check when menu active

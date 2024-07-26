@@ -238,6 +238,12 @@ function menubar() {
       $header.css("width", `calc(100% - ${scrollBarWidth}px)`);
     }
   });
+
+  // check hover submenu
+  $(".menu-container .menu-item").hover(function () {
+    $(".menu-container .menu-item").removeClass("active");
+    $(this).addClass("active");
+  });
 }
 function toggleScrollLock() {
   const body = $("body");

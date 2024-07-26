@@ -196,11 +196,30 @@ function scrollRoom() {
 function menubar() {
   var bar = $(".bar");
 
+  // Tạo timeline cho animation mở và đóng
+  var menuTl = gsap.timeline({ paused: true });
+  menuTl
+    .to(".menu-container", 1.2, {
+      x: 0,
+    })
+    .from(
+      ".menu-container li",
+      1,
+      {
+        autoAlpha: 0,
+        y: 50,
+        stagger: 0.2,
+      },
+      1.2
+    );
+
   bar.on("click", function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active").addClass("not-active");
+      menuTl.reverse();
     } else {
       $(this).removeClass("not-active").addClass("active");
+      menuTl.play();
     }
     $(".header__sub-menu").toggleClass("active");
     // check when menu active

@@ -163,6 +163,7 @@ function scrollRoom() {
       trigger: ".wink-room",
       start: "-10px 60%",
       end: "-10px 60%",
+      scrub: 1,
       // markers: true,
     },
   });

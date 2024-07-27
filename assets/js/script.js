@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  AOS.init({
+    once: true,
+    duration: 1000,
+  });
   gsap.registerPlugin(ScrollTrigger);
   scrollHeader();
   subMenuHeader();
@@ -13,10 +17,6 @@ $(document).ready(function () {
   $(".comming-soon__container").on("click", swapImages);
   animationTextReveal();
   ScrollTrigger.refresh();
-  AOS.init({
-    once: true,
-    duration: 1000,
-  });
 });
 
 function scrollHeader() {
@@ -194,6 +194,7 @@ function scrollRoom() {
     y: targetY,
     duration: 1,
   });
+  ScrollTrigger.refresh();
 }
 
 function menubar() {

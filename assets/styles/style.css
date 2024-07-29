@@ -1685,6 +1685,8 @@ body {
   text-transform: uppercase;
 }
 
+/* end css wink guide */
+/* start css comming soon */
 .comming-soon__container {
   display: flex;
   padding: 0 155px;
@@ -1693,9 +1695,6 @@ body {
   cursor: pointer;
   flex-wrap: wrap;
 }
-
-/* end css wink guide */
-/* start css comming soon */
 .comming-soon__container {
   display: flex;
   padding: 0 155px;
@@ -1726,11 +1725,11 @@ body {
   position: relative;
 }
 
-.text__container {
+.comming-soon .text__container {
   margin-bottom: 30px;
 }
 
-.text__wrapper {
+.comming-soon .text__wrapper {
   position: relative;
   display: flex;
 }
@@ -1743,7 +1742,7 @@ body {
   position: absolute;
 }
 
-.img__container:nth-child(2) {
+.comming-soon .img__container:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
@@ -1765,8 +1764,8 @@ body {
   gap: 15px;
 }
 
-.comming-soon__btn-prev,
-.comming-soon__btn-next {
+.comming-soon__btn--prev,
+.comming-soon__btn--next {
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -1778,28 +1777,28 @@ body {
   align-items: center;
 }
 
-.comming-soon__btn-prev:hover,
-.comming-soon__btn-next:hover {
+.comming-soon__btn--prev:hover,
+.comming-soon__btn--next:hover {
   background-color: black;
 }
-.comming-soon__btn-prev:hover svg path,
-.comming-soon__btn-next:hover svg path {
+.comming-soon__btn--prev:hover svg path,
+.comming-soon__btn--next:hover svg path {
   fill: var(--color-white);
 }
 
-.comming-soon__btn-prev:active,
-.comming-soon__btn-next:active {
+.comming-soon__btn--prev:active,
+.comming-soon__btn--next:active {
   background-color: black;
   color: white;
 }
 
-.img__container img {
+.comming-soon .img__container img {
   height: 372px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   transition: opacity 0.4s ease;
 }
 
-.img__container img:nth-child(2) {
+.comming-soon .img__container img:nth-child(2) {
   position: absolute;
   top: 60px;
   left: 45px;

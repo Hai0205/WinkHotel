@@ -938,6 +938,12 @@ body {
 }
 .banner-hero__form form .select-hotel .dropdown-custom__menu {
   left: 50px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.banner-hero__form form .select-hotel .dropdown-custom__menu.dropdown-up {
+  transform: translateY(-130%);
 }
 
 .banner-hero__form form .select-hotel .select-head h5 {
@@ -2104,6 +2110,11 @@ body {
   padding: 5px 10px;
   white-space: nowrap;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.dropdown-custom__menu .dropdown-custom__item:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
 }
 
 .dropdown--active {

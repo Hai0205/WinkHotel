@@ -299,6 +299,19 @@ function bookingForm() {
       }
     },
   });
+
+  $(".dropdown-custom__hotels").on("click", function (e) {
+    const clickYPosition = e.clientY;
+    const viewportHeight = $(window).height();
+
+    if (clickYPosition > viewportHeight / 2) {
+      console.log("aa");
+      $(".dropdown-custom__menu").addClass("dropdown-up");
+    } else {
+      console.log("abb");
+      $(".dropdown-custom__menu").removeClass("dropdown-up");
+    }
+  });
 }
 
 function swiperRoom() {

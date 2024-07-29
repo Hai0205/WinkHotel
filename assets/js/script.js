@@ -398,20 +398,6 @@ function animationTextReveal() {
   });
 }
 
-function fadeOut(element, duration, callback) {
-  element.style.transition = `opacity ${duration}ms ease-in-out`;
-  element.style.opacity = 0.8;
-
-  setTimeout(function () {
-    if (callback) callback();
-  }, duration);
-}
-
-function fadeIn(element, duration) {
-  element.style.transition = `opacity ${duration}ms ease-in-out`;
-  element.style.opacity = 1;
-}
-
 let isVisible = true;
 function swapImages() {
   const imageFront1 = document.getElementById("image-front1");

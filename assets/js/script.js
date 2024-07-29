@@ -1,4 +1,13 @@
 $(document).ready(function () {
+  const originalTitle = document.title;
+
+  $(document).on("visibilitychange", function () {
+    if (document.hidden) {
+      document.title = "Quay lại đi! 😢";
+    } else {
+      document.title = originalTitle;
+    }
+  });
   AOS.init({
     once: true,
     duration: 1000,

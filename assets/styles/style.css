@@ -1696,21 +1696,24 @@ body {
 
 /* end css wink guide */
 /* start css comming soon */
+.comming-soon__container {
+  display: flex;
+  padding: 0 155px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .comming-soon__left {
   max-width: 410px;
 }
 
 .comming-soon__left p {
   text-transform: uppercase;
-  /* font-size: 0.8rem;
-  font-weight: 900; */
   margin: 20px 0;
 }
 
 .comming-soon__left h2 {
   position: relative;
-  /* font-weight: 900;
-  color: var(--color-primary); */
   margin-bottom: 30px;
   display: block;
 }
@@ -1724,15 +1727,19 @@ body {
 }
 
 .text__container {
+  margin-bottom: 30px;
+}
+
+.text__wrapper {
   position: relative;
   display: flex;
 }
 
-.comming-soon__left .text__container span {
+.comming-soon__left .text__wrapper span {
   transition: opacity 0.4s ease;
 }
 
-.comming-soon__left .text__container span:nth-child(2) {
+.comming-soon__left .text__wrapper span:nth-child(2) {
   position: absolute;
 }
 
@@ -1750,13 +1757,46 @@ body {
 #text-back1,
 #text-back2 {
   opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.comming-soon__btn {
+  display: flex;
+  gap: 15px;
+}
+
+.comming-soon__btn-prev,
+.comming-soon__btn-next {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  border: 1px solid;
+  cursor: pointer;
+  align-items: center;
+}
+
+.comming-soon__btn-prev:hover,
+.comming-soon__btn-next:hover {
+  background-color: black;
+}
+.comming-soon__btn-prev:hover svg path,
+.comming-soon__btn-next:hover svg path {
+  fill: var(--color-white);
+}
+
+.comming-soon__btn-prev:active,
+.comming-soon__btn-next:active {
+  background-color: black;
+  color: white;
 }
 
 .img__container img {
   height: 372px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   transition: opacity 0.4s ease;
-  cursor: pointer;
 }
 
 .img__container img:nth-child(2) {
@@ -1773,7 +1813,10 @@ body {
 #changing-text {
   transition: opacity 1s ease;
 }
-
+.comming-soon__btn {
+  margin-top: 20px;
+  font-size: 20px;
+}
 /* end css comming soon */
 
 /* start css page hotels */

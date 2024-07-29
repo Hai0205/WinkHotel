@@ -412,31 +412,58 @@ function fadeIn(element, duration) {
   element.style.opacity = 1;
 }
 
+let isVisible = true;
 function swapImages() {
   const imageFront1 = document.getElementById("image-front1");
-  const imageFront2 = document.getElementById("image-front2");
   const imageBack1 = document.getElementById("image-back1");
-  const imageBack2 = document.getElementById("image-back2");
   const textFront1 = document.getElementById("text-front1");
   const textBack1 = document.getElementById("text-back1");
   const textFront2 = document.getElementById("text-front2");
   const textBack2 = document.getElementById("text-back2");
-
-  imageFront1.style.opacity = 1;
-  imageBack1.style.opacity = 1;
-  imageFront2.style.opacity = 0;
-  imageBack2.style.opacity = 0;
-
-  imageFront1.id = "image-back2";
-  imageBack1.id = "image-front2";
-  imageFront2.id = "image-back1";
-  imageBack2.id = "image-front1";
 
   textFront1.id = "text-back1";
   textBack1.id = "text-front1";
 
   textFront2.id = "text-back2";
   textBack2.id = "text-front2";
+
+  if (!isVisible) {
+    gsap.to("#image-front1", {
+      xPercent: 0,
+      yPercent: 0,
+      opacity: 1,
+      ease: "power3.out",
+    });
+
+    imageBack1.style.zIndex = "-1";
+    imageFront1.style.zIndex = "1";
+
+    gsap.to("#image-back1", {
+      xPercent: 0,
+      yPercent: 0,
+      opacity: 1,
+      ease: "power3.out",
+    });
+  } else {
+    gsap.to("#image-front1", {
+      xPercent: 7,
+      yPercent: 16,
+      opacity: 1,
+      ease: "power3.out",
+    });
+
+    imageFront1.style.zIndex = "-1";
+    imageBack1.style.zIndex = "1";
+
+    gsap.to("#image-back1", {
+      xPercent: -7,
+      yPercent: -16,
+      opacity: 1,
+      ease: "power3.out",
+    });
+  }
+
+  isVisible = !isVisible;
 }
 
 function toggleDropdown() {
@@ -449,36 +476,32 @@ function toggleDropdown() {
     const $dropdownItems = $dropdown.find(".dropdown-custom__item");
     const $textDropdown = $dropdown.find(".dropdown-custom__text");
 
-    // Xử lý sự kiện click cho nút dropdown
     $btnDropdown.on("click", function (e) {
       e.stopPropagation();
       closeAllDropdowns($dropdown);
       $dropdownMenu.toggleClass("dropdown--active");
     });
 
-    // Xử lý sự kiện click cho tài liệu
-    $(document).on("click", function (e) {
-      if (!$(e.target).closest(".dropdown-custom").length) {
-        closeAllDropdowns();
-      }
+    $(document).on("click", function () {
+      closeAllDropdowns();
     });
 
     $dropdownItems.on("click", function (e) {
       e.stopPropagation();
-      const $menu = $dropdown.find(".dropdown-custom__menu");
+      const $item = $(this);
       const tmp = $textDropdown.text();
-      $textDropdown.text($(this).text());
-      if ($(this).hasClass("language__item")) {
-        $(this).text(tmp);
+      $textDropdown.text($item.text());
+      if ($item.hasClass("language__item")) {
+        $item.text(tmp);
       }
       closeAllDropdowns();
     });
 
     function closeAllDropdowns(exception) {
       $dropdowns.each(function () {
-        const $this = $(this);
-        if (!exception || !exception.is($this)) {
-          $this.find(".dropdown-custom__menu").removeClass("dropdown--active");
+        const $menu = $(this).find(".dropdown-custom__menu");
+        if (!exception || !$(this).is(exception)) {
+          $menu.removeClass("dropdown--active");
         }
       });
     }

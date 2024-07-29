@@ -933,7 +933,7 @@ body {
 .banner-hero__form form .select-hotel .select-head {
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 30px;
   gap: 0 11px;
 }
 .banner-hero__form form .select-hotel .dropdown-custom__menu {
@@ -1060,6 +1060,7 @@ body {
   background-image: url("../images/icon-signature-big.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  /* background-position: center; */
   left: 8%;
   top: 0;
   overflow: hidden;

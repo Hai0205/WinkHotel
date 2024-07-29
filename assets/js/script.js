@@ -65,7 +65,6 @@ function scrollHeader() {
   $(window).on("load", initializeScrollTrigger);
 }
 function subMenuHeader() {
-  console.log("aa");
   let menuItem = $(".menu-item ");
 
   menuItem.on("mouseenter", function () {

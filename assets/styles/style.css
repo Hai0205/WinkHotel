@@ -1741,14 +1741,6 @@ body {
   padding: 0 155px;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  flex-wrap: wrap;
-}
-.comming-soon__container {
-  display: flex;
-  padding: 0 155px;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
 }
 .comming-soon__left {

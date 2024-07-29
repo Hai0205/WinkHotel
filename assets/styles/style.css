@@ -987,7 +987,20 @@ body {
 .lightpick__day-of-the-week {
   font-weight: 900;
 }
-
+.lightpick__month-title {
+  padding: 0;
+  margin-left: 8px;
+}
+.lightpick__month-title > .lightpick__select-months,
+.lightpick__day-of-the-week {
+  text-align: left;
+}
+.lightpick__next-action,
+.lightpick__previous-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* end css hero banner */
 
 /* start css wink room */

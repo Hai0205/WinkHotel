@@ -995,11 +995,24 @@ body {
 .lightpick__day-of-the-week {
   text-align: left;
 }
+.lightpick__toolbar {
+  display: flex;
+  gap: 5px;
+}
 .lightpick__next-action,
 .lightpick__previous-action {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0;
+  background-image: url("../images/ic_arrow_white.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--color-primary);
+  margin: 0;
+}
+.lightpick__previous-action {
+  transform: rotate(180deg);
 }
 /* end css hero banner */
 

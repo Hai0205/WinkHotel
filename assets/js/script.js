@@ -14,7 +14,12 @@ $(document).ready(function () {
   swiperRoom();
   scrollWinkGuide();
   toggleDropdown();
-  $(".comming-soon__container").on("click", swapImages);
+  $(".comming-soon__btn-prev, .comming-soon__btn-next").on(
+    "click",
+    function () {
+      swapImages();
+    }
+  );
   animationTextReveal();
   ScrollTrigger.refresh();
 });

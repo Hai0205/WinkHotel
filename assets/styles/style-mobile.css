@@ -38,6 +38,16 @@
   .header__burgers.mobile {
     display: initial;
   }
+
+  .header__sub-menu {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+  
+  .header__sub-menu.scrolled-down {
+    height: calc(100vh - 60px);
+  }
+   */
   /* mobile wink guide */
   .banner-guides__text h3 {
     font-size: 36px;

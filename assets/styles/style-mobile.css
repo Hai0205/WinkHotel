@@ -91,12 +91,12 @@
     cursor: auto;
   }
 
-  .img__container img:nth-child(2) {
+  .comming-soon .img__container img:nth-child(2) {
     top: 40px;
     left: 25px;
   }
 
-  .img__container img {
+  .comming-soon .img__container img {
     height: initial;
   }
 

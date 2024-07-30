@@ -1045,7 +1045,10 @@ body {
 .wink-room__container {
   padding: 0 40px;
 }
-
+.wink-room__slide .slide-inner {
+  width: 100%;
+  height: 100%;
+}
 .wink-room__heading {
   display: flex;
   justify-content: center;

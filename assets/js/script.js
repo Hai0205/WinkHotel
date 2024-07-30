@@ -167,10 +167,8 @@ function scrollFeedBack() {
 function scrollRoom() {
   gsap.registerPlugin(ScrollTrigger);
 
-  const heightSlider = $(".wink-room__slide").height();
-  const targetY = heightSlider + 450;
-
   // First animation: height from 0 to 365
+  // Tạo timeline GSAP với ScrollTrigger
   const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".wink-room",
@@ -181,11 +179,20 @@ function scrollRoom() {
     },
   });
 
-  tl1.to(".before-elements", {
-    height: 365,
-    duration: 1, // Quick but noticeable
-    ease: "none",
-  });
+  if (window.innerWidth <= 767) {
+    tl1.to(".before-elements", {
+      height: 189,
+      duration: 1,
+      ease: "none",
+    });
+    console.log("mobile nè");
+  } else {
+    tl1.to(".before-elements", {
+      height: 365,
+      duration: 1,
+      ease: "none",
+    });
+  }
 
   // Second animation with scrub
   const tl2 = gsap.timeline({
@@ -198,15 +205,29 @@ function scrollRoom() {
       // markers: true,
     },
   });
-
-  tl2.to(".before-elements", {
-    width: 32,
-    height: 27,
-    left: -24,
-    x: 0,
-    y: targetY,
-    duration: 1,
-  });
+  if (window.innerWidth <= 767) {
+    const heightSlider = $(".wink-room__slide").height();
+    const targetY = heightSlider + 250;
+    tl2.to(".before-elements", {
+      width: 32,
+      height: 27,
+      left: 0,
+      x: 0,
+      y: targetY,
+      duration: 1,
+    });
+  } else {
+    const heightSlider = $(".wink-room__slide").height();
+    const targetY = heightSlider + 450;
+    tl2.to(".before-elements", {
+      width: 32,
+      height: 27,
+      left: -24,
+      x: 0,
+      y: targetY,
+      duration: 1,
+    });
+  }
   ScrollTrigger.refresh();
 }
 

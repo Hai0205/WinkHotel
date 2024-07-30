@@ -2,6 +2,11 @@
   .spacing-200 {
     height: 80px;
   }
+  .h1-bold {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  /* mobile header */
   .button__book {
     display: none;
   }
@@ -41,6 +46,44 @@
   .header__burgers.mobile {
     display: initial;
   }
+  .header__sub-menu {
+    top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+  }
+
+  .header__sub-menu::-webkit-scrollbar {
+    display: none;
+  }
+  .header__sub-menu.scrolled-down {
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+  }
+  /* end mobile header */
+  /* mobile banner */
+  .banner-hero__heading {
+    bottom: 40px;
+  }
+  /* end mobile banner */
+
+  /* mobile winkroom */
+  .wink-room__container {
+    padding: 0 24px;
+  }
+  .wink-room__slide {
+    aspect-ratio: 327 / 340;
+  }
+  .wink-room__heading .heading .before-elements {
+    width: 220px;
+  }
+  .wink-room__heading .heading {
+    padding-top: 24px;
+  }
+  .wink-room__heading {
+    margin-bottom: 24px;
+  }
+  /* end mobile winkroom */
+
   /* mobile wink guide */
   .banner-guides__text h3 {
     font-size: 36px;

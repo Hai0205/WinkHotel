@@ -1,4 +1,30 @@
 @media screen and (max-width: 768px) {
+  /* header */
+  .header__nav nav ul {
+    display: none;
+  }
+
+  .button__book {
+    display: none;
+  }
+
+  /* Feature Image */
+  .featured-image__list {
+    flex-wrap: nowrap;
+    height: 220px;
+  }
+
+  .featured-image__container {
+    padding: 0;
+  }
+
+  .featured-image__item {
+    padding: 0;
+  }
+
+  .featured-image__swiper-wrapper {
+    height: 240px;
+  }
   /* experience */
   .experience__container {
     padding: 0;

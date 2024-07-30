@@ -37,6 +37,28 @@ function enableSwiper() {
   // }
 }
 
+function swiperImages() {
+  const isMobile = window.innerWidth <= 768
+
+  if (isMobile) {
+    const swiper1 = new Swiper('.featured-image__list', {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      slidesPerView: '1.2',
+    });
+
+    const swiper2 = new Swiper('.featured-image__list.reverse', {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      slidesPerView: '1.5',
+      centeredSlides: true,
+    });
+
+  }
+}
+
 function toggleDropdown() {
   const dropdowns = document.querySelectorAll(".dropdown-custom")
 
@@ -81,3 +103,4 @@ function toggleDropdown() {
 
 toggleDropdown()
 swiperDeals()
+swiperImages()

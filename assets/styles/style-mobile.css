@@ -1,4 +1,24 @@
 @media (max-width: 767px) {
+  /* mobile wink guide */
+  .banner-guides__text h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .banner-guides__text {
+    left: 24px;
+    max-width: 210px;
+  }
+  .banner-guides__content .content {
+    padding: 0 24px;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .banner-guides__container {
+    width: 100%;
+    aspect-ratio: 327 / 340;
+  }
+  /* end wink guide */
+  /* mobile feature image */
   .featured-image__container {
     padding: 0;
   }
@@ -19,4 +39,5 @@
     width: auto;
     height: auto;
   }
+  /* end mobile feature image */
 }

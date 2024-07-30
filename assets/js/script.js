@@ -378,19 +378,31 @@ function swiperRoom() {
 function scrollWinkGuide() {
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to(".banner-guides__img", {
-    clipPath: "polygon(13% 25%, 87% 25%, 87% 90%, 13% 90%)",
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".banner-guides__container",
-      start: "top 50%",
-      end: "bottom bottom",
-      // pin: true,
-      // markers: true,
-      scrub: 1,
-      toggleActions: "play reverse play reverse",
-    },
-  });
+  if (window.innerWidth <= 768) {
+    gsap.to(".banner-guides__img", {
+      clipPath: "polygon(24px 20%, 93% 20%, 93% 100%, 24px 100%)",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".banner-guides__container",
+        start: "top 30%",
+        end: "bottom bottom",
+        scrub: 1,
+        toggleActions: "play reverse play reverse",
+      },
+    });
+  } else {
+    gsap.to(".banner-guides__img", {
+      clipPath: "polygon(13% 25%, 87% 25%, 87% 90%, 13% 90%)",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".banner-guides__container",
+        start: "top 8%",
+        end: "bottom bottom",
+        scrub: 1,
+        toggleActions: "play reverse play reverse",
+      },
+    });
+  }
 }
 function animationTextReveal() {
   gsap.registerPlugin(SplitType, ScrollTrigger);

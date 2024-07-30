@@ -2,7 +2,8 @@
   .spacing-200 {
     height: 80px;
   }
-  .h1-bold {
+  .h1-bold,
+  .h1-light {
     font-size: 36px;
     line-height: 48px;
   }
@@ -80,7 +81,10 @@
     padding-top: 24px;
   }
   .wink-room__heading {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
+  }
+  .offer__content {
+    padding: 0 24px;
   }
   /* end mobile winkroom */
 

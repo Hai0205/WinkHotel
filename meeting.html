@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- import link custom css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/style-mobile.css" />
     <!-- end import link custom css -->
   </head>
   <body>
@@ -42,6 +43,15 @@
     <!-- start header -->
     <header class="header">
       <div class="header__top-bar">
+        <div class="header__burgers mobile">
+          <div class="box">
+            <div class="bar">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
         <div class="header-top__container">
           <div class="header__logo">
             <a href="./index.html">
@@ -332,7 +342,7 @@
     <!-- end header -->
     <main>
       <!-- start section hero banner -->
-      <section class="banner-hero">
+      <section class="banner-hero d-none">
         <div class="container-fluid p-0">
           <div class="banner-hero__container">
             <div class="swiper swiper-banner">
@@ -445,7 +455,7 @@
       </section>
       <!-- end section hero banner -->
       <div class="spacing-120"></div>
-      <section class="hotels meeting">
+      <section class="hotels meeting d-none">
         <div class="container-fluid p-0">
           <div class="row g-0">
             <div class="hotels__container">

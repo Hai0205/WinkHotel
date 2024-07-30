@@ -1,4 +1,43 @@
 @media (max-width: 767px) {
+  .button__book {
+    display: none;
+  }
+
+  .header__top-bar {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header__main {
+    display: none;
+  }
+
+  .header__btn-sign-in {
+    display: none;
+  }
+
+  .bar span {
+    background-color: white;
+  }
+
+  .header__logo {
+    position: static;
+    transform: none;
+  }
+
+  .header-top__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  .header__burgers.mobile {
+    display: initial;
+  }
   /* mobile wink guide */
   .banner-guides__text h3 {
     font-size: 36px;

@@ -1,13 +1,44 @@
 @media screen and (max-width: 768px) {
   /* header */
-  .header__nav nav ul {
-    display: none;
-  }
-
   .button__book {
     display: none;
   }
 
+  .header__top-bar {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header__main {
+    display: none;
+  }
+
+  .header__btn-sign-in {
+    display: none;
+  }
+
+  .bar span {
+    background-color: white;
+  }
+
+  .header__logo {
+    position: initial;
+    transform: none;
+  }
+
+  .header-top__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .header__burgers.mobile {
+    display: initial;
+  } 
   /* Feature Image */
   .featured-image__list {
     flex-wrap: nowrap;

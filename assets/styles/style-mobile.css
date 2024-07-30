@@ -1,0 +1,22 @@
+@media (max-width: 767px) {
+  .featured-image__container {
+    padding: 0;
+  }
+  .featured-image__list {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .featured-image__list::-webkit-scrollbar {
+    display: none;
+  }
+  .featured-image__item {
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  .featured-image__item:last-child {
+    width: auto;
+    height: auto;
+  }
+}

@@ -70,7 +70,7 @@
     display: none;
   }
   .featured-image__item {
-    width: auto;
+    width: calc(100vw - 60px);
     height: auto;
     padding: 0;
   }

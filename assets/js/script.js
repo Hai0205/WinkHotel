@@ -187,7 +187,6 @@ function scrollRoom() {
       duration: 1,
       ease: "none",
     });
-    console.log("mobile nè");
   } else {
     tl1.to(".before-elements", {
       height: 365,
@@ -589,7 +588,6 @@ function enableSwiper() {
   swiper = new Swiper(".swiper-deals", {
     loop: true,
     grabCursor: true,
-    spaceBetween: 20,
 
     navigation: {
       nextEl: ".swiper-button-next",
@@ -598,7 +596,7 @@ function enableSwiper() {
 
     breakpoints: {
       768: {
-        slidesPerView: "1",
+        slidesPerView: 1,
       },
     },
   });

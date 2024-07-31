@@ -192,4 +192,76 @@
     grid-template-columns: repeat(1, 1fr);
   }
   /* end css mobile hotels */
+
+  /* mobile section deals */
+  .deals__container {
+    padding: 0 24px;
+  }
+
+  .deals__header .deals__btn {
+    display: none;
+  }
+
+  .deals__container .box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .deals__container .box__wrapper {
+    flex-wrap: nowrap;
+    gap: 0;
+    margin-bottom: 40px;
+  }
+
+  .deals .box__wrapper .box {
+    height: auto;
+  }
+
+  .deals .box__container.swiper {
+    margin-inline: initial;
+  }
+
+  .deals .swiper-button__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .deals .swiper-button-prev,
+  .deals .swiper-button-next {
+    position: static;
+    font-size: 0;
+    color: var(--black-color);
+    width: 40px;
+    height: 40px;
+    border: solid 1px;
+  }
+  .deals .swiper-button-prev::after,
+  .deals .swiper-button-next::after {
+    font-size: 0;
+  }
+  .deals .swiper-button-prev:hover,
+  .deals .swiper-button-next:hover {
+    background-color: var(--color-black);
+  }
+  .deals .swiper-button-prev:hover svg path,
+  .deals .swiper-button-next:hover svg path {
+    fill: var(--color-white);
+  }
+
+  .deals .swiper-button-next svg,
+  .deals .swiper-button-prev svg {
+    width: auto;
+    height: auto;
+  }
+
+  .deals .swiper-button-prev {
+    left: calc(60% - 7rem);
+  }
+
+  .deals .swiper-button-next {
+    right: calc(60% - 7rem);
+  }
+  /* end section deals */
 }

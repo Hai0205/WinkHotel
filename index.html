@@ -372,7 +372,7 @@
       <!-- end section wink experience -->
       <div class="spacing-85"></div>
       <!-- start section deals -->
-      <section class="deals d-none">
+      <section class="deals">
         <div class="container-fluid p-0">
           <div class="deals__container">
             <h3 class="h2-font color-black" data-aos="fade-up">NEWS & DEALS</h3>
@@ -386,55 +386,96 @@
                 <span class="deals__label">view all</span>
               </a>
             </div>
-            <div class="box__container">
-              <!-- item -->
-              <div class="box" data-aos="fade-up">
-                <div class="box__img">
-                  <a href="#">
-                    <img src="./assets/images/image-deals-2.png" alt="" />
+            <div class="box__container swiper swiper-deals">
+              <div class="box__wrapper swiper-wrapper">
+                <!-- item -->
+                <div class="box swiper-slide" data-aos="fade-up">
+                  <div class="box__img">
+                    <a href="#">
+                      <img src="./assets/images/image-deals-2.png" alt="" />
+                    </a>
+                  </div>
+                  <p class="b3-bold color-black box__subtitle">3 MARCH, 2024</p>
+                  <a href="#" class="box__title h4-font"
+                    >Wink Hotel Saigon Centre is now open in 2024
+                  </a>
+                  <a href="#" class="deals__btn">
+                    <span class="deals__label">details</span>
                   </a>
                 </div>
-                <p class="b3-bold color-black box__subtitle">3 MARCH, 2024</p>
-                <a href="#" class="box__title h4-font"
-                  >Wink Hotel Saigon Centre is now open in 2024
-                </a>
-                <a href="#" class="deals__btn">
-                  <span class="deals__label">details</span>
-                </a>
-              </div>
-              <!-- item -->
-              <div class="box" data-aos="fade-up" data-aos-delay="100">
-                <div class="box__img">
-                  <a href="#">
-                    <img src="./assets/images/image-deals-1.png" alt="" />
-                  </a>
-                </div>
-
-                <p class="b3-bold color-black box__subtitle">25 MARCH, 2024</p>
-                <a href="#" class="box__title h4-font"
-                  >Wink Hotel Starts a revolution in Vietnamese hospitality</a
+                <!-- item -->
+                <div
+                  class="box swiper-slide"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
                 >
-                <a href="#" class="deals__btn">
-                  <span class="deals__label">details</span>
-                </a>
-              </div>
-              <!-- item -->
-              <div class="box" data-aos="fade-up" data-aos-delay="200">
-                <div class="box__img">
-                  <a href="#">
-                    <img src="./assets/images/image-deals-3.png" alt="" />
+                  <div class="box__img">
+                    <a href="#">
+                      <img src="./assets/images/image-deals-1.png" alt="" />
+                    </a>
+                  </div>
+
+                  <p class="b3-bold color-black box__subtitle">
+                    25 MARCH, 2024
+                  </p>
+                  <a href="#" class="box__title h4-font"
+                    >Wink Hotel Starts a revolution in Vietnamese hospitality</a
+                  >
+                  <a href="#" class="deals__btn">
+                    <span class="deals__label">details</span>
                   </a>
                 </div>
-
-                <p class="b3-bold color-black box__subtitle">
-                  DEALS - WINK HOTEL CAN THO
-                </p>
-                <a href="#" class="box__title h4-font"
-                  >Summer hot deal in Wink Hotel Can Tho</a
+                <!-- item -->
+                <div
+                  class="box swiper-slide"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
                 >
-                <a href="#" class="deals__btn">
-                  <span class="deals__label">details</span>
-                </a>
+                  <div class="box__img">
+                    <a href="#">
+                      <img src="./assets/images/image-deals-3.png" alt="" />
+                    </a>
+                  </div>
+
+                  <p class="b3-bold color-black box__subtitle">
+                    DEALS - WINK HOTEL CAN THO
+                  </p>
+                  <a href="#" class="box__title h4-font"
+                    >Summer hot deal in Wink Hotel Can Tho</a
+                  >
+                  <a href="#" class="deals__btn">
+                    <span class="deals__label">details</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- button swiper -->
+            <div class="swiper-button__container">
+              <div class="swiper-button-prev">
+                <svg
+                  width="5"
+                  height="10"
+                  viewBox="0 0 5 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0.714286 5L5 0L5 10L0.714286 5Z" fill="black" />
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg
+                  width="5"
+                  height="10"
+                  viewBox="0 0 5 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
+                    fill="black"
+                  />
+                </svg>
               </div>
             </div>
           </div>
@@ -443,7 +484,7 @@
       <!-- end section deals -->
       <div class="spacing-120"></div>
       <!-- start section comming soon -->
-      <section class="comming-soon">
+      <section class="comming-soon d-none d-md-block">
         <div class="container-fluid p-0">
           <div class="comming-soon__container">
             <div class="comming-soon__left" data-aos="fade-up">

@@ -30,6 +30,7 @@ $(document).ready(function () {
     }
   );
   animationTextReveal();
+  swiperDeals();
   ScrollTrigger.refresh();
 });
 
@@ -560,4 +561,43 @@ function toggleDropdown() {
       });
     }
   });
+}
+
+function swiperDeals() {
+  const breakpoint = window.matchMedia("(min-width: 768px)");
+
+  let swiper;
+
+  const breakpointChecker = function () {
+    if (breakpoint.matches == true) {
+      if (swiper !== undefined) swiper.destroy(true, true);
+    } else if (breakpoint.matches == false) {
+      return enableSwiper();
+    }
+  };
+
+  breakpointChecker();
+}
+
+function enableSwiper() {
+  // const isMobile = window.innerWidth <= 768
+
+  // if (isMobile) {
+  swiper = new Swiper(".swiper-deals", {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: "1",
+      },
+    },
+  });
+  // }
 }

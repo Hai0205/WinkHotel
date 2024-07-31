@@ -699,14 +699,17 @@ body {
   position: relative;
   width: max-content;
 }
+.sub-menu__bottom ul li a:hover {
+  color: var(--color-black);
+}
 .sub-menu__bottom ul li a::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
-  background-color: var(--color-white);
+  height: 2px;
+  background-color: var(--color-black);
   left: 0;
-  bottom: -2px;
+  bottom: 0;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);

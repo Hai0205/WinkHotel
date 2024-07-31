@@ -1144,6 +1144,11 @@ body {
   margin-bottom: 32px;
 }
 
+.box__wrapper {
+  width: 100%;
+  display: flex;
+  gap: 0 40px;
+}
 .deals__header {
   display: flex;
   justify-content: space-between;
@@ -1207,31 +1212,27 @@ body {
 
 .deals__container .box__container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  flex-direction: column;
+  height: 100%;
 }
 
 .deals__container .box {
   width: calc((100% - 80px) / 3);
   background: var(--color-white);
-  display: flex;
-  flex-direction: column;
+  height: auto;
 }
 
 .deals__container .box .box__subtitle {
-  padding: 0 32px;
   margin: 24px 0;
 }
 
 .deals__container .box .box__title {
-  padding: 0 32px;
   margin-bottom: 40px;
 }
 
 .deals__container .box .deals__btn {
   display: block;
-  margin-left: 32px;
-  margin-bottom: 50px;
+  margin-top: auto;
 }
 
 .deals__container .box a {
@@ -1240,20 +1241,20 @@ body {
   color: var(--color-black);
 }
 
-.deals__container .box__img {
+.deals__container .box__img a {
   position: relative;
   width: 100%;
   aspect-ratio: 427 / 280;
   overflow: hidden;
-}
-
-.deals__container .box .deals__btn {
+  display: block;
 }
 
 .deals__container .box__content {
   padding: 24px 32px 50px;
-  background-color: pink;
-  height: auto;
+  background-color: var(--color-white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .deals__container .box__content p {
@@ -1780,6 +1781,17 @@ body {
 
 .comming-soon__right {
   position: relative;
+  aspect-ratio: 641/372;
+}
+
+.comming-soon__right .img__container {
+  width: 100%;
+  height: 100%;
+}
+
+.comming-soon__right .img__container img {
+  width: 100%;
+  height: 100%;
 }
 
 .comming-soon .text__container {

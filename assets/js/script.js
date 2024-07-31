@@ -484,25 +484,27 @@ function swapImages() {
 
   if (!isVisible) {
     gsap.to("#image-front1", {
-      xPercent: 0,
-      yPercent: 0,
+      x: 0,
+      y: 0,
       opacity: 1,
       ease: "power3.out",
     });
 
-    imageBack1.style.zIndex = "-1";
     imageFront1.style.zIndex = "1";
+    imageBack1.style.zIndex = "-1";
 
     gsap.to("#image-back1", {
-      xPercent: 0,
-      yPercent: 0,
+      x: 0,
+      y: 0,
       opacity: 1,
       ease: "power3.out",
     });
   } else {
+    const isMobile = window.innerWidth <= 768;
+
     gsap.to("#image-front1", {
-      xPercent: 7,
-      yPercent: 16,
+      x: isMobile ? 17 : 40,
+      y: isMobile ? 40 : 60,
       opacity: 1,
       ease: "power3.out",
     });
@@ -511,8 +513,8 @@ function swapImages() {
     imageBack1.style.zIndex = "1";
 
     gsap.to("#image-back1", {
-      xPercent: -7,
-      yPercent: -16,
+      x: isMobile ? -17 : -40,
+      y: isMobile ? -40 : -60,
       opacity: 1,
       ease: "power3.out",
     });

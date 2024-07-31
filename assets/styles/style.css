@@ -1748,7 +1748,7 @@ body {
 /* start css comming soon */
 .comming-soon__container {
   display: flex;
-  padding: 0 155px;
+  padding: 0 40px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -1778,11 +1778,6 @@ body {
 }
 
 .comming-soon__right .img__container {
-  width: 100%;
-  height: 100%;
-}
-
-.comming-soon__right .img__container img {
   width: 100%;
   height: 100%;
 }
@@ -1854,7 +1849,7 @@ body {
   color: white;
 }
 
-.comming-soon .img__container img {
+.comming-soon__right .img__container img {
   height: 372px;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   transition: opacity 0.4s ease;

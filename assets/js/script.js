@@ -137,6 +137,7 @@ function swiperBanner() {
       },
     },
   });
+  swiperBanner.navigation.destroy();
 }
 function scrollFeedBack() {
   let btn;

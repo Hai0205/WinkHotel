@@ -1223,7 +1223,7 @@ body {
 }
 
 .deals__container .box .box__subtitle {
-  margin: 24px 0;
+  margin-bottom: 24px;
 }
 
 .deals__container .box .box__title {
@@ -1263,9 +1263,6 @@ body {
 
 .deals__container .box__content h2 {
   transition: all 0.3s ease-in-out;
-}
-
-.deals__container .box__title {
 }
 
 .deals__container .box img {

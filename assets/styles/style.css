@@ -1774,6 +1774,17 @@ body {
 
 .comming-soon__right {
   position: relative;
+  aspect-ratio: 641/372;
+}
+
+.comming-soon__right .img__container {
+  width: 100%;
+  height: 100%;
+}
+
+.comming-soon__right .img__container img {
+  width: 100%;
+  height: 100%;
 }
 
 .comming-soon .text__container {

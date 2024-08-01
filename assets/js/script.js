@@ -12,7 +12,6 @@ $(document).ready(function () {
     once: true,
     duration: 1000,
   });
-  gsap.registerPlugin(ScrollTrigger);
   scrollHeader();
   subMenuHeader();
   swiperBanner();
@@ -31,7 +30,6 @@ $(document).ready(function () {
   );
   animationTextReveal();
   swiperDeals();
-  ScrollTrigger.refresh();
 });
 
 function scrollHeader() {

@@ -92,9 +92,10 @@
     padding: 0;
   }
   .experience__grid {
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     flex-direction: column;
     gap: 48px 0;
+    overflow: hidden;
   }
 
   .experience__box {

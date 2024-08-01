@@ -306,6 +306,8 @@ function toggleScrollLock() {
 }
 
 function bookingForm() {
+  //----------------------------------------------------
+  // date
   var picker = new Lightpick({
     field: document.getElementById("startday"),
     secondField: document.getElementById("endday"),
@@ -328,7 +330,9 @@ function bookingForm() {
       }
     },
   });
-
+  //----------------------------------------------------
+  //----------------------------------------------------
+  // select hotels
   $(".dropdown-custom__hotels").on("click", function (e) {
     const clickYPosition = e.clientY;
     const viewportHeight = $(window).height();
@@ -341,6 +345,9 @@ function bookingForm() {
       $(".dropdown-custom__menu").removeClass("dropdown-up");
     }
   });
+  // end select hotels
+  //----------------------------------------------------
+  //----------------------------------------------------
   // select adults
   const unitsDisplay = $(".units-display");
   const selectBox = $(".select-box");
@@ -387,6 +394,8 @@ function bookingForm() {
       selectBox.removeClass("active");
     }
   });
+  // end select adults
+  //----------------------------------------------------
 }
 
 function swiperRoom() {

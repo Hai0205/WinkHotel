@@ -129,6 +129,10 @@
   .experience__heading {
     padding: 0 15px;
   }
+  .experience__text {
+    max-width: 210px;
+    width: 100%;
+  }
   /* end mobile experience */
   /* mobile wink guide */
   .banner-guides__text h3 {

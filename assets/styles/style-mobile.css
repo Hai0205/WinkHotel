@@ -2,6 +2,9 @@
   .spacing-200 {
     height: 80px;
   }
+  .spacing-120 {
+    height: 80px;
+  }
   .h1-bold,
   .h1-light {
     font-size: 36px;
@@ -312,4 +315,61 @@
     right: calc(60% - 7rem);
   } */
   /* end section deals */
+  /* mobile footer */
+  .footer__container--top {
+    padding: 48px 24px 40px;
+    height: auto;
+    background-image: url("../images/image-wink-mobile.svg");
+    background-position: bottom right;
+  }
+
+  .follow__us {
+    margin-bottom: 40px;
+  }
+
+  .footer__container--right {
+    gap: 40px 0;
+  }
+
+  .footer__container--right .form {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 40px 0;
+  }
+
+  .footer__container--right .form input {
+    width: 100%;
+  }
+
+  .footer__container--bottom {
+    padding: 40px 24px 48px;
+  }
+
+  .footer__container--bottom .row {
+    flex-direction: column-reverse;
+  }
+
+  .footer__container--bl {
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+
+  .footer__container--bottom .terms .terms__desc {
+    margin-bottom: 30px;
+  }
+
+  .footer__container--bottom .terms ul {
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    margin-bottom: 24px;
+  }
+
+  .footer__container--bottom .wink {
+    margin-top: 24px;
+  }
+
+  .footer__container--right .newsletter .content {
+    margin-bottom: 24px;
+  }
+  /* end mobile footer */
 }

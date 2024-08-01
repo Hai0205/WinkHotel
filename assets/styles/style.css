@@ -963,6 +963,10 @@ body {
 .banner-hero__form form .adults input {
   width: 100%;
 }
+.banner-hero__form form .people {
+  width: 170px;
+  position: relative;
+}
 
 .banner-hero__form form .promo-code {
   width: 150px;
@@ -1042,6 +1046,44 @@ body {
 .lightpick__previous-action {
   transform: rotate(180deg);
 }
+.banner-hero__form .select-box {
+  display: none;
+}
+.banner-hero__form .select-box {
+  display: block;
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  padding: 5px 10px;
+  z-index: 3;
+}
+.banner-hero__form .select-box.dropdown-up {
+  bottom: unset;
+  top: -70px;
+}
+.banner-hero__form .select-box.active {
+  opacity: 1;
+  visibility: visible;
+}
+.banner-hero__form .units-display {
+  cursor: pointer;
+}
+.banner-hero__form .select-box .adult,
+.banner-hero__form .select-box .child {
+  display: flex;
+  justify-content: space-between;
+}
+.banner-hero__form .select-box .select {
+  display: flex;
+  gap: 10px;
+}
+
 /* end css hero banner */
 
 /* start css wink room */

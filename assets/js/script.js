@@ -341,6 +341,52 @@ function bookingForm() {
       $(".dropdown-custom__menu").removeClass("dropdown-up");
     }
   });
+  // select adults
+  const unitsDisplay = $(".units-display");
+  const selectBox = $(".select-box");
+  const adultValElement = $('span[name="adult-val"]');
+  const childValElement = $('span[name="child-val"]');
+  const adultVal = $(".adult .val");
+  const childVal = $(".child .val");
+  const totalSum = $("#total-sum");
+
+  function updateDisplay() {
+    adultValElement.text(adultVal.text());
+    childValElement.text(childVal.text());
+    const totalSumVal = parseInt(adultVal.text()) + parseInt(childVal.text());
+    totalSum.text(totalSumVal);
+  }
+
+  unitsDisplay.on("click", function (e) {
+    const clickYPosition = e.clientY;
+    const viewportHeight = $(window).height();
+    selectBox
+      .toggleClass("dropdown-up", clickYPosition > viewportHeight / 2)
+      .toggleClass("active");
+    e.stopPropagation();
+  });
+
+  $(".select .min").on("click", function () {
+    const valElement = $(this).next();
+    let currentValue = parseInt(valElement.text());
+    if (currentValue > 0) {
+      valElement.text(--currentValue);
+      updateDisplay();
+    }
+  });
+
+  $(".select .plus").on("click", function () {
+    const valElement = $(this).prev();
+    let currentValue = parseInt(valElement.text());
+    valElement.text(++currentValue);
+    updateDisplay();
+  });
+
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".units").length) {
+      selectBox.removeClass("active");
+    }
+  });
 }
 
 function swiperRoom() {

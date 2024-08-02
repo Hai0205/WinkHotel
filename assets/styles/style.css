@@ -730,7 +730,7 @@ body {
   object-fit: cover;
 } */
 
-.box-img {
+.header__sub-menu .box-img {
   aspect-ratio: 894 / 432;
   width: 100%;
   height: auto;
@@ -932,6 +932,11 @@ body {
 .banner-hero__form form .select-hotel {
   width: 305px;
 }
+.select-hotel .dropdown-custom__menu .dropdown-custom__item {
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: none;
+}
 
 .banner-hero__form form .select-hotel .select-head {
   display: flex;
@@ -946,7 +951,7 @@ body {
   overflow: hidden;
 }
 .banner-hero__form form .select-hotel .dropdown-custom__menu.dropdown-up {
-  top: -157px;
+  top: -165px;
 }
 
 .banner-hero__form form .select-hotel .select-head h5 {
@@ -2001,18 +2006,18 @@ body {
 .hotels__content--top ul {
   list-style-type: none;
   padding-left: 0;
-  margin-bottom: 0;
   display: flex;
   align-items: center;
   gap: 32px;
   width: 100%;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
 .hotels__desc {
   display: flex;
   align-items: center;
   gap: 0 12px;
-  margin-bottom: 24px;
 }
 
 .hotels__desc span {
@@ -2172,7 +2177,11 @@ body {
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
 }
+
 .dropdown-custom__menu .dropdown-custom__item:hover {
   color: var(--color-white);
   background-color: var(--color-primary);

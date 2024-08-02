@@ -81,6 +81,13 @@
     height: calc(100vh - 60px);
     overflow-y: scroll;
   }
+  .header__sub-menu .box-img {
+    padding-inline: 24px;
+    aspect-ratio: 377 / 220;
+  }
+  .menu-container {
+    margin-left: 24px;
+  }
   /* end mobile header */
   /* mobile banner */
   .banner-hero__heading {

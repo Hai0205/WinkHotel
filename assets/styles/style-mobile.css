@@ -10,6 +10,27 @@
     font-size: 36px;
     line-height: 48px;
   }
+  /* css button find room */
+  .find-room-button {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    z-index: 999;
+    width: calc(100% - 48px);
+    transform: translateX(-50%) skewX(-20deg);
+  }
+  .find-room-button a {
+    background-color: var(--color-primary);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  .find-room-button a span {
+    transform: skewX(20deg);
+  }
+  /* end css button find room */
   /* mobile header */
   .button__book {
     display: none;

@@ -946,7 +946,7 @@ body {
   overflow: hidden;
 }
 .banner-hero__form form .select-hotel .dropdown-custom__menu.dropdown-up {
-  transform: translateY(-130%);
+  top: -157px;
 }
 
 .banner-hero__form form .select-hotel .select-head h5 {
@@ -1067,7 +1067,7 @@ body {
 }
 .banner-hero__form .select-box.dropdown-up {
   bottom: unset;
-  top: -70px;
+  top: -80px;
 }
 .banner-hero__form .select-box.active {
   opacity: 1;

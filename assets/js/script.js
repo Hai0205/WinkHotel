@@ -631,39 +631,16 @@ function toggleDropdown() {
 }
 
 function swiperDeals() {
-  const breakpoint = window.matchMedia("(min-width: 768px)");
-
-  let swiper;
-
-  const breakpointChecker = function () {
-    if (breakpoint.matches == true) {
-      if (swiper !== undefined) swiper.destroy(true, true);
-    } else if (breakpoint.matches == false) {
-      return enableSwiper();
-    }
-  };
-
-  breakpointChecker();
-}
-
-function enableSwiper() {
-  // const isMobile = window.innerWidth <= 768
-
-  // if (isMobile) {
-  swiper = new Swiper(".swiper-deals", {
-    loop: true,
-    grabCursor: true,
-
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-      768: {
-        slidesPerView: 1,
+  if ($(".swiper-deals").length) {
+    const swiperDeals = new Swiper(".swiper-deals", {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
       },
-    },
-  });
-  // }
+    });
+  }
 }

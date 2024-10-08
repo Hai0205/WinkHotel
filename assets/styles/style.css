@@ -98,6 +98,11 @@ body {
   line-height: 24px;
   font-weight: 900;
 }
+.b3-font {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 900;
+}
 
 .b2-italic {
   font-size: 13px;
@@ -931,6 +936,9 @@ body {
 
 .banner-hero__form form .select-hotel {
   width: 305px;
+}
+.header__btn-language .dropdown-custom__menu .dropdown-custom__item {
+  padding: 5px;
 }
 .select-hotel .dropdown-custom__menu .dropdown-custom__item {
   font-size: 16px;
@@ -2169,6 +2177,7 @@ body {
   visibility: hidden;
   transition: all 0.3s ease;
   z-index: 3;
+  left: -5px;
 }
 
 .dropdown-custom__menu .dropdown-custom__item {

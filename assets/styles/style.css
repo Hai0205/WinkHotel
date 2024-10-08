@@ -45,7 +45,9 @@ button {
 p {
   margin: 0;
 }
-
+a {
+  text-decoration: none;
+}
 body {
   min-height: 100vh;
   background-color: var(--color-gray-10);
@@ -96,6 +98,7 @@ body {
   font-size: 16px;
   line-height: 26px;
   font-weight: normal;
+  letter-spacing: 0.04rem;
 }
 
 .b2-font {
@@ -876,13 +879,13 @@ body {
 }
 
 .banner-hero__form .date {
-  max-width: 224px;
   width: 100%;
+  padding-left: 16px;
 }
 
 .banner-hero__form form {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) 160px;
   gap: 24px;
 }
 
@@ -945,19 +948,6 @@ body {
   transform: rotate(15deg) skewX(30deg);
 }
 
-.banner-hero__form form .select-hotel {
-  width: 100%;
-  max-width: 254px;
-  border-bottom: 1px solid var(--color-gray-50);
-  padding-bottom: 4px;
-}
-.banner-hero__form .date,
-.banner-hero__form form .people,
-.banner-hero__form form .promo-code {
-  border-bottom: 1px solid var(--color-gray-50);
-  padding-bottom: 4px;
-}
-
 .header__btn-language .dropdown-custom__menu .dropdown-custom__item {
   padding: 5px;
 }
@@ -987,7 +977,7 @@ body {
 }
 
 .banner-hero__form form .date input {
-  width: 70px;
+  width: 100px;
 }
 
 .banner-hero__form form .adults {
@@ -997,9 +987,9 @@ body {
   width: 100%;
 }
 .banner-hero__form form .people {
-  max-width: 224px;
   width: 100%;
   position: relative;
+  padding-left: 16px;
 }
 
 .banner-hero__form form .promo-code {
@@ -1011,13 +1001,13 @@ body {
   font-weight: 900;
 }
 .banner-hero__form {
-  padding: 12px 16px;
+  padding: 12px 24px;
 }
 
 .banner-hero__form form .find-room {
   width: 160px;
   background-color: var(--color-primary);
-  padding: 18px 0;
+  padding: 17px 0;
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
@@ -1116,17 +1106,16 @@ body {
   cursor: pointer;
 }
 .banner-hero__form .units-display span {
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04rem;
 }
 .banner-hero__form .select-box .adult,
 .banner-hero__form .select-box .child {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
 }
 .banner-hero__form .select-box .select {
   display: flex;
@@ -1262,6 +1251,7 @@ body {
   height: auto;
 }
 .deals__item {
+  --h: 240;
   height: 100%;
 }
 .deals__list .swiper-pagination {
@@ -1276,32 +1266,67 @@ body {
   width: max-content;
 }
 .deals__content {
-  --h: 240;
   padding: 32px;
   background-color: var(--color-white);
   height: calc(100% - var(--h) * 1px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .deals__img {
   width: 100%;
   aspect-ratio: 427 / var(--h);
+  overflow: hidden;
 }
 .deals__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
-
+.deals__content .deals__content--top .location {
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
 .deals__content .deals__content--top .location,
 .deals__content .deals__content--top .title {
   margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 .deals__content .deals__content--bottom .btn-more {
   display: flex;
   gap: 12px;
   align-items: center;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
-
+.deals__content .deals__content--bottom .btn-more:hover {
+  color: var(--color-primary);
+  gap: 20px;
+}
+.deals__content .deals__content--bottom .btn-more svg path {
+  transition: all 0.2s ease;
+  color: var(--color-black);
+}
+.deals__content .deals__content--bottom .btn-more:hover svg path {
+  color: var(--color-primary);
+}
+.deals__content .deals__content--bottom .desc {
+  margin-bottom: 32px;
+}
+.deals__item:hover .deals__img img {
+  transform: scale(1.1);
+}
+.deals__item:hover .deals__content--top .title {
+  color: var(--color-primary);
+}
+.deals__item:hover .deals__content--bottom .btn-more {
+  color: var(--color-primary);
+  gap: 20px;
+}
+.deals__item:hover .deals__content .deals__content--bottom .btn-more svg path {
+  color: var(--color-primary);
+}
 /* end section deals */
 /* start css experience */
 .experience__container {

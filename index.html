@@ -76,7 +76,7 @@
                 </div>
               </div>
             </div>
-            <div class="header__btn-sign-in color-gray b3-font">
+            <div class="header__btn-sign-in color-gray b1-font">
               Member Login
             </div>
           </div>
@@ -383,8 +383,10 @@
             <div class="banner-hero__booking d-none d-md-block">
               <div class="banner-hero__form">
                 <form action="">
-                  <div class="select-hotel">
-                    <div class="dropdown-custom">
+                  <div
+                    class="select-hotel d-flex align-items-center w-100 justify-content-between"
+                  >
+                    <div class="dropdown-custom w-100">
                       <div
                         class="select-head dropdown-custom__btn dropdown-custom__hotels"
                       >
@@ -394,7 +396,7 @@
                             class="d-flex align-items-center justify-content-between"
                           >
                             <p
-                              class="dropdown-custom__text b3-font color-black"
+                              class="dropdown-custom__text b1-font color-black"
                               name=""
                             >
                               Select Hotel
@@ -404,37 +406,39 @@
                         </div>
                       </div>
                       <div class="dropdown-custom__menu">
-                        <div class="dropdown-custom__item b3-font">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Saigon Centre
                         </div>
-                        <div class="dropdown-custom__item b3-font">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Danang Riverside
                         </div>
-                        <div class="dropdown-custom__item b3-font">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Tuy Hoa Beach
                         </div>
-                        <div class="dropdown-custom__item b3-font">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Can Tho Centre
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="date flex-column d-flex">
+                  <div
+                    class="date flex-column d-flex align-items-start justify-content-center"
+                  >
                     <p class="b3-font color-black-50">Dates</p>
-                    <div class="group d-flex justify-content-between">
+                    <div class="group d-flex justify-content-between w-100">
                       <div class="d-flex align-items-center">
                         <input
                           type="text"
                           id="startday"
-                          class="b3-font color-black"
+                          class="b1-font color-black"
                           autocomplete="off"
                         />
                         -
                         <input
                           type="text"
                           id="endday"
-                          class="b3-font color-black"
+                          class="b1-font color-black"
                           autocomplete="off"
                         />
                       </div>
@@ -442,7 +446,9 @@
                     </div>
                   </div>
 
-                  <div class="units people">
+                  <div
+                    class="units people d-flex flex-column justify-content-center"
+                  >
                     <p class="b3-font color-black-50">Guests</p>
                     <p id="total-sum" class="d-none" name=""></p>
                     <div
@@ -450,8 +456,8 @@
                     >
                       <div class="units-display">
                         <span
-                          ><span name="adult-val ">1</span> adults,
-                          <span name="child-val ">0</span> children
+                          ><span name="adult-val ">1</span> Adults,
+                          <span name="child-val ">0</span> Child
                         </span>
                       </div>
                       <img src="./assets/images/ic_people.svg" alt="" />
@@ -465,7 +471,7 @@
                           </div>
                         </div>
                         <div class="child">
-                          <div class="label">Children</div>
+                          <div class="label">Child</div>
                           <div class="select">
                             <div class="min">-</div>
                             <div class="val">0</div>
@@ -476,20 +482,6 @@
                     </div>
                   </div>
 
-                  <div class="promo-code">
-                    <p class="b3-font color-black-50">Promotion code</p>
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <input
-                        type="text"
-                        name=""
-                        placeholder="I have promo code"
-                        class="b3-font color-black"
-                      />
-                      <img src="./assets/images/ic_people.svg" alt="" />
-                    </div>
-                  </div>
                   <button class="find-room color-white b3-font">
                     FIND ROOM
                   </button>
@@ -599,19 +591,24 @@
                   <div class="swiper-slide">
                     <div class="deals__item">
                       <div class="deals__img">
-                        <img src="./assets/images/deal_1.webp" alt="image" />
+                        <a href="">
+                          <img src="./assets/images/deal_1.webp" alt="image" />
+                        </a>
                       </div>
+
                       <div class="deals__content">
                         <div class="deals__content--top">
                           <p class="location b3-font color-gray-50">
                             Wink Hotel Sai Gon Center
                           </p>
-                          <h4 class="title h3-font color-black">
-                            Wink Hotel Saigon Centre is now open in 2024
-                          </h4>
+                          <a href="">
+                            <h4 class="title h3-font color-black">
+                              Wink Hotel Saigon Centre is now open in 2024
+                            </h4>
+                          </a>
                         </div>
                         <div class="deals__content--bottom">
-                          <div class="desc">
+                          <div class="desc b1-font color-black">
                             <p>
                               No more queues at check-in. No more waiting around
                               to check-out. Head straight to your room with
@@ -630,7 +627,7 @@
                               >
                                 <path
                                   d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="black"
+                                  fill="currentColor"
                                 />
                               </svg>
                             </span>
@@ -642,19 +639,24 @@
                   <div class="swiper-slide">
                     <div class="deals__item">
                       <div class="deals__img">
-                        <img src="./assets/images/deal_1.webp" alt="image" />
+                        <a href="">
+                          <img src="./assets/images/deal_1.webp" alt="image" />
+                        </a>
                       </div>
+
                       <div class="deals__content">
                         <div class="deals__content--top">
                           <p class="location b3-font color-gray-50">
                             Wink Hotel Sai Gon Center
                           </p>
-                          <h4 class="title h3-font color-black">
-                            Wink Hotel Saigon Centre
-                          </h4>
+                          <a href="">
+                            <h4 class="title h3-font color-black">
+                              Wink Hotel Saigon Centre is now open in 2024
+                            </h4>
+                          </a>
                         </div>
                         <div class="deals__content--bottom">
-                          <div class="desc">
+                          <div class="desc b1-font color-black">
                             <p>
                               No more queues at check-in. No more waiting around
                               to check-out. Head straight to your room with
@@ -673,7 +675,7 @@
                               >
                                 <path
                                   d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="black"
+                                  fill="currentColor"
                                 />
                               </svg>
                             </span>
@@ -685,19 +687,24 @@
                   <div class="swiper-slide">
                     <div class="deals__item">
                       <div class="deals__img">
-                        <img src="./assets/images/deal_1.webp" alt="image" />
+                        <a href="">
+                          <img src="./assets/images/deal_1.webp" alt="image" />
+                        </a>
                       </div>
+
                       <div class="deals__content">
                         <div class="deals__content--top">
                           <p class="location b3-font color-gray-50">
                             Wink Hotel Sai Gon Center
                           </p>
-                          <h4 class="title h3-font color-black">
-                            Wink Hotel Saigon Centre is now open in 2024
-                          </h4>
+                          <a href="">
+                            <h4 class="title h3-font color-black">
+                              Wink Hotel Saigon Centre is now open in 2024
+                            </h4>
+                          </a>
                         </div>
                         <div class="deals__content--bottom">
-                          <div class="desc">
+                          <div class="desc b1-font color-black">
                             <p>
                               No more queues at check-in. No more waiting around
                               to check-out. Head straight to your room with
@@ -716,7 +723,7 @@
                               >
                                 <path
                                   d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="black"
+                                  fill="currentColor"
                                 />
                               </svg>
                             </span>
@@ -728,19 +735,24 @@
                   <div class="swiper-slide">
                     <div class="deals__item">
                       <div class="deals__img">
-                        <img src="./assets/images/deal_1.webp" alt="image" />
+                        <a href="">
+                          <img src="./assets/images/deal_1.webp" alt="image" />
+                        </a>
                       </div>
+
                       <div class="deals__content">
                         <div class="deals__content--top">
                           <p class="location b3-font color-gray-50">
                             Wink Hotel Sai Gon Center
                           </p>
-                          <h4 class="title h3-font color-black">
-                            Wink Hotel Saigon Centre is now open in 2024
-                          </h4>
+                          <a href="">
+                            <h4 class="title h3-font color-black">
+                              Wink Hotel Saigon Centre is now open in 2024
+                            </h4>
+                          </a>
                         </div>
                         <div class="deals__content--bottom">
-                          <div class="desc">
+                          <div class="desc b1-font color-black">
                             <p>
                               No more queues at check-in. No more waiting around
                               to check-out. Head straight to your room with
@@ -759,7 +771,7 @@
                               >
                                 <path
                                   d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="black"
+                                  fill="currentColor"
                                 />
                               </svg>
                             </span>
@@ -771,19 +783,24 @@
                   <div class="swiper-slide">
                     <div class="deals__item">
                       <div class="deals__img">
-                        <img src="./assets/images/deal_1.webp" alt="image" />
+                        <a href="">
+                          <img src="./assets/images/deal_1.webp" alt="image" />
+                        </a>
                       </div>
+
                       <div class="deals__content">
                         <div class="deals__content--top">
                           <p class="location b3-font color-gray-50">
                             Wink Hotel Sai Gon Center
                           </p>
-                          <h4 class="title h3-font color-black">
-                            Wink Hotel Saigon Centre is now open in 2024
-                          </h4>
+                          <a href="">
+                            <h4 class="title h3-font color-black">
+                              Wink Hotel Saigon Centre is now open in 2024
+                            </h4>
+                          </a>
                         </div>
                         <div class="deals__content--bottom">
-                          <div class="desc">
+                          <div class="desc b1-font color-black">
                             <p>
                               No more queues at check-in. No more waiting around
                               to check-out. Head straight to your room with
@@ -802,7 +819,7 @@
                               >
                                 <path
                                   d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="black"
+                                  fill="currentColor"
                                 />
                               </svg>
                             </span>
@@ -813,7 +830,11 @@
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-control">
+                <div class="swiper-button-prev">PREV</div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next">NEXT</div>
+              </div>
             </div>
           </div>
         </div>

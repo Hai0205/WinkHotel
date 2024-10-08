@@ -134,7 +134,12 @@ body {
   font-weight: 900;
   /* font-style: italic; */
 }
-
+.h3-font {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 900;
+  letter-spacing: 0.03rem;
+}
 .h3-bold {
   font-weight: 900;
   font-size: 24px;
@@ -1258,11 +1263,35 @@ body {
   line-height: 18px;
   color: var(--color-black);
   font-weight: 900;
-  right: 0;
+  right: 70px;
   top: -80px;
   bottom: unset;
   left: unset;
   width: max-content;
+}
+.deals__img {
+  width: 100%;
+  /* aspect-ratio: 427 / 240; */
+  height: 240px;
+}
+.deals__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.deals__content {
+  padding: 32px;
+  background-color: var(--color-white);
+}
+.deals__content .deals__content--top .location,
+.deals__content .deals__content--top .title {
+  margin-bottom: 12px;
+}
+.deals__content .deals__content--bottom .btn-more {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  text-decoration: none;
 }
 
 /* end section deals */

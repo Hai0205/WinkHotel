@@ -635,7 +635,6 @@ function swiperDeals() {
     const swiperDeals = new Swiper(".swiper-deals", {
       slidesPerView: 3,
       spaceBetween: 40,
-      centeredSlides: true,
       loop: true,
       pagination: {
         el: ".swiper-pagination",

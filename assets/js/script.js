@@ -8,10 +8,6 @@ $(document).ready(function () {
       document.title = originalTitle;
     }
   });
-  AOS.init({
-    once: true,
-    duration: 1000,
-  });
   scrollHeader();
   subMenuHeader();
   swiperBanner();
@@ -20,18 +16,37 @@ $(document).ready(function () {
   menubar();
   bookingForm();
   swiperRoom();
-  scrollWinkGuide();
+  scrollWinkRewards();
   toggleDropdown();
-  $(".comming-soon__btn--prev, .comming-soon__btn--next").on(
-    "click",
-    function () {
-      swapImages();
-    }
-  );
   animationTextReveal();
   swiperDeals();
+  customAnimation();
 });
+function customAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
 
+  gsap.utils.toArray(".data-fade-in").forEach((element, i) => {
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 59%",
+          end: "bottom 59%",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: "sine.out",
+        stagger: 0.1,
+      }
+    );
+  });
+}
 function scrollHeader() {
   let height = $(".header__top-bar").height() * -1;
   let navTop;
@@ -450,42 +465,46 @@ function swiperRoom() {
     },
   });
 }
-function scrollWinkGuide() {
+function scrollWinkRewards() {
   gsap.registerPlugin(ScrollTrigger);
 
   function getClipPathForSmallScreens(pixelValue, viewportWidth) {
     const percentage = (pixelValue / viewportWidth) * 100;
-    return `polygon(${pixelValue}px 20%, ${100 - percentage}% 20%, ${
+    return `polygon(${pixelValue}px 10%, ${100 - percentage}% 10%, ${
       100 - percentage
-    }% 95%, ${pixelValue}px 95%)`;
+    }% 90%, ${pixelValue}px 90%)`;
   }
 
   function applyClipPathAnimation(clipPathValue, startTrigger, endTrigger) {
-    gsap.to(".banner-guides__img", {
+    gsap.to(".rewards-sec__img", {
       clipPath: clipPathValue,
       duration: 1,
       scrollTrigger: {
-        trigger: ".banner-guides__container",
+        trigger: ".rewards-sec__container",
         start: startTrigger,
         end: endTrigger,
         scrub: 1,
         toggleActions: "play reverse play reverse",
+        pin: true,
+        // markers: true,
       },
     });
   }
 
   const viewportWidth = window.innerWidth;
-  const pixelValue = 24;
+  const pixelValue = viewportWidth <= 767 ? 24 : 80;
 
   if (viewportWidth <= 767) {
     const clipPathValue = getClipPathForSmallScreens(pixelValue, viewportWidth);
     applyClipPathAnimation(clipPathValue, "top 30%", "bottom bottom");
   } else {
-    applyClipPathAnimation(
-      "polygon(13% 25%, 87% 25%, 87% 90%, 13% 90%)",
-      "top 20%",
-      "bottom bottom"
-    );
+    // applyClipPathAnimation(
+    //   "polygon(13% 25%, 87% 25%, 87% 90%, 13% 90%)",
+    //   "top top",
+    //   "bottom bottom"
+    // );
+    const clipPathValue = getClipPathForSmallScreens(pixelValue, viewportWidth);
+    applyClipPathAnimation(clipPathValue, "top 5%", "bottom bottom");
   }
 }
 function animationTextReveal() {
@@ -635,10 +654,14 @@ function swiperDeals() {
     const swiperDeals = new Swiper(".swiper-deals", {
       slidesPerView: 3,
       spaceBetween: 40,
-      loop: true,
+      // loop: true,
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
+      },
+      navigation: {
+        nextEl: ".deals__list .swiper-button-next",
+        prevEl: ".deals__list .swiper-button-prev",
       },
     });
   }

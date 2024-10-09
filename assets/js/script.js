@@ -504,7 +504,7 @@ function scrollWinkRewards() {
     //   "bottom bottom"
     // );
     const clipPathValue = getClipPathForSmallScreens(pixelValue, viewportWidth);
-    applyClipPathAnimation(clipPathValue, "top 5%", "bottom bottom");
+    applyClipPathAnimation(clipPathValue, "top 10%", "bottom bottom");
   }
 }
 function animationTextReveal() {

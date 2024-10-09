@@ -49,7 +49,14 @@ function customAnimation() {
   });
 }
 function scrollHeader() {
-  let height = $(".header__top-bar").height() * -1;
+  let height;
+  if ($("body").hasClass("page-details-hotels")) {
+    height =
+      ($(".header__top-bar").height() + $(".header__main").height()) * -1;
+  } else {
+    height = $(".header__top-bar").height() * -1;
+  }
+
   let navTop;
 
   function initializeScrollTrigger() {
@@ -639,11 +646,10 @@ function commingSoon() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".sections",
-        start: "top 20%",
+        start: "top top",
         end: () => "+=" + 100 * panels.length + "%",
         pin: true,
         scrub: 1,
-        markers: true,
       },
     });
 
@@ -658,6 +664,46 @@ function commingSoon() {
           "+=0.25"
         );
       }
+    });
+
+    gsap.to(".one", {
+      scrollTrigger: {
+        trigger: ".red",
+        start: "top center",
+        toggleActions: "restart pause resume pause",
+        onEnter: () => {
+          document.querySelector(".one").classList.add("revealed");
+        },
+        onLeave: () => {
+          document.querySelector(".one").classList.remove("revealed");
+        },
+        onLeaveBack: () => {
+          document.querySelector(".one").classList.remove("revealed");
+        },
+        onEnterBack: () => {
+          document.querySelector(".one").classList.add("revealed");
+        },
+      },
+    });
+
+    gsap.to(".two", {
+      scrollTrigger: {
+        trigger: ".orange",
+        start: "top center",
+        toggleActions: "restart pause resume pause",
+        onEnter: () => {
+          document.querySelector(".two").classList.add("revealed");
+        },
+        onLeave: () => {
+          document.querySelector(".two").classList.remove("revealed");
+        },
+        onLeaveBack: () => {
+          document.querySelector(".two").classList.remove("revealed");
+        },
+        onEnterBack: () => {
+          document.querySelector(".two").classList.add("revealed");
+        },
+      },
     });
   }
 }

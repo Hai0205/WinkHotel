@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang Chủ</title>
+    <title>Hotels Details</title>
     <!-- import favicon -->
     <link
       rel="icon"
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="./assets/styles/style-mobile.css" />
     <!-- end import link custom css -->
   </head>
-  <body>
+  <body class="page-details-hotels">
     <!-- start feeback -->
     <div class="feedback">
       <div class="feedback__text b2-font color-white">FEEDBACK</div>
@@ -343,630 +343,187 @@
           </div>
         </div>
       </div>
-    </header>
-    <!-- end header -->
-    <main>
-      <!-- start section hero banner -->
-      <section class="banner-hero">
-        <div class="container-fluid p-0">
-          <div class="banner-hero__container">
-            <div class="swiper swiper-banner">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="slide-banner">
-                    <div class="banner-hero__image">
-                      <img src="./assets/images/hero-banner.webp" alt="" />
-                    </div>
-                    <div class="banner-hero__heading">
-                      <h1 class="h1-bold color-white">
-                        STAY 24-HOURS WITH 24/7 SELF-SERVICES
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="slide-banner">
-                    <div class="banner-hero__image">
-                      <img src="./assets/images/room-2.webp" alt="" />
-                    </div>
-                    <div class="banner-hero__heading">
-                      <h1 class="h1-bold color-white">
-                        STAY 24-HOURS WITH 24/7 SELF-SERVICES
-                      </h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="swiper-button-next swiper-button-white"></div>
-              <div class="swiper-button-prev swiper-button-white"></div> -->
+      <!-- chỉ có ở trang hotels details -->
+      <div
+        class="header-hotels__details d-flex align-items-center justify-content-between"
+      >
+        <div class="hotels__details--left">
+          <div class="d-flex align-items-center group-left">
+            <h4 class="b3-font color-black">WINK HOTEL DANANG RIVERSIDE</h4>
+            <div class="rating"></div>
+            <div class="views b3-font color-black">
+              120 <span>Reviews</span>
             </div>
-            <div class="banner-hero__booking d-none d-md-block">
-              <div class="banner-hero__form">
-                <form action="">
-                  <div
-                    class="select-hotel d-flex align-items-center w-100 justify-content-between"
-                  >
-                    <div class="dropdown-custom w-100">
-                      <div
-                        class="select-head dropdown-custom__btn dropdown-custom__hotels"
-                      >
-                        <div class="d-flex flex-column w-100">
-                          <p class="b3-font color-black-50">Hotel</p>
-                          <div
-                            class="d-flex align-items-center justify-content-between"
-                          >
-                            <p
-                              class="dropdown-custom__text b1-font color-black"
-                              name=""
-                            >
-                              Select Hotel
-                            </p>
-                            <img src="./assets/images/ic_location.svg" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="dropdown-custom__menu">
-                        <div class="dropdown-custom__item b1-font">
-                          Wink Hotel Saigon Centre
-                        </div>
-                        <div class="dropdown-custom__item b1-font">
-                          Wink Hotel Danang Riverside
-                        </div>
-                        <div class="dropdown-custom__item b1-font">
-                          Wink Hotel Tuy Hoa Beach
-                        </div>
-                        <div class="dropdown-custom__item b1-font">
-                          Wink Hotel Can Tho Centre
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="date flex-column d-flex align-items-start justify-content-center"
-                  >
-                    <p class="b3-font color-black-50">Dates</p>
-                    <div class="group d-flex justify-content-between w-100">
-                      <div class="d-flex align-items-center">
-                        <input
-                          type="text"
-                          id="startday"
-                          class="b1-font color-black"
-                          autocomplete="off"
-                        />
-                        -
-                        <input
-                          type="text"
-                          id="endday"
-                          class="b1-font color-black"
-                          autocomplete="off"
-                        />
-                      </div>
-                      <img src="./assets/images/ic_calendar.svg" alt="" />
-                    </div>
-                  </div>
-
-                  <div
-                    class="units people d-flex flex-column justify-content-center"
-                  >
-                    <p class="b3-font color-black-50">Guests</p>
-                    <p id="total-sum" class="d-none" name=""></p>
+          </div>
+        </div>
+        <div class="hotels__details--right d-flex align-items-center">
+          <div class="map d-flex align-items-center">
+            <div class="icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.3927 20.3569C12.0076 20.884 12.007 20.8834 12.007 20.8834L12.005 20.8821L11.9996 20.8782L11.9828 20.8666C11.8862 20.8 11.7905 20.732 11.6958 20.6629C11.5036 20.5227 11.2321 20.317 10.9075 20.0534C10.0562 19.3616 9.2598 18.6102 8.52499 17.8054C6.80652 15.9154 5 13.1962 5 10.0713C5 8.19589 5.77888 6.39727 7.16528 5.07114C8.55169 3.74501 10.4321 3 12.3927 3C14.3534 3 16.2338 3.74501 17.6202 5.07114C19.0066 6.39727 19.7855 8.19589 19.7855 10.0713C19.7855 13.1956 17.979 15.9148 16.2605 17.8054C15.5257 18.6102 14.7293 19.3616 13.878 20.0534C13.5491 20.3209 13.2111 20.578 12.8645 20.8242L12.8027 20.8666L12.7859 20.8782L12.7805 20.8821L12.7792 20.8827C12.6481 20.709 12.5193 20.5337 12.3927 20.3569ZM12.3927 20.3569L12.7778 20.884C12.6649 20.9595 12.5305 21 12.3927 21C12.255 21 12.1199 20.9589 12.007 20.8834L12.3927 20.3569ZM9.49977 10.3929C9.49977 9.62566 9.80454 8.88986 10.3471 8.34736C10.8896 7.80485 11.6254 7.50007 12.3926 7.50007C13.1598 7.50007 13.8956 7.80485 14.4381 8.34736C14.9806 8.88986 15.2854 9.62566 15.2854 10.3929C15.2854 11.1601 14.9806 11.8959 14.4381 12.4384C13.8956 12.9809 13.1598 13.2857 12.3926 13.2857C11.6254 13.2857 10.8896 12.9809 10.3471 12.4384C9.80454 11.8959 9.49977 11.1601 9.49977 10.3929Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <a href="" class="b3-font color-black">View map</a>
+          </div>
+          <div class="phone d-flex align-items-center">
+            <div class="icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8672 5.2793C14.9501 5.57054 15.9375 6.14122 16.7305 6.93417C17.5234 7.72713 18.0941 8.71452 18.3853 9.79744"
+                  stroke="currentColor"
+                  stroke-width="0.733333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.207 7.74805C13.8568 7.92279 14.4492 8.2652 14.925 8.74097C15.4008 9.21675 15.7432 9.80918 15.9179 10.4589"
+                  stroke="currentColor"
+                  stroke-width="0.733333"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8.52228 12.0515C9.18491 13.4062 10.283 14.4993 11.6407 15.1558C11.74 15.2029 11.8499 15.2233 11.9595 15.215C12.0691 15.2067 12.1747 15.17 12.2658 15.1085L14.2649 13.7755C14.3534 13.7165 14.4551 13.6805 14.5609 13.6708C14.6667 13.6611 14.7733 13.6779 14.871 13.7198L18.6109 15.3226C18.738 15.3766 18.8441 15.4704 18.9132 15.5899C18.9823 15.7094 19.0107 15.8481 18.9941 15.9851C18.8759 16.9101 18.4246 17.7603 17.7246 18.3765C17.0247 18.9927 16.1242 19.3326 15.1917 19.3327C12.3115 19.3327 9.54933 18.1885 7.51275 16.152C5.47617 14.1154 4.33203 11.3532 4.33203 8.47303C4.33208 7.54051 4.67203 6.63999 5.28822 5.94007C5.90442 5.24015 6.75461 4.78884 7.6796 4.67063C7.81663 4.65404 7.95535 4.68244 8.07484 4.75155C8.19433 4.82066 8.28813 4.92672 8.34209 5.05377L9.94633 8.79699C9.98782 8.89381 10.0047 8.99939 9.99555 9.10433C9.98636 9.20926 9.95137 9.3103 9.89368 9.39844L8.56526 11.4282C8.5048 11.5195 8.46906 11.625 8.46152 11.7342C8.45399 11.8435 8.47493 11.9528 8.52228 12.0515Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <a href="tel:+84 28 3826 9999" class="b3-font color-black"
+              >+84 28 3826 9999</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="header__booking">
+        <div class="banner-hero__form">
+          <form action="">
+            <div
+              class="select-hotel d-flex align-items-center w-100 justify-content-between"
+            >
+              <div class="dropdown-custom w-100">
+                <div
+                  class="select-head dropdown-custom__btn dropdown-custom__hotels"
+                >
+                  <div class="d-flex flex-column w-100">
+                    <p class="b3-font color-black-50">Hotel</p>
                     <div
                       class="d-flex align-items-center justify-content-between"
                     >
-                      <div class="units-display">
-                        <span
-                          ><span name="adult-val ">1</span> Adults,
-                          <span name="child-val ">0</span> Child
-                        </span>
-                      </div>
-                      <img src="./assets/images/ic_people.svg" alt="" />
-                      <div class="select-box">
-                        <div class="adult">
-                          <div class="label">Adults</div>
-                          <div class="select">
-                            <div class="min">-</div>
-                            <div class="val">1</div>
-                            <div class="plus">+</div>
-                          </div>
-                        </div>
-                        <div class="child">
-                          <div class="label">Child</div>
-                          <div class="select">
-                            <div class="min">-</div>
-                            <div class="val">0</div>
-                            <div class="plus">+</div>
-                          </div>
-                        </div>
-                      </div>
+                      <p
+                        class="dropdown-custom__text b1-font color-black"
+                        name=""
+                      >
+                        Select Hotel
+                      </p>
+                      <img src="./assets/images/ic_location.svg" alt="" />
                     </div>
-                  </div>
-
-                  <button class="find-room color-white b3-font">
-                    FIND ROOM
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- end section hero banner -->
-      <section class="spacing-120"></section>
-      <!-- start section wink experience -->
-      <section class="experience">
-        <div class="container-fluid p-0">
-          <div class="row g-0">
-            <div class="col-md-8 offset-md-2">
-              <div class="experience__container">
-                <div class="experience__content">
-                  <div class="experience__heading">
-                    <h3 class="h2-font color-black">The Wink Experience</h3>
-                    <p class="b1-font color-black">
-                      What sets Wink apart is its contemporary ethos of chic +
-                      creative design, deep functionality and traditional
-                      Vietnamese values. Quá đỉnh!
-                    </p>
                   </div>
                 </div>
-
-                <div class="experience__grid">
-                  <!-- item -->
-                  <div class="experience__item">
-                    <div class="experience__box">
-                      <a href="" class="experience__image">
-                        <img src="./assets/images/room-2.webp" alt="" />
-                      </a>
-                      <div class="experience__desc">
-                        <div class="experience__text">
-                          <h5 class="h3-italic">STAY 24</h5>
-                          <p class="b2-italic">
-                            CHECK OUT THE SAME TIME YOU CHECKED IN
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                <div class="dropdown-custom__menu">
+                  <div class="dropdown-custom__item b1-font">
+                    Wink Hotel Saigon Centre
                   </div>
-                  <!-- item -->
-                  <div class="experience__item">
-                    <div class="experience__box">
-                      <a href="" class="experience__image">
-                        <img src="./assets/images/exp-1.png" alt="" />
-                      </a>
-                      <div class="experience__desc">
-                        <div class="experience__text">
-                          <h5 class="h3-italic">TECH DRIVEN STAY</h5>
-                          <p class="b2-italic">FAST, EFFICIENT, FUNCTIONAL</p>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="dropdown-custom__item b1-font">
+                    Wink Hotel Danang Riverside
                   </div>
-                  <!-- item -->
-                  <div class="experience__item">
-                    <div class="experience__box">
-                      <a href="" class="experience__image">
-                        <img src="./assets/images/exp-gym.png" alt="" />
-                      </a>
-                      <div class="experience__desc">
-                        <div class="experience__text">
-                          <h5 class="h3-italic">24/7 SERVICES</h5>
-                          <p class="b2-italic">
-                            WINK BAR + LAUNDROMAT + CO-WORKING SPACE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="dropdown-custom__item b1-font">
+                    Wink Hotel Tuy Hoa Beach
+                  </div>
+                  <div class="dropdown-custom__item b1-font">
+                    Wink Hotel Can Tho Centre
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- end section wink experience -->
-      <div class="spacing-85"></div>
-      <!-- start section deals -->
-      <section class="deals-sec">
-        <div class="container-fluid p-0">
-          <div class="deals__container">
+
             <div
-              class="deals__title d-flex align-items-center flex-column justify-content-center"
+              class="date flex-column d-flex align-items-start justify-content-center"
             >
-              <h2 class="h2-font color-black">DEALS</h2>
-              <div class="desc b1-font color-black">
-                <p>
-                  Get your hands on the latest special offers at Wink Hotels
-                </p>
+              <p class="b3-font color-black-50">Dates</p>
+              <div class="group d-flex justify-content-between w-100">
+                <div class="d-flex align-items-center">
+                  <input
+                    type="text"
+                    id="startday"
+                    class="b1-font color-black"
+                    autocomplete="off"
+                  />
+                  -
+                  <input
+                    type="text"
+                    id="endday"
+                    class="b1-font color-black"
+                    autocomplete="off"
+                  />
+                </div>
+                <img src="./assets/images/ic_calendar.svg" alt="" />
               </div>
             </div>
-            <div class="deals__list">
-              <div class="swiper swiper-deals">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="deals__item">
-                      <div class="deals__img">
-                        <a href="">
-                          <img src="./assets/images/deal_1.webp" alt="image" />
-                        </a>
-                      </div>
 
-                      <div class="deals__content">
-                        <div class="deals__content--top">
-                          <p class="location b3-font color-gray-50">
-                            Wink Hotel Sai Gon Center
-                          </p>
-                          <a href="">
-                            <h4 class="title h3-font color-black">
-                              Wink Hotel Saigon Centre is now open in 2024
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="deals__content--bottom">
-                          <div class="desc b1-font color-black">
-                            <p>
-                              No more queues at check-in. No more waiting around
-                              to check-out. Head straight to your room with
-                              mobile check-in.
-                            </p>
-                          </div>
-                          <a href="" class="btn-more b3-font color-black">
-                            SEE MORE
-                            <span>
-                              <svg
-                                width="5"
-                                height="10"
-                                viewBox="0 0 5 10"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
+            <div class="units people d-flex flex-column justify-content-center">
+              <p class="b3-font color-black-50">Guests</p>
+              <p id="total-sum" class="d-none" name=""></p>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="units-display">
+                  <span
+                    ><span name="adult-val ">1</span> Adults,
+                    <span name="child-val ">0</span> Child
+                  </span>
+                </div>
+                <img src="./assets/images/ic_people.svg" alt="" />
+                <div class="select-box">
+                  <div class="adult">
+                    <div class="label">Adults</div>
+                    <div class="select">
+                      <div class="min">-</div>
+                      <div class="val">1</div>
+                      <div class="plus">+</div>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div class="deals__item">
-                      <div class="deals__img">
-                        <a href="">
-                          <img src="./assets/images/deal_1.webp" alt="image" />
-                        </a>
-                      </div>
-
-                      <div class="deals__content">
-                        <div class="deals__content--top">
-                          <p class="location b3-font color-gray-50">
-                            Wink Hotel Sai Gon Center
-                          </p>
-                          <a href="">
-                            <h4 class="title h3-font color-black">
-                              Wink Hotel Saigon Centre is now open in 2024
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="deals__content--bottom">
-                          <div class="desc b1-font color-black">
-                            <p>
-                              No more queues at check-in. No more waiting around
-                              to check-out. Head straight to your room with
-                              mobile check-in.
-                            </p>
-                          </div>
-                          <a href="" class="btn-more b3-font color-black">
-                            SEE MORE
-                            <span>
-                              <svg
-                                width="5"
-                                height="10"
-                                viewBox="0 0 5 10"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="deals__item">
-                      <div class="deals__img">
-                        <a href="">
-                          <img src="./assets/images/deal_1.webp" alt="image" />
-                        </a>
-                      </div>
-
-                      <div class="deals__content">
-                        <div class="deals__content--top">
-                          <p class="location b3-font color-gray-50">
-                            Wink Hotel Sai Gon Center
-                          </p>
-                          <a href="">
-                            <h4 class="title h3-font color-black">
-                              Wink Hotel Saigon Centre is now open in 2024
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="deals__content--bottom">
-                          <div class="desc b1-font color-black">
-                            <p>
-                              No more queues at check-in. No more waiting around
-                              to check-out. Head straight to your room with
-                              mobile check-in.
-                            </p>
-                          </div>
-                          <a href="" class="btn-more b3-font color-black">
-                            SEE MORE
-                            <span>
-                              <svg
-                                width="5"
-                                height="10"
-                                viewBox="0 0 5 10"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="deals__item">
-                      <div class="deals__img">
-                        <a href="">
-                          <img src="./assets/images/deal_1.webp" alt="image" />
-                        </a>
-                      </div>
-
-                      <div class="deals__content">
-                        <div class="deals__content--top">
-                          <p class="location b3-font color-gray-50">
-                            Wink Hotel Sai Gon Center
-                          </p>
-                          <a href="">
-                            <h4 class="title h3-font color-black">
-                              Wink Hotel Saigon Centre is now open in 2024
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="deals__content--bottom">
-                          <div class="desc b1-font color-black">
-                            <p>
-                              No more queues at check-in. No more waiting around
-                              to check-out. Head straight to your room with
-                              mobile check-in.
-                            </p>
-                          </div>
-                          <a href="" class="btn-more b3-font color-black">
-                            SEE MORE
-                            <span>
-                              <svg
-                                width="5"
-                                height="10"
-                                viewBox="0 0 5 10"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="deals__item">
-                      <div class="deals__img">
-                        <a href="">
-                          <img src="./assets/images/deal_1.webp" alt="image" />
-                        </a>
-                      </div>
-
-                      <div class="deals__content">
-                        <div class="deals__content--top">
-                          <p class="location b3-font color-gray-50">
-                            Wink Hotel Sai Gon Center
-                          </p>
-                          <a href="">
-                            <h4 class="title h3-font color-black">
-                              Wink Hotel Saigon Centre is now open in 2024
-                            </h4>
-                          </a>
-                        </div>
-                        <div class="deals__content--bottom">
-                          <div class="desc b1-font color-black">
-                            <p>
-                              No more queues at check-in. No more waiting around
-                              to check-out. Head straight to your room with
-                              mobile check-in.
-                            </p>
-                          </div>
-                          <a href="" class="btn-more b3-font color-black">
-                            SEE MORE
-                            <span>
-                              <svg
-                                width="5"
-                                height="10"
-                                viewBox="0 0 5 10"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
+                  <div class="child">
+                    <div class="label">Child</div>
+                    <div class="select">
+                      <div class="min">-</div>
+                      <div class="val">0</div>
+                      <div class="plus">+</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-control">
-                <div class="swiper-button-prev">
-                  <div class="icon">
-                    <svg
-                      width="5"
-                      height="10"
-                      viewBox="0 0 5 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.499442 5L4.78516 0L4.78516 10L0.499442 5Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
-                  <span class="b2-font color-black">PRE</span>
-                  <!-- PREV -->
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next">
-                  <span class="b2-font color-black">NEXT</span>
-                  <div class="icon">
-                    <svg
-                      width="6"
-                      height="10"
-                      viewBox="0 0 6 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5.07087 5L0.785156 10L0.785156 0L5.07087 5Z"
-                        fill="black"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="deals__view d-flex justify-content-center">
-              <a href="" class="custom__btn">
-                <span class="b3-font color-black d-block">VIEW ALL</span>
-              </a>
-            </div>
-          </div>
+
+            <button class="find-room color-white b3-font">FIND ROOM</button>
+          </form>
         </div>
-      </section>
-      <!-- end section deals -->
-      <div class="spacing-120"></div>
-      <!-- start section comming soon -->
-      <section class="cooming-sec">
+      </div>
+      <!-- chỉ có ở trang hotels details -->
+    </header>
+    <!-- end header -->
+    <main class="hotels-details">
+      <section class="banner-hero">
         <div class="container-fluid p-0">
-          <div class="comming__container">
-            <div class="sections">
-              <div class="container-page">
-                <div class="contento one">
-                  <h2>This is random content</h2>
-                </div>
-                <div class="contento two">
-                  <h2>This is another content</h2>
-                </div>
-              </div>
-              <div class="panels">
-                <section class="panel red">ONE</section>
-                <section class="panel orange">TWO</section>
-              </div>
-            </div>
+          <div class="banner-hero__container">
+            <img src="./assets/images/image-wink-bar.png" alt="image" />
           </div>
         </div>
       </section>
-      <!-- end section comming soon -->
-      <!-- start section wink guide -->
-      <section class="rewards-sec">
-        <div class="container-fluid p-0">
-          <div class="rewards-sec__container">
-            <div class="rewards-sec__img">
-              <div class="rewards-sec__box">
-                <div class="rewards-sec__top">
-                  <h3 class="h2-font color-primary">
-                    Where is your next meeting?
-                  </h3>
-                  <div class="desc b1-font color-black">
-                    <p>
-                      Join Wink’s Community of One. Everyone is rewarded in our
-                      tier-less Loyalty Program. Get free nights fast.​
-                    </p>
-                  </div>
-                </div>
-                <div class="rewards-sec__bottom">
-                  <div class="rewards__list">
-                    <div class="rewards__item">
-                      <div class="icon">
-                        <img src="./assets/images/ic_pillow.svg" alt="icon" />
-                      </div>
-                      <p class="b3-font color-black">Earn Free Nights</p>
-                    </div>
-                    <div class="rewards__item">
-                      <div class="icon">
-                        <img src="./assets/images/ic_wifi.svg" alt="icon" />
-                      </div>
-                      <p class="b3-font color-black">Member Rates</p>
-                    </div>
-                    <div class="rewards__item">
-                      <div class="icon">
-                        <img
-                          src="./assets/images/ic_smart_key.svg"
-                          alt="icon"
-                        />
-                      </div>
-                      <p class="b3-font color-black">F&B discounts</p>
-                    </div>
-                    <div class="rewards__item">
-                      <div class="icon">
-                        <img src="./assets/images/ic_one_day.svg" alt="icon" />
-                      </div>
-                      <p class="b3-font color-black">Exclusive offers</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="rewards-sec__button d-flex justify-content-center">
-                  <a href="" class="custom__btn">
-                    <span class="b3-font color-black d-block"
-                      >FREE TO JOIN</span
-                    >
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="rewards-sec__content">
-            <div class="row g-0">
-              <div class="col-md-9 offer__text">
-                <p class="h1-light color-black content">
-                  A true Vietnamese. Wink thinks that although Vietnam seems
-                  easy to know, it’s full of hidden places and secret corners,
-                  and we can help you discover them.
-                </p>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </section>
-      <!-- end section wink guide -->
     </main>
     <!-- start footer -->
     <footer class="footer">

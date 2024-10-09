@@ -64,7 +64,7 @@
                 <div
                   class="value-select color-white b2-font dropdown-custom__text"
                 >
-                  ENGLISH
+                  <img src="./assets/images/ic_flag_en.svg" alt="" />
                 </div>
                 <img src="./assets/images/icon-arrow-down.svg" alt="" />
               </div>
@@ -72,11 +72,13 @@
                 <div
                   class="dropdown-custom__item language__item color-black b2-font"
                 >
-                  VIETNAM
+                  <img src="./assets/images/ic_flag_vi.svg" alt="" />
                 </div>
               </div>
             </div>
-            <div class="header__btn-sign-in color-white b2-font">SIGN IN</div>
+            <div class="header__btn-sign-in color-gray b1-font">
+              Member Login
+            </div>
           </div>
         </div>
       </div>
@@ -94,27 +96,24 @@
           <nav>
             <ul>
               <li>
-                <a href="./hotels.html" class="b2-font color-black">HOTELS</a>
+                <a href="./hotels.html" class="b3-font color-black">HOTELS</a>
               </li>
 
               <li>
-                <a href="./meeting.html" class="b2-font color-black active"
-                  >MEETING</a
+                <a href="./meeting.html" class="b3-font color-black active"
+                  >SUITES</a
                 >
               </li>
               <li>
-                <a href="" class="b2-font color-black">WINK EXPERIENCE</a>
+                <a href="" class="b3-font color-black">THE WINK EXPERIENCE</a>
               </li>
               <li>
-                <a href="" class="b2-font color-black"
+                <a href="" class="b3-font color-black"
                   >WINK REWARDS LIFESTYLE</a
                 >
               </li>
               <li>
-                <a href="" class="b2-font color-black">DEALS</a>
-              </li>
-              <li>
-                <a href="" class="b2-font color-black">BLOGS</a>
+                <a href="" class="b3-font color-black">MEETING & EVENTS</a>
               </li>
             </ul>
           </nav>
@@ -360,7 +359,7 @@
                     </div>
                     <div class="banner-hero__heading">
                       <h1 class="h1-bold color-white">
-                        Visionary Hospitality Experience Creators
+                        STAY 24-HOURS WITH 24/7 SELF-SERVICES
                       </h1>
                     </div>
                   </div>
@@ -372,7 +371,7 @@
                     </div>
                     <div class="banner-hero__heading">
                       <h1 class="h1-bold color-white">
-                        Visionary Hospitality Experience Creators
+                        STAY 24-HOURS WITH 24/7 SELF-SERVICES
                       </h1>
                     </div>
                   </div>
@@ -384,92 +383,106 @@
             <div class="banner-hero__booking d-none d-md-block">
               <div class="banner-hero__form">
                 <form action="">
-                  <div class="select-hotel">
-                    <div class="dropdown-custom">
+                  <div
+                    class="select-hotel d-flex align-items-center w-100 justify-content-between"
+                  >
+                    <div class="dropdown-custom w-100">
                       <div
                         class="select-head dropdown-custom__btn dropdown-custom__hotels"
                       >
-                        <img
-                          src="./assets/images/icon-arrow-down-black.svg"
-                          alt=""
-                        />
-                        <p
-                          class="dropdown-custom__text b1-font color-black"
-                          name=""
-                        >
-                          Select Hotel
-                        </p>
+                        <div class="d-flex flex-column w-100">
+                          <p class="b3-font color-black-50">Hotel</p>
+                          <div
+                            class="d-flex align-items-center justify-content-between"
+                          >
+                            <p
+                              class="dropdown-custom__text b1-font color-black"
+                              name=""
+                            >
+                              Select Hotel
+                            </p>
+                            <img src="./assets/images/ic_location.svg" alt="" />
+                          </div>
+                        </div>
                       </div>
                       <div class="dropdown-custom__menu">
-                        <div class="dropdown-custom__item">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Saigon Centre
                         </div>
-                        <div class="dropdown-custom__item">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Danang Riverside
                         </div>
-                        <div class="dropdown-custom__item">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Tuy Hoa Beach
                         </div>
-                        <div class="dropdown-custom__item">
+                        <div class="dropdown-custom__item b1-font">
                           Wink Hotel Can Tho Centre
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="line"></div>
-                  <div class="date">
-                    <input
-                      type="text"
-                      id="startday"
-                      class="b1-font color-black"
-                      autocomplete="off"
-                    />
-                    <div class="line"></div>
-                    <input
-                      type="text"
-                      id="endday"
-                      class="b1-font color-black"
-                      autocomplete="off"
-                    />
+
+                  <div
+                    class="date flex-column d-flex align-items-start justify-content-center"
+                  >
+                    <p class="b3-font color-black-50">Dates</p>
+                    <div class="group d-flex justify-content-between w-100">
+                      <div class="d-flex align-items-center">
+                        <input
+                          type="text"
+                          id="startday"
+                          class="b1-font color-black"
+                          autocomplete="off"
+                        />
+                        -
+                        <input
+                          type="text"
+                          id="endday"
+                          class="b1-font color-black"
+                          autocomplete="off"
+                        />
+                      </div>
+                      <img src="./assets/images/ic_calendar.svg" alt="" />
+                    </div>
                   </div>
-                  <div class="line"></div>
-                  <div class="units people">
+
+                  <div
+                    class="units people d-flex flex-column justify-content-center"
+                  >
+                    <p class="b3-font color-black-50">Guests</p>
                     <p id="total-sum" class="d-none" name=""></p>
-                    <div class="units-display">
-                      <span
-                        ><span name="adult-val">1</span> adults,
-                        <span name="child-val">0</span> children
-                      </span>
-                    </div>
-                    <div class="select-box">
-                      <div class="adult">
-                        <div class="label">Adults</div>
-                        <div class="select">
-                          <div class="min">-</div>
-                          <div class="val">1</div>
-                          <div class="plus">+</div>
-                        </div>
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <div class="units-display">
+                        <span
+                          ><span name="adult-val ">1</span> Adults,
+                          <span name="child-val ">0</span> Child
+                        </span>
                       </div>
-                      <div class="child">
-                        <div class="label">Children</div>
-                        <div class="select">
-                          <div class="min">-</div>
-                          <div class="val">0</div>
-                          <div class="plus">+</div>
+                      <img src="./assets/images/ic_people.svg" alt="" />
+                      <div class="select-box">
+                        <div class="adult">
+                          <div class="label">Adults</div>
+                          <div class="select">
+                            <div class="min">-</div>
+                            <div class="val">1</div>
+                            <div class="plus">+</div>
+                          </div>
+                        </div>
+                        <div class="child">
+                          <div class="label">Child</div>
+                          <div class="select">
+                            <div class="min">-</div>
+                            <div class="val">0</div>
+                            <div class="plus">+</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="line"></div>
-                  <div class="promo-code">
-                    <input
-                      type="text"
-                      name=""
-                      placeholder="Promotion Code"
-                      class="b1-font color-black"
-                    />
-                  </div>
-                  <button class="find-room color-white b2-font">
+
+                  <button class="find-room color-white b3-font">
                     FIND ROOM
                   </button>
                 </form>
@@ -523,49 +536,45 @@
               <div class="hotels__result">
                 <div class="hotels__grid">
                   <!-- item -->
-                  <div class="hotels__item" data-aos="fade-up">
+                  <div class="hotels__item">
                     <div class="hotels__box">
                       <div class="hotels__image">
-                        <img
-                          src="./assets/images/wink_sai_gon.webp"
-                          alt="image"
-                        />
+                        <a href="">
+                          <img
+                            src="./assets/images/wink_sai_gon.webp"
+                            alt="image"
+                          />
+                        </a>
                       </div>
                       <div class="hotels__content">
                         <div class="hotels__content--top">
-                          <h4 class="hotels__name">Wink Hotel Saigon Centre</h4>
+                          <a href="">
+                            <h4 class="hotels__name color-black">
+                              Wink Hotel Saigon Centre
+                            </h4>
+                          </a>
                           <!-- hotel description -->
                           <ul>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_room_erea.svg"
-                                  alt=""
-                                />
-                                <span>50 M2</span>
+                                <img src="./assets/images/ic_room.svg" alt="" />
+                                <span class="b3-font color-grey"
+                                  >237 ROOMS</span
+                                >
                               </div>
                             </li>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
                                 <img
-                                  src="./assets/images/icon_bed.svg"
+                                  src="./assets/images/ic_location_gray.svg"
                                   alt=""
                                 />
-                                <span>200+ KEYS</span>
+                                <span class="b3-font color-grey">HCMC</span>
                               </div>
                             </li>
                             <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_location.svg"
-                                  alt=""
-                                />
-                                <span>SAIGON</span>
-                              </div>
-                            </li>
                           </ul>
                           <!-- end hotel description -->
                           <div class="hotels__text">
@@ -575,15 +584,24 @@
                           </div>
                         </div>
                         <div class="hotels__content--bottom">
-                          <div class="hotels__btn--book">
-                            <a href="" class="btn__brand b2-bold color-black">
-                              <span>BOOK NOW</span></a
-                            >
-                          </div>
                           <div class="hotels__btn--view">
-                            <a href="" class="b2-bold color-black"
-                              >VIEW DETAILS</a
-                            >
+                            <a href="" class="btn-more b3-font color-black">
+                              EXPLORE HOTEL
+                              <span>
+                                <svg
+                                  width="5"
+                                  height="10"
+                                  viewBox="0 0 5 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
+                                    fill="currentColor"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -591,73 +609,72 @@
                   </div>
                   <!-- end item -->
                   <!-- item -->
-                  <div
-                    class="hotels__item"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                  >
+                  <div class="hotels__item">
                     <div class="hotels__box">
                       <div class="hotels__image">
-                        <img
-                          src="./assets/images/wink_da_nang.webp"
-                          alt="image"
-                        />
+                        <a href="">
+                          <img
+                            src="./assets/images/wink_sai_gon.webp"
+                            alt="image"
+                          />
+                        </a>
                       </div>
                       <div class="hotels__content">
                         <div class="hotels__content--top">
-                          <h4 class="hotels__name">
-                            Wink Hotel Danang Riverside
-                          </h4>
+                          <a href="">
+                            <h4 class="hotels__name color-black">
+                              Wink Hotel Saigon Centre
+                            </h4>
+                          </a>
                           <!-- hotel description -->
                           <ul>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_room_erea.svg"
-                                  alt=""
-                                />
-                                <span>50 M2</span>
+                                <img src="./assets/images/ic_room.svg" alt="" />
+                                <span class="b3-font color-grey"
+                                  >237 ROOMS</span
+                                >
                               </div>
                             </li>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
                                 <img
-                                  src="./assets/images/icon_bed.svg"
+                                  src="./assets/images/ic_location_gray.svg"
                                   alt=""
                                 />
-                                <span>200+ KEYS</span>
+                                <span class="b3-font color-grey">HCMC</span>
                               </div>
                             </li>
                             <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_location.svg"
-                                  alt=""
-                                />
-                                <span>DANANG</span>
-                              </div>
-                            </li>
                           </ul>
                           <!-- end hotel description -->
                           <div class="hotels__text">
-                            Our destination hotel & suites. Explore three floors
-                            of bars, restaurants and entertainment below. Or
-                            venture up to our designer Hai Pool
+                            Centrally located. Districtly prime. Wink Hotel
+                            Saigon Centre shares the neighborhood with new beer
+                            pubs, fusion restaurants
                           </div>
                         </div>
                         <div class="hotels__content--bottom">
-                          <div class="hotels__btn--book">
-                            <a href="" class="btn__brand b2-bold color-black">
-                              <span>BOOK NOW</span></a
-                            >
-                          </div>
                           <div class="hotels__btn--view">
-                            <a href="" class="b2-bold color-black"
-                              >VIEW DETAILS</a
-                            >
+                            <a href="" class="btn-more b3-font color-black">
+                              EXPLORE HOTEL
+                              <span>
+                                <svg
+                                  width="5"
+                                  height="10"
+                                  viewBox="0 0 5 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
+                                    fill="currentColor"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -665,71 +682,72 @@
                   </div>
                   <!-- end item -->
                   <!-- item -->
-                  <div
-                    class="hotels__item"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
+                  <div class="hotels__item">
                     <div class="hotels__box">
                       <div class="hotels__image">
-                        <img
-                          src="./assets/images/wink_tuy_hoa.webp"
-                          alt="image"
-                        />
+                        <a href="">
+                          <img
+                            src="./assets/images/wink_sai_gon.webp"
+                            alt="image"
+                          />
+                        </a>
                       </div>
                       <div class="hotels__content">
                         <div class="hotels__content--top">
-                          <h4 class="hotels__name">Wink Hotel Tuy Hoa Beach</h4>
+                          <a href="">
+                            <h4 class="hotels__name color-black">
+                              Wink Hotel Saigon Centre
+                            </h4>
+                          </a>
                           <!-- hotel description -->
                           <ul>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_room_erea.svg"
-                                  alt=""
-                                />
-                                <span>50 M2</span>
+                                <img src="./assets/images/ic_room.svg" alt="" />
+                                <span class="b3-font color-grey"
+                                  >237 ROOMS</span
+                                >
                               </div>
                             </li>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
                                 <img
-                                  src="./assets/images/icon_bed.svg"
+                                  src="./assets/images/ic_location_gray.svg"
                                   alt=""
                                 />
-                                <span>200+ KEYS</span>
+                                <span class="b3-font color-grey">HCMC</span>
                               </div>
                             </li>
                             <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_location.svg"
-                                  alt=""
-                                />
-                                <span>TUYHOA</span>
-                              </div>
-                            </li>
                           </ul>
                           <!-- end hotel description -->
                           <div class="hotels__text">
-                            Located in Tuy Hoa, a 3-minute walk from Tuy Hoa
-                            Beach, Wink Hotel Tuy Hoa Beach - 24hrs stay &
-                            Rooftop Pool Bar offers accommodation
+                            Centrally located. Districtly prime. Wink Hotel
+                            Saigon Centre shares the neighborhood with new beer
+                            pubs, fusion restaurants
                           </div>
                         </div>
                         <div class="hotels__content--bottom">
-                          <div class="hotels__btn--book">
-                            <a href="" class="btn__brand b2-bold color-black">
-                              <span>BOOK NOW</span></a
-                            >
-                          </div>
                           <div class="hotels__btn--view">
-                            <a href="" class="b2-bold color-black"
-                              >VIEW DETAILS</a
-                            >
+                            <a href="" class="btn-more b3-font color-black">
+                              EXPLORE HOTEL
+                              <span>
+                                <svg
+                                  width="5"
+                                  height="10"
+                                  viewBox="0 0 5 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
+                                    fill="currentColor"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -737,71 +755,72 @@
                   </div>
                   <!-- end item -->
                   <!-- item -->
-                  <div
-                    class="hotels__item"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                  >
+                  <div class="hotels__item">
                     <div class="hotels__box">
                       <div class="hotels__image">
-                        <img
-                          src="./assets/images/wink_can_tho.webp"
-                          alt="image"
-                        />
+                        <a href="">
+                          <img
+                            src="./assets/images/wink_sai_gon.webp"
+                            alt="image"
+                          />
+                        </a>
                       </div>
                       <div class="hotels__content">
                         <div class="hotels__content--top">
-                          <h4 class="hotels__name">Wink Hotel Can Tho</h4>
+                          <a href="">
+                            <h4 class="hotels__name color-black">
+                              Wink Hotel Saigon Centre
+                            </h4>
+                          </a>
                           <!-- hotel description -->
                           <ul>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_room_erea.svg"
-                                  alt=""
-                                />
-                                <span>50 M2</span>
+                                <img src="./assets/images/ic_room.svg" alt="" />
+                                <span class="b3-font color-grey"
+                                  >237 ROOMS</span
+                                >
                               </div>
                             </li>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
                                 <img
-                                  src="./assets/images/icon_bed.svg"
+                                  src="./assets/images/ic_location_gray.svg"
                                   alt=""
                                 />
-                                <span>200+ KEYS</span>
+                                <span class="b3-font color-grey">HCMC</span>
                               </div>
                             </li>
                             <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_location.svg"
-                                  alt=""
-                                />
-                                <span>CANTHO</span>
-                              </div>
-                            </li>
                           </ul>
                           <!-- end hotel description -->
                           <div class="hotels__text">
-                            Located in Can Tho, just a few steps from Ninh Kieu
-                            Pier, Wink Hotel Can Tho - Full 24hrs stay offers
-                            accommodation with an outdoor swimming
+                            Centrally located. Districtly prime. Wink Hotel
+                            Saigon Centre shares the neighborhood with new beer
+                            pubs, fusion restaurants
                           </div>
                         </div>
                         <div class="hotels__content--bottom">
-                          <div class="hotels__btn--book">
-                            <a href="" class="btn__brand b2-bold color-black">
-                              <span>BOOK NOW</span></a
-                            >
-                          </div>
                           <div class="hotels__btn--view">
-                            <a href="" class="b2-bold color-black"
-                              >VIEW DETAILS</a
-                            >
+                            <a href="" class="btn-more b3-font color-black">
+                              EXPLORE HOTEL
+                              <span>
+                                <svg
+                                  width="5"
+                                  height="10"
+                                  viewBox="0 0 5 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
+                                    fill="currentColor"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -809,73 +828,72 @@
                   </div>
                   <!-- end item -->
                   <!-- item -->
-                  <div
-                    class="hotels__item"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
+                  <div class="hotels__item">
                     <div class="hotels__box">
                       <div class="hotels__image">
-                        <img
-                          src="./assets/images/wink_ha_noi.webp"
-                          alt="image"
-                        />
+                        <a href="">
+                          <img
+                            src="./assets/images/wink_sai_gon.webp"
+                            alt="image"
+                          />
+                        </a>
                       </div>
                       <div class="hotels__content">
                         <div class="hotels__content--top">
-                          <h4 class="hotels__name">
-                            Wink Hotel Ha Noi Westlake
-                          </h4>
+                          <a href="">
+                            <h4 class="hotels__name color-black">
+                              Wink Hotel Saigon Centre
+                            </h4>
+                          </a>
                           <!-- hotel description -->
                           <ul>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_room_erea.svg"
-                                  alt=""
-                                />
-                                <span>50 M2</span>
+                                <img src="./assets/images/ic_room.svg" alt="" />
+                                <span class="b3-font color-grey"
+                                  >237 ROOMS</span
+                                >
                               </div>
                             </li>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
                                 <img
-                                  src="./assets/images/icon_bed.svg"
+                                  src="./assets/images/ic_location_gray.svg"
                                   alt=""
                                 />
-                                <span>200+ KEYS</span>
+                                <span class="b3-font color-grey">HCMC</span>
                               </div>
                             </li>
                             <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_location.svg"
-                                  alt=""
-                                />
-                                <span>DANANG</span>
-                              </div>
-                            </li>
                           </ul>
                           <!-- end hotel description -->
                           <div class="hotels__text">
-                            With its sleek design and modern amenities, Wink
-                            Hotel Ha Noi Westlake is poised to become a premier
-                            business address in the city.
+                            Centrally located. Districtly prime. Wink Hotel
+                            Saigon Centre shares the neighborhood with new beer
+                            pubs, fusion restaurants
                           </div>
                         </div>
                         <div class="hotels__content--bottom">
-                          <div class="hotels__btn--book">
-                            <a href="" class="btn__brand b2-bold color-black">
-                              <span>BOOK NOW</span></a
-                            >
-                          </div>
                           <div class="hotels__btn--view">
-                            <a href="" class="b2-bold color-black"
-                              >VIEW DETAILS</a
-                            >
+                            <a href="" class="btn-more b3-font color-black">
+                              EXPLORE HOTEL
+                              <span>
+                                <svg
+                                  width="5"
+                                  height="10"
+                                  viewBox="0 0 5 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
+                                    fill="currentColor"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -883,143 +901,72 @@
                   </div>
                   <!-- end item -->
                   <!-- item -->
-                  <div
-                    class="hotels__item"
-                    data-aos="fade-up"
-                    data-aos-delay="500"
-                  >
+                  <div class="hotels__item">
                     <div class="hotels__box">
                       <div class="hotels__image">
-                        <img
-                          src="./assets/images/wink_thuy_khe.webp"
-                          alt="image"
-                        />
+                        <a href="">
+                          <img
+                            src="./assets/images/wink_sai_gon.webp"
+                            alt="image"
+                          />
+                        </a>
                       </div>
                       <div class="hotels__content">
                         <div class="hotels__content--top">
-                          <h4 class="hotels__name">Wink Hotel Thuy Khue</h4>
+                          <a href="">
+                            <h4 class="hotels__name color-black">
+                              Wink Hotel Saigon Centre
+                            </h4>
+                          </a>
                           <!-- hotel description -->
                           <ul>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_room_erea.svg"
-                                  alt=""
-                                />
-                                <span>50 M2</span>
+                                <img src="./assets/images/ic_room.svg" alt="" />
+                                <span class="b3-font color-grey"
+                                  >237 ROOMS</span
+                                >
                               </div>
                             </li>
                             <!-- item -->
                             <li>
                               <div class="hotels__desc">
                                 <img
-                                  src="./assets/images/icon_bed.svg"
+                                  src="./assets/images/ic_location_gray.svg"
                                   alt=""
                                 />
-                                <span>200+ KEYS</span>
+                                <span class="b3-font color-grey">HCMC</span>
                               </div>
                             </li>
                             <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_location.svg"
-                                  alt=""
-                                />
-                                <span>DANANG</span>
-                              </div>
-                            </li>
                           </ul>
                           <!-- end hotel description -->
                           <div class="hotels__text">
-                            Centrally located. Districtly prime. Wink Hotel Thuy
-                            Khue shares the neighborhood with new beer pubs,
-                            fusion restaurants
+                            Centrally located. Districtly prime. Wink Hotel
+                            Saigon Centre shares the neighborhood with new beer
+                            pubs, fusion restaurants
                           </div>
                         </div>
                         <div class="hotels__content--bottom">
-                          <div class="hotels__btn--book">
-                            <a href="" class="btn__brand b2-bold color-black">
-                              <span>BOOK NOW</span></a
-                            >
-                          </div>
                           <div class="hotels__btn--view">
-                            <a href="" class="b2-bold color-black"
-                              >VIEW DETAILS</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end item -->
-                  <!-- item -->
-                  <div
-                    class="hotels__item"
-                    data-aos="fade-up"
-                    data-aos-delay="600"
-                  >
-                    <div class="hotels__box">
-                      <div class="hotels__image">
-                        <img
-                          src="./assets/images/wink_hai_phong.webp"
-                          alt="image"
-                        />
-                      </div>
-                      <div class="hotels__content">
-                        <div class="hotels__content--top">
-                          <h4 class="hotels__name">Wink Hotel Hai Phong</h4>
-                          <!-- hotel description -->
-                          <ul>
-                            <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_room_erea.svg"
-                                  alt=""
-                                />
-                                <span>50 M2</span>
-                              </div>
-                            </li>
-                            <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_bed.svg"
-                                  alt=""
-                                />
-                                <span>200+ KEYS</span>
-                              </div>
-                            </li>
-                            <!-- item -->
-                            <li>
-                              <div class="hotels__desc">
-                                <img
-                                  src="./assets/images/icon_location.svg"
-                                  alt=""
-                                />
-                                <span>DANANG</span>
-                              </div>
-                            </li>
-                          </ul>
-                          <!-- end hotel description -->
-                          <div class="hotels__text">
-                            Centrally located. Districtly prime. Wink Hotel Hai
-                            Phong shares the neighborhood with new beer pubs,
-                            fusion restaurants
-                          </div>
-                        </div>
-                        <div class="hotels__content--bottom">
-                          <div class="hotels__btn--book">
-                            <a href="" class="btn__brand b2-bold color-black">
-                              <span>BOOK NOW</span></a
-                            >
-                          </div>
-                          <div class="hotels__btn--view">
-                            <a href="" class="b2-bold color-black"
-                              >VIEW DETAILS</a
-                            >
+                            <a href="" class="btn-more b3-font color-black">
+                              EXPLORE HOTEL
+                              <span>
+                                <svg
+                                  width="5"
+                                  height="10"
+                                  viewBox="0 0 5 10"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M4.28571 5L0 10L-4.37114e-07 0L4.28571 5Z"
+                                    fill="currentColor"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -1078,24 +1025,25 @@
                         >
                       </li>
                       <li>
+                        <a href="" class="b2-bold color-white">AWARDS</a>
+                      </li>
+                      <li>
                         <a href="" class="b2-bold color-white">CAREERS</a>
                       </li>
                       <li>
-                        <a href="" class="b2-bold color-white">ESG</a>
+                        <a href="" class="b2-bold color-white">WINK + EARTH</a>
                       </li>
                       <li>
-                        <a href="" class="b2-bold color-white">MEDIA</a>
+                        <a href="" class="b2-bold color-white">DEALS</a>
                       </li>
                       <li>
-                        <a href="" class="b2-bold color-white"
-                          >OUR COMMUNITIES</a
-                        >
+                        <a href="" class="b2-bold color-white">PRESS</a>
                       </li>
                       <li>
-                        <a href="" class="b2-bold color-white">FOR INVESTOR</a>
+                        <a href="" class="b2-bold color-white">BLOGS</a>
                       </li>
                       <li>
-                        <a href="" class="b2-bold color-white">FAQ?</a>
+                        <a href="" class="b2-bold color-white">CONTACT</a>
                       </li>
                     </ul>
                   </div>
@@ -1225,23 +1173,41 @@
               </div>
               <div class="col-md-7">
                 <div class="footer__container--right">
+                  <!-- rewards -->
+                  <div class="rewards-list">
+                    <h6 class="b2-bold color-primary">REWARDS</h6>
+                    <ul>
+                      <li>
+                        <img src="./assets/images/rewards_1.svg" alt="icon" />
+                      </li>
+                      <li>
+                        <img src="./assets/images/rewards_2.svg" alt="icon" />
+                      </li>
+                      <li>
+                        <img src="./assets/images/rewards_3.svg" alt="icon" />
+                      </li>
+                      <li>
+                        <img src="./assets/images/rewards_4.svg" alt="icon" />
+                      </li>
+                      <li>
+                        <img src="./assets/images/rewards_5.svg" alt="icon" />
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- end rewards -->
                   <!-- newsletter -->
                   <div class="newsletter">
                     <h6 class="b2-bold color-primary">
-                      SIGN UP FOR NEWSLETTER
+                      WINK REWARDS LIFESTYLE
                     </h6>
-                    <p class="b1-font color-white content">
-                      Stay connected! Wink updates + city guides + insider info
-                      = Wink Hotels’ newsletter. Quá ngầu!
-                    </p>
-                    <div class="form">
-                      <input
-                        type="text"
-                        placeholder="You email address"
-                        class="b1-font color-white"
-                      />
-                      <button>
-                        <span class="b2-bold color-white">SEND</span>
+                    <div class="d-flex align-items-center news-group">
+                      <p class="b1-font color-white content">
+                        Unlock exclusive discounts for your stay.Top up your
+                        discount. The more bookings you make, the bigger the
+                        discount you earn for the following bookings.
+                      </p>
+                      <button class="custom__btn btn-join">
+                        <span class="b2-bold color-white">JOIN NOW</span>
                       </button>
                     </div>
                   </div>

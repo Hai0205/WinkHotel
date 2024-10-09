@@ -15,6 +15,7 @@ $(document).ready(function () {
   scrollFeedBack();
   menubar();
   bookingForm();
+  commingSoon();
   swiperRoom();
   scrollWinkRewards();
   toggleDropdown();
@@ -465,48 +466,7 @@ function swiperRoom() {
     },
   });
 }
-function scrollWinkRewards() {
-  gsap.registerPlugin(ScrollTrigger);
 
-  function getClipPathForSmallScreens(pixelValue, viewportWidth) {
-    const percentage = (pixelValue / viewportWidth) * 100;
-    return `polygon(${pixelValue}px 10%, ${100 - percentage}% 10%, ${
-      100 - percentage
-    }% 90%, ${pixelValue}px 90%)`;
-  }
-
-  function applyClipPathAnimation(clipPathValue, startTrigger, endTrigger) {
-    gsap.to(".rewards-sec__img", {
-      clipPath: clipPathValue,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ".rewards-sec__container",
-        start: startTrigger,
-        end: endTrigger,
-        scrub: 1,
-        toggleActions: "play reverse play reverse",
-        pin: true,
-        // markers: true,
-      },
-    });
-  }
-
-  const viewportWidth = window.innerWidth;
-  const pixelValue = viewportWidth <= 767 ? 24 : 80;
-
-  if (viewportWidth <= 767) {
-    const clipPathValue = getClipPathForSmallScreens(pixelValue, viewportWidth);
-    applyClipPathAnimation(clipPathValue, "top 30%", "bottom bottom");
-  } else {
-    // applyClipPathAnimation(
-    //   "polygon(13% 25%, 87% 25%, 87% 90%, 13% 90%)",
-    //   "top top",
-    //   "bottom bottom"
-    // );
-    const clipPathValue = getClipPathForSmallScreens(pixelValue, viewportWidth);
-    applyClipPathAnimation(clipPathValue, "top 10%", "bottom bottom");
-  }
-}
 function animationTextReveal() {
   gsap.registerPlugin(SplitType, ScrollTrigger);
 
@@ -664,5 +624,84 @@ function swiperDeals() {
         prevEl: ".deals__list .swiper-button-prev",
       },
     });
+  }
+}
+function commingSoon() {
+  if ($(".cooming-sec").length) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const panels = gsap.utils.toArray(".panel");
+
+    gsap.set(panels, {
+      yPercent: (i) => (i ? 100 : 0),
+    });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".sections",
+        start: "top 20%",
+        end: () => "+=" + 100 * panels.length + "%",
+        pin: true,
+        scrub: 1,
+        markers: true,
+      },
+    });
+
+    panels.forEach((panel, index) => {
+      if (index) {
+        tl.to(
+          panel,
+          {
+            yPercent: 0,
+            ease: "none",
+          },
+          "+=0.25"
+        );
+      }
+    });
+  }
+}
+function scrollWinkRewards() {
+  if ($(".rewards-sec").length) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    function getClipPathForSmallScreens(pixelValue, viewportWidth) {
+      const percentage = (pixelValue / viewportWidth) * 100;
+      return `polygon(${pixelValue}px 10%, ${100 - percentage}% 10%, ${
+        100 - percentage
+      }% 90%, ${pixelValue}px 90%)`;
+    }
+
+    function applyClipPathAnimation(clipPathValue, startTrigger, endTrigger) {
+      gsap.to(".rewards-sec__img", {
+        clipPath: clipPathValue,
+        duration: 1,
+        scrollTrigger: {
+          trigger: ".rewards-sec",
+          start: startTrigger,
+          end: endTrigger,
+          scrub: 1,
+          toggleActions: "play reverse play reverse",
+          pin: true,
+        },
+      });
+    }
+
+    const viewportWidth = window.innerWidth;
+    const pixelValue = viewportWidth <= 767 ? 24 : 80;
+
+    if (viewportWidth <= 767) {
+      const clipPathValue = getClipPathForSmallScreens(
+        pixelValue,
+        viewportWidth
+      );
+      applyClipPathAnimation(clipPathValue, "top 30%", "bottom bottom");
+    } else {
+      const clipPathValue = getClipPathForSmallScreens(
+        pixelValue,
+        viewportWidth
+      );
+      applyClipPathAnimation(clipPathValue, "top 10%", "bottom bottom");
+    }
   }
 }

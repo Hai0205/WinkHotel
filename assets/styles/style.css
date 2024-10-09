@@ -1611,7 +1611,7 @@ ul {
 }
 
 .footer__container--right {
-  max-width: 480px;
+  max-width: 530px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1627,7 +1627,15 @@ ul {
   max-width: 410px;
   width: 100%;
 }
-
+.footer__container--right .news-group {
+  gap: 35px;
+}
+.footer__container--right .btn-join {
+  z-index: 0;
+}
+.footer__container--right .btn-join span {
+  white-space: nowrap;
+}
 .footer__container--right .form {
   display: flex;
   align-items: center;

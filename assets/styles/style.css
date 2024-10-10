@@ -300,11 +300,17 @@ ul {
   position: relative;
   z-index: 2;
 }
+.custom__btn.long-medium::before {
+  clip-path: polygon(8% 0, 16% 0, 8% 100%, 0% 100%);
+}
+.custom__btn.long-medium:hover::before {
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
+}
 .custom__btn.long-text::before {
-  clip-path: polygon(8% 0, 15% 0, 7% 100%, 0% 100%);
+  clip-path: polygon(6% 0, 11% 0, 5% 100%, 0% 100%);
 }
 .custom__btn.long-text:hover::before {
-  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0% 100%);
+  clip-path: polygon(6% 0, 100% 0, 94% 100%, 0% 100%);
 }
 .custom__btn:hover::before {
   clip-path: polygon(13% 0, 100% 0, 87% 100%, 0% 100%);

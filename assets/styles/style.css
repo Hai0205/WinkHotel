@@ -2681,4 +2681,10 @@ section.spacer {
 .other-wink-sec .deals__content .deals__content--top .location {
   gap: 12px;
 }
+.amenities__container {
+  padding: 0 40px;
+}
+.amenities__container h3 {
+  margin-bottom: 56px;
+}
 /* css page hotels details */

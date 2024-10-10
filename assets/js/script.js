@@ -13,6 +13,7 @@ $(document).ready(function () {
   swiperBanner();
   scrollRoom();
   scrollFeedBack();
+  scrollMess();
   menubar();
   bookingForm();
   commingSoon();
@@ -210,6 +211,32 @@ function scrollFeedBack() {
       end: 99999,
       onUpdate: (self) => {
         self.direction === -1 ? btn.play() : btn.reverse();
+      },
+    });
+  }
+
+  initializeScrollTrigger();
+
+  // Re-initialize ScrollTrigger when page is refreshed
+  $(window).on("load", initializeScrollTrigger);
+}
+function scrollMess() {
+  let btnMess;
+
+  function initializeScrollTrigger() {
+    btnMess = gsap
+      .from(".cta-mess", {
+        x: "200%",
+        paused: true,
+        duration: 0.5,
+      })
+      .progress(1);
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      onUpdate: (self) => {
+        self.direction === -1 ? btnMess.play() : btnMess.reverse();
       },
     });
   }
@@ -656,7 +683,7 @@ function swiperDeals() {
       spaceBetween: 40,
       // loop: true,
       pagination: {
-        el: ".swiper-pagination",
+        el: ".deals-sec .swiper-pagination",
         type: "fraction",
       },
       navigation: {

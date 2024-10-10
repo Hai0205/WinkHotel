@@ -232,6 +232,31 @@ ul {
 
 /* end css classname */
 /* custom style button */
+.cta-mess {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 999;
+}
+.cta-mess .mess-icon a {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.cta-mess .mess-icon a:hover {
+  background-color: var(--color-black);
+}
+.cta-mess .mess-icon svg path {
+  transition: all 0.3s ease;
+}
+.cta-mess .mess-icon:hover svg path {
+  fill: var(--color-white);
+}
 .btn-custom {
   display: block;
   width: 160px;
@@ -2650,14 +2675,20 @@ section.spacer {
   height: 184px;
   border: 1px solid rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 16px;
+  padding: 22px 0;
 }
 .facilities__item p {
   text-transform: uppercase;
   max-width: 120px;
   text-align: center;
+}
+.other-wink-sec .deals__title h2 {
+  margin-bottom: 0;
+}
+.other-wink-sec .deals__content .deals__content--top .location {
+  gap: 12px;
 }
 /* css page hotels details */

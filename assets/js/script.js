@@ -693,80 +693,68 @@ function swiperDeals() {
     });
   }
 }
+
 function commingSoon() {
   if ($(".cooming-sec").length) {
+    console.clear();
+
     gsap.registerPlugin(ScrollTrigger);
 
-    const panels = gsap.utils.toArray(".panel");
+    const panels = gsap.utils.toArray(".animate-right");
+    const content = gsap.utils.toArray(".animate-left");
+    const numberStart = $(".number-start");
+    const totalSlides = $(".panel").length;
+    let currentSlide = 1;
 
-    gsap.set(panels, {
-      yPercent: (i) => (i ? 100 : 0),
-    });
+    numberStart.text(currentSlide);
 
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".sections",
-        start: "top top",
+        trigger: ".comming-soon",
+        start: "top 3%",
         end: () => "+=" + 100 * panels.length + "%",
         pin: true,
-        scrub: 1,
+        scrub: true,
+        onUpdate: (self) => {
+          // Xác định slide hiện tại dựa trên progress của ScrollTrigger
+          const newSlide = Math.min(
+            Math.max(1, Math.ceil(self.progress * totalSlides)),
+            totalSlides
+          );
+
+          // Cập nhật số đếm khi có thay đổi slide
+          if (newSlide !== currentSlide) {
+            currentSlide = newSlide;
+            numberStart.text(currentSlide); // Thay đổi số đếm
+          }
+        },
       },
     });
 
     panels.forEach((panel, index) => {
-      if (index) {
-        tl.to(
-          panel,
-          {
-            yPercent: 0,
-            ease: "none",
-          },
-          "+=0.25"
-        );
-      }
-    });
+      // Hiệu ứng cho .animate-right như trước
+      tl.from(
+        panel,
+        {
+          yPercent: 100,
+          ease: "none",
+        },
+        "+=0.25"
+      );
 
-    gsap.to(".one", {
-      scrollTrigger: {
-        trigger: ".red",
-        start: "top center",
-        toggleActions: "restart pause resume pause",
-        onEnter: () => {
-          document.querySelector(".one").classList.add("revealed");
+      // Thay đổi .animate-left thành dạng fade
+      tl.from(
+        content[index],
+        {
+          yPercent: -100,
+          ease: "none",
         },
-        onLeave: () => {
-          document.querySelector(".one").classList.remove("revealed");
-        },
-        onLeaveBack: () => {
-          document.querySelector(".one").classList.remove("revealed");
-        },
-        onEnterBack: () => {
-          document.querySelector(".one").classList.add("revealed");
-        },
-      },
-    });
-
-    gsap.to(".two", {
-      scrollTrigger: {
-        trigger: ".orange",
-        start: "top center",
-        toggleActions: "restart pause resume pause",
-        onEnter: () => {
-          document.querySelector(".two").classList.add("revealed");
-        },
-        onLeave: () => {
-          document.querySelector(".two").classList.remove("revealed");
-        },
-        onLeaveBack: () => {
-          document.querySelector(".two").classList.remove("revealed");
-        },
-        onEnterBack: () => {
-          document.querySelector(".two").classList.add("revealed");
-        },
-      },
+        "<"
+      );
     });
   }
 }
+
 function scrollWinkRewards() {
   if ($(".rewards-sec").length) {
     gsap.registerPlugin(ScrollTrigger);
@@ -807,7 +795,7 @@ function scrollWinkRewards() {
         pixelValue,
         viewportWidth
       );
-      applyClipPathAnimation(clipPathValue, "top 10%", "bottom bottom");
+      applyClipPathAnimation(clipPathValue, "top 7%", "bottom bottom");
     }
   }
 }

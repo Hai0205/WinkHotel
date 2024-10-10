@@ -22,7 +22,40 @@ $(document).ready(function () {
   animationTextReveal();
   swiperDeals();
   customAnimation();
+  displayRatings();
+  swiperRoomSuites();
 });
+function displayRatings() {
+  $(".rating-number").each(function () {
+    const rating = parseFloat($(this).text().trim());
+
+    const $container = $(this).siblings(".rating-container");
+    $container.empty();
+
+    const fullCircles = Math.floor(rating);
+    const partialCircle = rating % 1 !== 0;
+
+    // Create full circles
+    for (let i = 0; i < fullCircles; i++) {
+      const $circle = $("<div>").addClass("circle");
+      $container.append($circle);
+    }
+
+    // Create partial circle if necessary
+    if (partialCircle) {
+      const $partial = $("<div>").addClass("circle partial");
+
+      const percentageMissing = (5 - rating) * 100;
+      const $coverCircle = $("<div>")
+        .addClass("cover-circle")
+        .css("width", `${percentageMissing}%`);
+
+      $partial.append($coverCircle);
+      $container.append($partial);
+    }
+  });
+}
+
 function customAnimation() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -506,61 +539,61 @@ function animationTextReveal() {
   });
 }
 
-let isVisible = true;
-function swapImages() {
-  const imageFront1 = document.getElementById("image-front1");
-  const imageBack1 = document.getElementById("image-back1");
-  const textFront1 = document.getElementById("text-front1");
-  const textBack1 = document.getElementById("text-back1");
-  const textFront2 = document.getElementById("text-front2");
-  const textBack2 = document.getElementById("text-back2");
+// let isVisible = true;
+// function swapImages() {
+//   const imageFront1 = document.getElementById("image-front1");
+//   const imageBack1 = document.getElementById("image-back1");
+//   const textFront1 = document.getElementById("text-front1");
+//   const textBack1 = document.getElementById("text-back1");
+//   const textFront2 = document.getElementById("text-front2");
+//   const textBack2 = document.getElementById("text-back2");
 
-  textFront1.id = "text-back1";
-  textBack1.id = "text-front1";
+//   textFront1.id = "text-back1";
+//   textBack1.id = "text-front1";
 
-  textFront2.id = "text-back2";
-  textBack2.id = "text-front2";
+//   textFront2.id = "text-back2";
+//   textBack2.id = "text-front2";
 
-  if (!isVisible) {
-    gsap.to("#image-front1", {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      ease: "power3.out",
-    });
+//   if (!isVisible) {
+//     gsap.to("#image-front1", {
+//       x: 0,
+//       y: 0,
+//       opacity: 1,
+//       ease: "power3.out",
+//     });
 
-    imageFront1.style.zIndex = "1";
-    imageBack1.style.zIndex = "-1";
+//     imageFront1.style.zIndex = "1";
+//     imageBack1.style.zIndex = "-1";
 
-    gsap.to("#image-back1", {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      ease: "power3.out",
-    });
-  } else {
-    const isMobile = window.innerWidth <= 768;
+//     gsap.to("#image-back1", {
+//       x: 0,
+//       y: 0,
+//       opacity: 1,
+//       ease: "power3.out",
+//     });
+//   } else {
+//     const isMobile = window.innerWidth <= 768;
 
-    gsap.to("#image-front1", {
-      x: isMobile ? 17 : 40,
-      y: isMobile ? 40 : 60,
-      opacity: 1,
-      ease: "power3.out",
-    });
+//     gsap.to("#image-front1", {
+//       x: isMobile ? 17 : 40,
+//       y: isMobile ? 40 : 60,
+//       opacity: 1,
+//       ease: "power3.out",
+//     });
 
-    imageFront1.style.zIndex = "-1";
-    imageBack1.style.zIndex = "1";
+//     imageFront1.style.zIndex = "-1";
+//     imageBack1.style.zIndex = "1";
 
-    gsap.to("#image-back1", {
-      x: isMobile ? -17 : -40,
-      y: isMobile ? -40 : -60,
-      opacity: 1,
-      ease: "power3.out",
-    });
-  }
+//     gsap.to("#image-back1", {
+//       x: isMobile ? -17 : -40,
+//       y: isMobile ? -40 : -60,
+//       opacity: 1,
+//       ease: "power3.out",
+//     });
+//   }
 
-  isVisible = !isVisible;
-}
+//   isVisible = !isVisible;
+// }
 
 function toggleDropdown() {
   const $dropdowns = $(".dropdown-custom");
@@ -749,5 +782,43 @@ function scrollWinkRewards() {
       );
       applyClipPathAnimation(clipPathValue, "top 10%", "bottom bottom");
     }
+  }
+}
+
+function swiperRoomSuites() {
+  if ($(".wink-room-sec").length) {
+    const swiperParentRoom = new Swiper(".swiper-parent-room", {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 40,
+      // loop: true,
+      pagination: {
+        el: ".swiper-control-parent .swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-control-parent .swiper-button-next",
+        prevEl: ".swiper-control-parent .swiper-button-prev",
+      },
+    });
+
+    var swiperChildImage = $(".swiper-child-img");
+    swiperChildImage.each(function () {
+      var $this = $(this); // Cache the current Swiper element
+
+      // Initialize Swiper for each element
+      new Swiper($this[0], {
+        slidesPerView: 1,
+        allowTouchMove: false,
+        pagination: {
+          el: $this.find(".swiper-pagination")[0],
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: $this.find(".swiper-button-next")[0],
+          prevEl: $this.find(".swiper-button-prev")[0],
+        },
+      });
+    });
   }
 }

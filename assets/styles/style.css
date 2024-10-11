@@ -2439,6 +2439,7 @@ ul {
 }
 .comming-soon__content .box {
   max-width: 440px;
+  background-color: var(--color-gray-10);
 }
 .comming-soon__content .box h5 {
   margin-bottom: 24px;
@@ -2784,6 +2785,14 @@ section.spacer {
 }
 .map-content-wrapper .marker-detail {
   position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s ease;
+  transition-delay: calc(0.15s * (var(--index) + 1));
+}
+.map-content-wrapper.show .marker-detail {
+  opacity: 1;
+  visibility: visible;
 }
 .map-content-wrapper .marker-detail.active svg rect,
 .map-content-wrapper .marker-detail.active svg .subtrack {
@@ -2831,7 +2840,7 @@ section.spacer {
   background-color: var(--color-white);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.5s;
 }
 .map-content.show {
   opacity: 1;

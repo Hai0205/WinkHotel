@@ -641,8 +641,6 @@ function swiperDeals() {
 
 function commingSoon() {
   if ($(".cooming-sec").length) {
-    console.clear();
-
     gsap.registerPlugin(ScrollTrigger);
 
     const panels = gsap.utils.toArray(".animate-right");
@@ -685,20 +683,21 @@ function commingSoon() {
           ease: "none",
           duration: 1,
         },
-        "+=0.25"
+        "+=0.5"
       );
 
       // Thay đổi .animate-left thành dạng fade
       tl.from(
         content[index],
         {
-          // yPercent: -100,
+          // yPercent: 10,
           autoAlpha: 0,
           ease: "none",
         },
         "<"
       );
     });
+    ScrollTrigger.refresh();
   }
 }
 function selectMap() {
@@ -749,7 +748,7 @@ function selectMap() {
     console.log(city, citys);
 
     // Xóa các lớp 'show' và 'active' trước
-    $(".map-content").removeClass("show");
+    // $(".map-content").removeClass("show");
     $(".marker-detail").removeClass("active");
     $(".map-content-detail").removeClass("show");
 
@@ -757,7 +756,7 @@ function selectMap() {
     $(this).addClass("active");
 
     // Hiển thị map-content và map-content-detail theo city
-    $(`.map-content[data-city-map="${city}"]`).addClass("show");
+    // $(`.map-content[data-city-map="${city}"]`).addClass("show");
     $(`.map-content-detail[data-hotel="${city}"]`).addClass("show");
 
     // Nếu citys tồn tại, thực hiện cập nhật thêm

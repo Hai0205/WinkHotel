@@ -791,6 +791,7 @@ function selectMap() {
   $(".icon-back").on("click", function (e) {
     $(".map-content-wrapper").removeClass("show");
     $(".marker-detail").removeClass("active");
+    $(".map-content-detail").removeClass("show");
 
     $(".map-content").removeClass("show");
     $(".marker").removeClass("hidden");
@@ -804,6 +805,7 @@ function selectMap() {
     console.log(city);
     $(".marker-detail").removeClass("active");
     $(`.marker-detail[data-city="${city}"]`).addClass("active");
+    $(`.map-content-detail[data-hotel="${city}"]`).addClass("show");
   });
   // $(".marker-detail").on("click", function (e) {
   //   if ($(window).width() < 767) {

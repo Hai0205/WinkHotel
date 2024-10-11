@@ -2702,6 +2702,7 @@ section.spacer {
 /* css map */
 .map__wrapper {
   width: 100%;
+  /* height: 100vh; */
   height: 750px;
   position: relative;
 }
@@ -2851,5 +2852,68 @@ section.spacer {
   justify-content: space-between;
   padding: 24px 40px;
   border-bottom: 2px solid #c2c2c2;
+}
+.map-content-detail {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 440px;
+  background-color: var(--color-white);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.map-content-detail.show {
+  opacity: 1;
+  visibility: visible;
+}
+.map-content-detail .box-head {
+  position: relative;
+}
+.map-content-detail .box-head .icon-back {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-content-detail .box-head .icon-back:hover {
+  cursor: pointer;
+}
+.map-content-detail .box-head .icon-back svg path {
+  transition: all 0.3s ease;
+}
+.map-content-detail .box-head .icon-back:hover svg path {
+  fill: var(--color-primary);
+}
+.map-content-detail .box-head .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.map-content-detail .box-body .img {
+  width: 100%;
+  height: 245px;
+}
+.map-content-detail .box-body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.map-content-detail .box-body .content {
+  padding: 40px;
+}
+.map-content-detail .box-body .content h5 {
+  margin-bottom: 24px;
+}
+.map-content-detail .box-body .content .desc {
+  margin-bottom: 32px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.4px;
 }
 /* end css map */

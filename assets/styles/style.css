@@ -1607,6 +1607,19 @@ ul {
 /* end css experience */
 
 /* start css footer */
+.footer {
+  position: relative;
+}
+
+.footer.freeze .cta-mess {
+  position: absolute !important;
+  bottom: unset !important;
+  top: -80px !important;
+  transform: translate(0) !important;
+  transition: all 0.4s;
+}
+
+
 .footer__container--top {
   background-color: var(--color-black);
   background-image: url("../images/image-w.svg");

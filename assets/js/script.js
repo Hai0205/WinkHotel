@@ -26,7 +26,20 @@ $(document).ready(function () {
   customAnimation();
   displayRatings();
   swiperRoomSuites();
+  scrollFreezeCtaMess();
 });
+function scrollFreezeCtaMess() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: ".footer",
+    start: "top bottom",
+    end: "bottom bottom",
+    toggleClass: "freeze",
+    markers: true,
+    scrub: 1,
+  });
+}
 function displayRatings() {
   $(".rating-number").each(function () {
     const rating = parseFloat($(this).text().trim());

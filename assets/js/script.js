@@ -15,6 +15,7 @@ $(document).ready(function () {
   scrollFeedBack();
   scrollMess();
   menubar();
+  selectMap();
   bookingForm();
   commingSoon();
   swiperRoom();
@@ -746,7 +747,8 @@ function commingSoon() {
       tl.from(
         content[index],
         {
-          yPercent: -100,
+          // yPercent: -100,
+          autoAlpha: 0,
           ease: "none",
         },
         "<"
@@ -754,7 +756,70 @@ function commingSoon() {
     });
   }
 }
+function selectMap() {
+  let activeMarker = null;
 
+  $(".marker").on("click", function (e) {
+    $(".marker").addClass("hidden");
+    if ($(window).width() < 767) {
+      // Remove 'active' class from all marker-detail elements
+      $(".marker-detail").removeClass("active");
+    }
+    const city = $(this).data("city");
+    console.log(city);
+    $(this).addClass("hidden");
+    $(".map-img").addClass("zoom");
+    $(".map-content-wrapper").addClass("show");
+
+    $(".map-content").removeClass("show");
+    $(`.map-content[data-city-map="${city}"]`).addClass("show");
+    $(`.marker-detail[data-city="${city}"]`).addClass("active");
+
+    // activeMarker = $(this);
+    // if ($(".map-content.show").length) {
+    //   const activeMarkerDetail = $(
+    //     `.marker-detail.active[data-city="${city}"]`
+    //   );
+    //   const markerId = activeMarkerDetail.data("marker");
+    //   $(`.data-content[data-content="${city}"] .location`).removeClass(
+    //     "active show"
+    //   );
+    //   $(`.location[data-content="${markerId}"]`).addClass("active show");
+    // }
+  });
+
+  $(".icon-back").on("click", function (e) {
+    $(".map-content-wrapper").removeClass("show");
+    $(".marker-detail").removeClass("active");
+
+    $(".map-content").removeClass("show");
+    $(".marker").removeClass("hidden");
+  });
+  if ($(window).width() < 767) {
+    // Remove 'active' class from all marker-detail elements
+    $(".marker-detail").removeClass("active");
+  }
+  $(".box-body .item").on("click", function (e) {
+    const city = $(this).data("city-item");
+    console.log(city);
+    $(".marker-detail").removeClass("active");
+    $(`.marker-detail[data-city="${city}"]`).addClass("active");
+  });
+  // $(".marker-detail").on("click", function (e) {
+  //   if ($(window).width() < 767) {
+  //     // Remove 'active' class from all marker-detail elements
+  //     $(".marker-detail").removeClass("active");
+  //   }
+  //   const city = $(this).data("city");
+  //   const markerId = $(this).data("marker");
+  //   $(`.marker-detail[data-city="${city}"]`).removeClass("active");
+  //   $(this).addClass("active");
+  //   $(`.data-content[data-content="${city}"] .location`).removeClass(
+  //     "active show"
+  //   );
+  //   $(`.location[data-content="${markerId}"]`).addClass("active show");
+  // });
+}
 function scrollWinkRewards() {
   if ($(".rewards-sec").length) {
     gsap.registerPlugin(ScrollTrigger);

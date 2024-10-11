@@ -177,6 +177,16 @@ ul {
   font-weight: 900;
   letter-spacing: 0.03rem;
 }
+.h5-bold {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 900;
+}
+.h5-font {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
 
 .color-black {
   color: #000000;
@@ -2688,3 +2698,158 @@ section.spacer {
   margin-bottom: 56px;
 }
 /* css page hotels details */
+
+/* css map */
+.map__wrapper {
+  width: 100%;
+  height: 750px;
+  position: relative;
+}
+.map__wrapper .map-overview {
+  width: 100%;
+  height: 100%;
+}
+.map__wrapper .map-overview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.map__marker {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--color-white);
+  height: 100%;
+  width: 440px;
+}
+.map__marker h2 {
+  padding-top: 40px;
+  padding-inline: 40px;
+  margin-bottom: 32px;
+}
+.map__marker .marker-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 2px solid #c2c2c2;
+}
+.map__marker .marker-content .name-city {
+  position: relative;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.03rem;
+  color: var(--color-black);
+}
+.map__marker .marker-content .name-city span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  transform: translateX(120%);
+}
+.map-content-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.map-content-wrapper.show {
+  opacity: 1;
+  visibility: visible;
+}
+.map-content-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.map-content-wrapper .marker-detail {
+  position: absolute;
+}
+.map-content-wrapper .marker-detail.active svg rect,
+.map-content-wrapper .marker-detail.active svg .subtrack {
+  fill: var(--color-primary);
+}
+.map-content-wrapper .marker-detail.hai-phong {
+  top: 135px;
+  left: 50%;
+  transform: translateX(-125px);
+}
+.map-content-wrapper .marker-detail.da-nang-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-88px, -60px);
+  z-index: 3;
+}
+.map-content-wrapper .marker-detail.da-nang-riverside {
+  top: 50%;
+  left: 50%;
+  transform: translate(-75px, -50px);
+  z-index: 2;
+}
+.map-content-wrapper .marker-detail.tuy-hoa {
+  left: 50%;
+  bottom: 40%;
+  z-index: 2;
+  transform: translate(-20px, 40px);
+}
+.map-content-wrapper .marker-detail.ho-chi-minh {
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-127px);
+}
+.map-content-wrapper .marker-detail.can-tho {
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-165px);
+}
+.map-content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 440px;
+  background-color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+.map-content.show {
+  opacity: 1;
+  visibility: visible;
+}
+.map-content .box .box-head {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.map-content .box .icon-back {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-content .box .icon-back:hover {
+  cursor: pointer;
+}
+.map-content .box .icon-back svg path {
+  transition: all 0.3s ease;
+}
+.map-content .box .icon-back:hover svg path {
+  fill: var(--color-primary);
+}
+.map-content .box .box-body .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 2px solid #c2c2c2;
+}
+/* end css map */

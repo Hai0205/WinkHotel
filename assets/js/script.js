@@ -34,7 +34,7 @@ function scrollFreezeCtaMess() {
   ScrollTrigger.create({
     trigger: ".footer",
     start: "top bottom",
-    end: "bottom bottom",
+    end: "bottom top",
     toggleClass: "freeze",
     markers: true,
     scrub: 1,
@@ -238,19 +238,23 @@ function scrollMess() {
   let btnMess;
 
   function initializeScrollTrigger() {
-    btnMess = gsap
-      .from(".cta-mess", {
-        x: "200%",
-        paused: true,
-        duration: 0.5,
-      })
-      .progress(1);
+    // btnMess = gsap
+    //   .from(".cta-mess", {
+    //     x: "200%",
+    //     paused: true,
+    //     duration: 0.5,
+    //   })
+    //   .progress(1);
 
     ScrollTrigger.create({
       start: "top top",
       end: 99999,
       onUpdate: (self) => {
-        self.direction === -1 ? btnMess.play() : btnMess.reverse();
+        if (self.direction === -1) {
+          $(".cta-mess").removeClass("hide");
+        } else {
+          $(".cta-mess").addClass("hide");
+        }
       },
     });
   }

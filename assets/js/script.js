@@ -766,26 +766,12 @@ function selectMap() {
       $(".marker-detail").removeClass("active");
     }
     const city = $(this).data("city");
-    console.log(city);
     $(this).addClass("hidden");
     $(".map-img").addClass("zoom");
     $(".map-content-wrapper").addClass("show");
 
     $(".map-content").removeClass("show");
     $(`.map-content[data-city-map="${city}"]`).addClass("show");
-    $(`.marker-detail[data-city="${city}"]`).addClass("active");
-
-    // activeMarker = $(this);
-    // if ($(".map-content.show").length) {
-    //   const activeMarkerDetail = $(
-    //     `.marker-detail.active[data-city="${city}"]`
-    //   );
-    //   const markerId = activeMarkerDetail.data("marker");
-    //   $(`.data-content[data-content="${city}"] .location`).removeClass(
-    //     "active show"
-    //   );
-    //   $(`.location[data-content="${markerId}"]`).addClass("active show");
-    // }
   });
 
   $(".icon-back").on("click", function (e) {
@@ -807,20 +793,24 @@ function selectMap() {
     $(`.marker-detail[data-city="${city}"]`).addClass("active");
     $(`.map-content-detail[data-hotel="${city}"]`).addClass("show");
   });
-  // $(".marker-detail").on("click", function (e) {
-  //   if ($(window).width() < 767) {
-  //     // Remove 'active' class from all marker-detail elements
-  //     $(".marker-detail").removeClass("active");
-  //   }
-  //   const city = $(this).data("city");
-  //   const markerId = $(this).data("marker");
-  //   $(`.marker-detail[data-city="${city}"]`).removeClass("active");
-  //   $(this).addClass("active");
-  //   $(`.data-content[data-content="${city}"] .location`).removeClass(
-  //     "active show"
-  //   );
-  //   $(`.location[data-content="${markerId}"]`).addClass("active show");
-  // });
+
+  $(".marker-detail").on("click", function (e) {
+    const city = $(this).data("city");
+    const citys = $(this).data("v2-city");
+    console.log(city, citys);
+
+    $(".map-content").removeClass("show");
+    $(".marker-detail").removeClass("active");
+    $(this).addClass("active");
+    $(`.map-content[data-city-map="${city}"]`).addClass("show");
+
+    if (citys.length) {
+      $(".map-content").removeClass("show");
+      $(".marker-detail").removeClass("active");
+      $(this).addClass("active");
+      $(`.map-content[data-city-map="${citys}"]`).addClass("show");
+    }
+  });
 }
 function scrollWinkRewards() {
   if ($(".rewards-sec").length) {

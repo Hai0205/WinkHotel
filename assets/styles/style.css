@@ -1093,7 +1093,9 @@ ul {
   background-color: #b3b3b3;
   transform: rotate(15deg) skewX(30deg);
 }
-
+.header__btn-language .dropdown-custom__menu {
+  top: 22px;
+}
 .header__btn-language .dropdown-custom__menu .dropdown-custom__item {
   padding: 5px;
 }

@@ -2874,7 +2874,7 @@ section.spacer {
 .map-content-detail .box-head {
   position: relative;
 }
-.map-content-detail .box-head .icon-back {
+.map-content-detail .box-head .icon-back-lv2 {
   width: 80px;
   height: 80px;
   background-color: var(--color-black);
@@ -2882,13 +2882,13 @@ section.spacer {
   justify-content: center;
   align-items: center;
 }
-.map-content-detail .box-head .icon-back:hover {
+.map-content-detail .box-head .icon-back-lv2:hover {
   cursor: pointer;
 }
-.map-content-detail .box-head .icon-back svg path {
+.map-content-detail .box-head .icon-back-lv2 svg path {
   transition: all 0.3s ease;
 }
-.map-content-detail .box-head .icon-back:hover svg path {
+.map-content-detail .box-head .icon-back-lv2:hover svg path {
   fill: var(--color-primary);
 }
 .map-content-detail .box-head .logo {

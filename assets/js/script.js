@@ -567,62 +567,6 @@ function animationTextReveal() {
   });
 }
 
-// let isVisible = true;
-// function swapImages() {
-//   const imageFront1 = document.getElementById("image-front1");
-//   const imageBack1 = document.getElementById("image-back1");
-//   const textFront1 = document.getElementById("text-front1");
-//   const textBack1 = document.getElementById("text-back1");
-//   const textFront2 = document.getElementById("text-front2");
-//   const textBack2 = document.getElementById("text-back2");
-
-//   textFront1.id = "text-back1";
-//   textBack1.id = "text-front1";
-
-//   textFront2.id = "text-back2";
-//   textBack2.id = "text-front2";
-
-//   if (!isVisible) {
-//     gsap.to("#image-front1", {
-//       x: 0,
-//       y: 0,
-//       opacity: 1,
-//       ease: "power3.out",
-//     });
-
-//     imageFront1.style.zIndex = "1";
-//     imageBack1.style.zIndex = "-1";
-
-//     gsap.to("#image-back1", {
-//       x: 0,
-//       y: 0,
-//       opacity: 1,
-//       ease: "power3.out",
-//     });
-//   } else {
-//     const isMobile = window.innerWidth <= 768;
-
-//     gsap.to("#image-front1", {
-//       x: isMobile ? 17 : 40,
-//       y: isMobile ? 40 : 60,
-//       opacity: 1,
-//       ease: "power3.out",
-//     });
-
-//     imageFront1.style.zIndex = "-1";
-//     imageBack1.style.zIndex = "1";
-
-//     gsap.to("#image-back1", {
-//       x: isMobile ? -17 : -40,
-//       y: isMobile ? -40 : -60,
-//       opacity: 1,
-//       ease: "power3.out",
-//     });
-//   }
-
-//   isVisible = !isVisible;
-// }
-
 function toggleDropdown() {
   const $dropdowns = $(".dropdown-custom");
 
@@ -739,6 +683,7 @@ function commingSoon() {
         {
           yPercent: 100,
           ease: "none",
+          duration: 1,
         },
         "+=0.25"
       );
@@ -782,6 +727,10 @@ function selectMap() {
     $(".map-content").removeClass("show");
     $(".marker").removeClass("hidden");
   });
+
+  $(".icon-back-lv2").on("click", function (e) {
+    $(".map-content-detail").removeClass("show");
+  });
   if ($(window).width() < 767) {
     // Remove 'active' class from all marker-detail elements
     $(".marker-detail").removeClass("active");
@@ -799,14 +748,25 @@ function selectMap() {
     const citys = $(this).data("v2-city");
     console.log(city, citys);
 
+    // Xóa các lớp 'show' và 'active' trước
     $(".map-content").removeClass("show");
     $(".marker-detail").removeClass("active");
-    $(this).addClass("active");
-    $(`.map-content[data-city-map="${city}"]`).addClass("show");
+    $(".map-content-detail").removeClass("show");
 
-    if (citys.length) {
+    // Thêm lớp 'active' cho marker được click
+    $(this).addClass("active");
+
+    // Hiển thị map-content và map-content-detail theo city
+    $(`.map-content[data-city-map="${city}"]`).addClass("show");
+    $(`.map-content-detail[data-hotel="${city}"]`).addClass("show");
+
+    // Nếu citys tồn tại, thực hiện cập nhật thêm
+    if (citys) {
+      // Ẩn các nội dung liên quan đến city ban đầu
       $(".map-content").removeClass("show");
       $(".marker-detail").removeClass("active");
+
+      // Thêm lớp 'active' và hiển thị map-content theo citys
       $(this).addClass("active");
       $(`.map-content[data-city-map="${citys}"]`).addClass("show");
     }
